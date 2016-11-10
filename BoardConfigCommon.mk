@@ -75,7 +75,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos9820
 
 ## Keymaster
