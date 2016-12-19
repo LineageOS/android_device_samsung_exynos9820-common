@@ -109,9 +109,7 @@
      </string-array>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <!-- FIXME: Check if this is really not supported
     <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
-    -->
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
