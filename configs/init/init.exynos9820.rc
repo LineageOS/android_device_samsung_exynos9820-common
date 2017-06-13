@@ -260,6 +260,8 @@ on init
 
     start watchdogd
 
+    setprop ro.boot.hardware.revision ${ro.revision}
+
 on fs
 # Permissions for backlight
     chown system system /sys/class/backlight/panel/brightness
