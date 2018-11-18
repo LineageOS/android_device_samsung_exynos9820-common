@@ -9,3 +9,6 @@ ro.cmc.version=2.0
 
 ### CHARGER
 ro.charger.enable_suspend=true
+
+### WIFI Direct
+wifi.direct.interface=p2p-dev-wlan0
