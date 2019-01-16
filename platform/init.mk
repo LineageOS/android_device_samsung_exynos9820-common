@@ -1,3 +1,7 @@
+### FIRST STAGE INIT
+PRODUCT_PACKAGES += \
+    fstab.exynos9820_ramdisk
+
 ### INIT
 PRODUCT_PACKAGES += \
     init.exynos9820.root.rc \
