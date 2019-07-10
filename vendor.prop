@@ -66,6 +66,9 @@ ro.surface_flinger.use_color_management=true
 ## Incremental FS
 ro.incremental.enable=true
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 ## Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
 # Call deleteAllKeys if vold detects a factory reset
