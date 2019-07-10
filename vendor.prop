@@ -66,6 +66,7 @@ ro.vendor.ddk.set.afbc=1
 ro.incremental.enable=true
 
 ## Media
+debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
 
 ## Metadata Encryption
