@@ -37,6 +37,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(PLATFORM_PATH)/config/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
+### SYSCONFIG
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/sysconfig/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
+
 ### THERMAL
 PRODUCT_COPY_FILES += \
     $(PLATFORM_PATH)/config/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
