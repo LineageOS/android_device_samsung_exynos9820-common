@@ -13,6 +13,9 @@ ro.vendor.eden.npu.version.path=/sys/devices/platform/npu@17800000/version
 ### DALVIK
 dalvik.vm.lockprof.threshold=500
 
+### FASTBOOTD
+ro.fastbootd.available=true
+
 ### GRAPHICS
 # gralloc/exynosdisplay
 ro.vendor.ddk.set.afbc=1
