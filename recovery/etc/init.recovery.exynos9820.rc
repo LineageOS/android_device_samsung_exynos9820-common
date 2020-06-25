@@ -2,3 +2,7 @@ on init
     write /proc/sys/kernel/hung_task_timeout_secs 0
 
     setprop sys.usb.configfs 1
+
+on fs
+    wait /dev/block/platform/13d60000.ufs
+    symlink /dev/block/platform/13d60000.ufs /dev/block/bootdevice
