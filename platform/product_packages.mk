@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
 
+### USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.1-service.exynos9820
+
 ### USB TRUST HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
