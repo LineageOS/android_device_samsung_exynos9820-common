@@ -1,0 +1,5 @@
+### ROOT
+/keydata(/.*)?                               u:object_r:keydata_data_file:s0
+/keyrefuge(/.*)?                             u:object_r:keyrefuge_data_file:s0
+/omr(/.*)?                                   u:object_r:omr_file:s0
+/dqmdbg(/.*)?                                u:object_r:dqmdbg_file:s0

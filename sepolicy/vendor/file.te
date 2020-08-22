@@ -1,0 +1,8 @@
+# file.te
+
+# ROOT
+# /keydata /keyrefuge /omr
+type keydata_data_file, file_type;
+type keyrefuge_data_file, file_type;
+type omr_file, file_type;
+type dqmdbg_file, file_type;
