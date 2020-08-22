@@ -1046,7 +1046,7 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_min_clock
 
 # LPM
-service lpm /system/bin/lpm
+service lpm /system/bin/charger
     class sec-charger
     user root
     group system radio input
