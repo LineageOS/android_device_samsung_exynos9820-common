@@ -1,0 +1,8 @@
+# Samsung specific
+ro.product_ship=true
+# Set csc support in OMX
+# If not set or set to 0, OMX will only use BT.601 colorspace.
+ro.vendor.cscsupported=1
+# Set cmc properties
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
