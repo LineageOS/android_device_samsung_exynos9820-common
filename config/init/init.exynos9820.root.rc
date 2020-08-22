@@ -210,7 +210,7 @@ on post-fs-data
     mkdir /data/vendor/mediacodec 0700 mediacodec mediacodec
     mkdir /data/vendor/mediacodec/fruc_files 0700 mediacodec mediacodec
     mkdir /data/vendor/mediacodec/fruc_assets 0700 mediacodec mediacodec
-    copy /system/media/fruc_kernels.exynos9820.bin /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9820.bin
+    copy /vendor/firmware/fruc_kernels.exynos9820.bin /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9820.bin
     chown mediacodec mediacodec /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9820.bin
 
     # FINGERPRINT
