@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
 
+### THERMAL
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.samsung
+
 ### USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service.exynos9820

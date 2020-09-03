@@ -19,3 +19,7 @@ PRODUCT_COPY_FILES += \
 ### POWER
 PRODUCT_COPY_FILES += \
     $(PLATFORM_PATH)/config/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+### THERMAL
+PRODUCT_COPY_FILES += \
+    $(PLATFORM_PATH)/config/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
