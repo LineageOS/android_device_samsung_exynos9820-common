@@ -117,6 +117,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
+### SHIMS
+PRODUCT_PACKAGES += \
+    libshim_sensorndkbridge
+
 ### SOUNDTRIGGER
 PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-impl:32
