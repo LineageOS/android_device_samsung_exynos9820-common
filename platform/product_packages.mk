@@ -106,6 +106,11 @@ PRODUCT_PACKAGES += \
     NfcNci \
     Tag
 
+### POWER
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.samsung-libperfmgr \
+    libperfmgr.vendor:64
+
 ### RENDERSCRIPT
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
