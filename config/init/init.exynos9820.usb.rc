@@ -22,8 +22,8 @@ on init
 
 on charger && property:ro.debuggable=1
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer "SAMSUNG"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "SAMSUNG_Android_lpm"
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.vendor.manufacturer}
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product ${ro.product.vendor.model}
     write /sys/kernel/config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "Conf 1"
     symlink /sys/kernel/config/usb_gadget/g1/functions/ffs.adb /sys/kernel/config/usb_gadget/g1/configs/b.1/ffs.adb
     setprop sys.usb.configfs 2
@@ -31,8 +31,8 @@ on charger && property:ro.debuggable=1
 
 on boot
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer "SAMSUNG"
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "SAMSUNG_Android"
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.vendor.manufacturer}
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product ${ro.product.vendor.model}
     write /sys/kernel/config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "Conf 1"
     write /sys/kernel/config/usb_gadget/g1/configs/b.1/MaxPower 900
     symlink /sys/kernel/config/usb_gadget/g1/functions/mtp.0 /sys/kernel/config/usb_gadget/g1/configs/b.1/mtp.0
