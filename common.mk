@@ -132,6 +132,7 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
     $(COMMON_PATH)/configs/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl
 
 # Keymaster
