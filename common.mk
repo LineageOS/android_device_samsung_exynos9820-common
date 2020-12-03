@@ -62,6 +62,10 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     Snap
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
