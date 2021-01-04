@@ -27,8 +27,9 @@ PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(PLATFORM_PATH) \
+    hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung/hidl/power-libperfmgr
+    hardware/samsung/aidl/power-libperfmgr
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(PLATFORM_PATH)/overlay

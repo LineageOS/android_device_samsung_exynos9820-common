@@ -123,8 +123,9 @@ PRODUCT_PACKAGES += \
 
 ### POWER
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.samsung-libperfmgr \
-    libperfmgr.vendor:64
+    android.hardware.power-service.samsung-libperfmgr \
+    libperfmgr.vendor:64 \
+    pixel-power-ext-ndk_platform.vendor:64
 
 ### POWERSHARE
 PRODUCT_PACKAGES += \
