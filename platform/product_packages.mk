@@ -31,10 +31,7 @@ PRODUCT_PACKAGES += \
 
 ### CAMERA
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4 \
-    android.hardware.camera.provider@2.5 \
-    android.hardware.camera.provider@2.4-legacy \
-    android.hardware.camera.provider@2.5-legacy
+    android.hardware.camera.provider@2.5-service_64
 
 PRODUCT_PACKAGES += \
     Snap
