@@ -124,7 +124,7 @@
                 <route type="mix" sink="Bt Sco Car Kit"
                        sources="primary-out,deep-buffer,fast"/>
                 <route type="mix" sink="primary-in"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,Bt Sco Headset Mic,Aux Device In,Voice Call Mic,FM Mic"/>
+                       sources="Built-In Mic,Wired Headset Mic,Bt Sco Headset Mic,Aux Device In,Voice Call Mic,FM Mic"/>
             </routes>
 
         </module>
