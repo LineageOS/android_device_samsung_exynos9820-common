@@ -25,13 +25,13 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
-def AddImage(info, basename, dest):
-  name = basename
-  data = info.input_zip.read("IMAGES/" + basename)
-  common.ZipWriteStr(info.output_zip, name, data)
+def AddImage(info, dir, basename, dest):
+  data = info.input_zip.read(dir + "/" + basename)
+  common.ZipWriteStr(info.output_zip, basename, data)
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
-  info.script.AppendExtra('package_extract_file("%s", "%s");' % (name, dest))
+  info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def OTA_InstallEnd(info):
-  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  AddImage(info, "RADIO", "dtb.img", "/dev/block/by-name/dtb")
+  AddImage(info, "IMAGES", "dtbo.img", "/dev/block/by-name/dtbo")
   return
