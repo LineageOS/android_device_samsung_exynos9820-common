@@ -566,11 +566,8 @@ on post-fs-data
     chown wifi wifi /mnt/vendor/efs/wifi/.mac.cob
     chmod 0644 /mnt/vendor/efs/wifi/.mac.cob
 
-# Samsung Pay
-    mkdir /efs/pfw_data 0760 vendor_spay vendor_spay
-
 # MST/NFC Switch
-    chown vendor_spay system /dev/mst_ctrl
+    chown system system /dev/mst_ctrl
     chmod 0660 /dev/mst_ctrl
 
 # HWC data
