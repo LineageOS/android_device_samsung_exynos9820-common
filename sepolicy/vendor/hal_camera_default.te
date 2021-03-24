@@ -1,0 +1,20 @@
+# hal_camera_default.te
+
+r_dir_file(hal_camera_default, sysfs_camera);
+allow hal_camera_default sysfs_camera_writable:file rw_file_perms;
+
+get_prop(hal_camera_default, exported_camera_prop);
+get_prop(hal_camera_default, vendor_factory_prop);
+set_prop(hal_camera_default, vendor_camera_prop);
+
+allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
+
+allow hal_camera_default sysfs_mem_boost_writable:file rw_file_perms;
+
+allow hal_camera_default jsqz_device:chr_file rw_file_perms;
+
+r_dir_file(hal_camera_default, sysfs_battery);
+
+binder_call(hal_camera_default, system_server);
+
+allow hal_camera_default hal_graphics_composer_default:fd use;

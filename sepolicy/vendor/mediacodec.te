@@ -1,0 +1,5 @@
+# mediacodec.te
+
+r_dir_file(mediacodec, sysfs_v4l);
+
+allow mediacodec m2m1shot_device:chr_file rw_file_perms;

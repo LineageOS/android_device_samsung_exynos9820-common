@@ -1,0 +1,5 @@
+# charger.te
+
+allow charger device:dir r_file_perms;
+allow charger sysfs_battery:file r_file_perms;
+allow charger sysfs_battery_writable:file r_file_perms;

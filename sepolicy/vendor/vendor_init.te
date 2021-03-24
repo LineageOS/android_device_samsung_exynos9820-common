@@ -1,0 +1,13 @@
+# vendor_init.te
+
+allow vendor_init cgroup:file getattr;
+allow vendor_init debugfs_trace_marker:file getattr;
+
+get_prop(vendor_init, vendor_radio_prop);
+dontaudit vendor_init system_prop:file read;
+
+allow vendor_init proc_swappiness:file rw_file_perms;
+
+set_prop(vendor_init, persist_rmnet_prop);
+set_prop(vendor_init, persist_data_wda_prop);
+set_prop(vendor_init, persist_data_df_prop);

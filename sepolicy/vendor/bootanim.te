@@ -1,0 +1,4 @@
+# bootanim.te
+
+allow bootanim traced_producer_socket:sock_file write;
+allow bootanim traced:unix_stream_socket connectto;

@@ -1,0 +1,3 @@
+# hal_nfc_default.te
+
+add_hwservice(hal_nfc_default, hal_nfc_hwservice);

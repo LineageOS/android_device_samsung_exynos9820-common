@@ -1,0 +1,3 @@
+# proc_net.te
+
+allow proc_net proc:filesystem associate;

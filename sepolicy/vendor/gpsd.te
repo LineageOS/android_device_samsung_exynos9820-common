@@ -1,0 +1,3 @@
+# gpsd.te
+
+allow gpsd gpsd_exec:file execute_no_trans;

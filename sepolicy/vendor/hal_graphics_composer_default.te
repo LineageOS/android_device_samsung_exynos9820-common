@@ -1,0 +1,23 @@
+# hal_graphics_composer_default.te
+
+vndbinder_use(hal_graphics_composer_default);
+
+allow hal_graphics_composer_default video_device:chr_file rw_file_perms;
+
+allow hal_graphics_composer_default log_vendor_data_file:dir { rw_file_perms add_name search };
+allow hal_graphics_composer_default log_vendor_data_file:file { rw_file_perms create };
+
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket { create bind read setopt };
+
+binder_call(hal_graphics_composer_default, vndservicemanager);
+hal_client_domain(hal_graphics_composer_default, hal_graphics_allocator);
+
+allow hal_graphics_composer_default sysfs_chipid:file r_file_perms;
+
+allow hal_graphics_composer_default sysfs_decon:file r_file_perms;
+allow hal_graphics_composer_default sysfs_decon_writable:file rw_file_perms;
+
+get_prop(hal_graphics_composer_default, vendor_hwc_prop);
+get_prop(hal_graphics_composer_default, vendor_camera_prop);
+
+allow hal_graphics_composer_default vendor_surfaceflinger_vndservice:service_manager { add find };

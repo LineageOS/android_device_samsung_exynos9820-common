@@ -1,5 +1,75 @@
+### DATA
+/data/nfc(/.*)                               u:object_r:nfc_data_file:s0
+/data/vendor/display(/.*)?                   u:object_r:display_vendor_data_file:s0
+/data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
+
+### DEV
+/dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
+/dev/block/platform/.+/by-name/system        u:object_r:system_block_device:s0
+/dev/block/platform/.+/by-name/vendor        u:object_r:system_block_device:s0
+
+# Camera
+/dev/jsqz                                    u:object_r:jsqz_device:s0
+/dev/m2m1shot_scaler0                        u:object_r:m2m1shot_device:s0
+
+# Fingerprint
+/dev/qbt2000_fd                              u:object_r:fp_sensor_device:s0
+/dev/qbt2000_ipc                             u:object_r:fp_sensor_device:s0
+
+# Graphics
+/dev/mali[0-9]                               u:object_r:gpu_device:s0
+/dev/g2d                                     u:object_r:graphics_device:s0
+
+# NFC
+/dev/sec-nfc                                 u:object_r:nfc_device:s0
+
+# Secmem
+/dev/s5p-smem                                u:object_r:secmem_device:s0
+
+# Soundtrigger
+/dev/vts_fio_dev                             u:object_r:vts_fio_device:s0
+
 ### ROOT
 /keydata(/.*)?                               u:object_r:keydata_data_file:s0
 /keyrefuge(/.*)?                             u:object_r:keyrefuge_data_file:s0
 /omr(/.*)?                                   u:object_r:omr_file:s0
 /dqmdbg(/.*)?                                u:object_r:dqmdbg_file:s0
+
+### SYSFS
+
+# Block
+/sys/devices/platform/13d00000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler       u:object_r:sysfs_io_sched_tuneable:s0
+/sys/devices/platform/13d60000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
+
+# Camera
+/sys/devices/virtual/camera/flash/rear_flash                  u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera/rear/fw_update                    u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
+/sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
+
+# Sensors
+/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)                  u:object_r:sysfs_iio:s0
+/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/enable    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
+/sys/devices/platform/15c40000.adc(/.*)                                           u:object_r:sysfs_iio:s0
+/sys/devices/virtual/input/input[0-9]/enable                                      u:object_r:sysfs_input_writable:s0
+/sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
+
+### VENDOR
+
+/(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hw/gpsd                                                                 u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hw/lhd                                                                  u:object_r:lhd_exec:s0
+/(vendor|system/vendor)/bin/hw/macloader                                                            u:object_r:macloader_exec:s0
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.clearkey                u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                u:object_r:hal_drm_widevine_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]-service\.samsung           u:object_r:hal_keymaster_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb@[0-9]\.[0-9]-service\.exynos9820              u:object_r:hal_usb_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@[0-9]\.[0-9]-service\.samsung            u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/sec\.android\.hardware\.nfc@[0-9]\.[0-9]-service                     u:object_r:hal_nfc_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.gnss@[0-9]\.[0-9]-service                 u:object_r:hal_gnss_default_exec:s0
+
+/(vendor|system/vendor)/lib(64)?/hw/gralloc\.exynos[0-9]*\.so                                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libion_exynos\.so                                                  u:object_r:same_process_hal_file:s0

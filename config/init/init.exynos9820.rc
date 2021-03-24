@@ -1,9 +1,6 @@
 import /vendor/etc/init/hw/init.exynos9820.root.rc
 
 on early-init
-    mkdir /mnt/vendor/efs 0771 radio system
-    mkdir /mnt/vendor/cpefs 0771 radio system
-    mkdir /mnt/vendor/persist 0771 system system
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
@@ -18,7 +15,6 @@ on init
     export SECONDARY_STORAGE /storage/sdcard:/storage/usb1:/storage/usb2
 
     # Support legacy paths
-    symlink /storage/sdcard /mnt/ext_sd
     symlink /data/app /factory
 
     symlink /dev/block/platform/13d60000.ufs/by-name/steady /dev/block/steady
