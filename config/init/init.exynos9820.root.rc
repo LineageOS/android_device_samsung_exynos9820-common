@@ -1,4 +1,7 @@
 on init
+    # for tsp cmd node
+    chown system radio /sys/class/sec/tsp/cmd
+
     # for audit message
     chown system system /proc/avc_msg
     chmod 0660 /proc/avc_msg
@@ -306,7 +309,6 @@ on boot
     chown system system /sys/devices/virtual/data_on
 
     # Permissions for Touchscreen
-    chown system radio /sys/class/sec/tsp/cmd
     chown system system /sys/class/sec/tsp/input/enabled
     chmod 0660 /sys/class/sec/tsp/input/enabled
     chown root system /proc/tsp_msg
