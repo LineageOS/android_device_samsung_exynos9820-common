@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+### PROPRIETARY VENDOR FILES
+$(call inherit-product, vendor/samsung/exynos9820-common/exynos9820-common-vendor.mk)
+
 PLATFORM_PATH := device/samsung/exynos9820-common
 
 # Device uses high-density artwork where available

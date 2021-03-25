@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+include vendor/samsung/exynos9820-common/BoardConfigVendor.mk
+
 BUILD_TOP := $(shell pwd)
 
 PLATFORM_PATH := device/samsung/exynos9820-common
