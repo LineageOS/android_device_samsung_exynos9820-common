@@ -1,4 +1,4 @@
-/dev/block/platform/13d60000.ufs/by-name/system		/		ext4	ro											wait,recoveryonly
+/dev/block/platform/13d60000.ufs/by-name/system		/system		ext4	ro											wait,recoveryonly
 /dev/block/platform/13d60000.ufs/by-name/vendor		/vendor		ext4	ro											wait,recoveryonly
 
 /dev/block/platform/13d60000.ufs/by-name/boot		/boot		emmc	defaults										recoveryonly

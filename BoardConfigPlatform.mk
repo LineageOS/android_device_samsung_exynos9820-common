@@ -85,8 +85,6 @@ BOARD_MKBOOTIMG_ARGS += --board $(BOARD_BOOT_HEADER_NAME)
 
 ### SYSTEM
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-# build/make
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # system/core and build/make
 AB_OTA_UPDATER := false
 
