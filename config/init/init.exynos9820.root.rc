@@ -63,6 +63,9 @@ on init
 
     chmod 0660 /sys/power/wakeup_count
 
+    # fastcharge switch
+    chown system radio /sys/class/sec/switch/afc_disable
+
 on early-fs
     # tzic need to be grand permission before vold
     chown system net_bt_admin /dev/tzic
@@ -273,7 +276,6 @@ on boot
     chown system radio /sys/class/sec/switch/uart_en
     chown system radio /sys/class/sec/switch/otg_test
     chown system radio /sys/class/sec/switch/apo_factory
-    chown system radio /sys/class/sec/switch/afc_disable
     chown system radio /sys/class/sec/switch/hiccup
     chown system radio /sys/class/sec/switch/jig_disable    
     chown system radio /sys/class/sec/switch/factory_uart
