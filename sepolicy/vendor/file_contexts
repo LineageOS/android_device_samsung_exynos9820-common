@@ -29,6 +29,9 @@
 # Soundtrigger
 /dev/vts_fio_dev                             u:object_r:vts_fio_device:s0
 
+# ZRAM
+/dev/block/zram0                             u:object_r:swap_block_device:s0
+
 ### ROOT
 /keydata(/.*)?                               u:object_r:keydata_data_file:s0
 /keyrefuge(/.*)?                             u:object_r:keyrefuge_data_file:s0

@@ -1005,6 +1005,7 @@ on property:vold.decrypt=trigger_restart_framework
 
 on fs
     mount_all /vendor/etc/fstab.exynos9820
+    swapon_all /vendor/etc/fstab.exynos9820
     # We need to seperate mounting SEC_EFS partition from fstab file due to GSI image loading case
     wait /dev/block/platform/13d60000.ufs/by-name/sec_efs
     mount ext4 /dev/block/platform/13d60000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
