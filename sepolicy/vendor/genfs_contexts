@@ -1,8 +1,3 @@
-## DebugFS
-genfscon debugfs /dma_buf                                                                                               u:object_r:debugfs_ion_dma:s0
-genfscon debugfs /mali/mem                                                                                              u:object_r:debugfs_mali_mem:s0
-genfscon debugfs /ion                                                                                                   u:object_r:debugfs_ion:s0
-
 ## Proc
 genfscon proc /sys/vm/swappiness                                                                                        u:object_r:proc_swappiness:s0
 
