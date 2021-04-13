@@ -66,6 +66,10 @@ on init
     # fastcharge switch
     chown system radio /sys/class/sec/switch/afc_disable
 
+    # vibrator
+    chown system system /sys/class/timed_output/vibrator/intensity
+    chown system system /sys/class/timed_output/vibrator/motor_type
+
 on early-fs
     # tzic need to be grand permission before vold
     chown system net_bt_admin /dev/tzic
@@ -707,9 +711,6 @@ on boot
     chmod 771 /efs/usb_hw_param
     chown system system /efs/usb_hw_param/usb_hw_param.log
     chmod 0660 /efs/usb_hw_param/usb_hw_param.log
-
-    chown system system /sys/class/timed_output/vibrator/intensity
-    chown system system /sys/class/timed_output/vibrator/motor_type
 
     # UFS
     chown system system /sys/block/sda/device/model
