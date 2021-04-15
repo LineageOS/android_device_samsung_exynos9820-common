@@ -28,11 +28,11 @@ static inline const char* getBTDefaultName()
     char device[PROPERTY_VALUE_MAX];
     property_get("ro.product.device", device, "");
 
-    if (!strcmp("beyond0", device)) {
+    if (!strcmp("beyond0lte", device)) {
         return "Galaxy S10e";
     }
 
-    if (!strcmp("beyond2", device)) {
+    if (!strcmp("beyond2lte", device)) {
         return "Galaxy S10+";
     }
 
