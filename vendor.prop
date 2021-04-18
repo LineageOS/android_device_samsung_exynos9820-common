@@ -31,7 +31,6 @@ ro.security.keystore.keytype=sak,gak
 ro.opengles.version=196610
 
 ### RIL
-ro.telephony.default_network=26,26
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
