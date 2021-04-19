@@ -2,7 +2,6 @@
 
 ### AUDIO
 vendor/etc/audio_board_info.xml
-vendor/etc/audio_effects.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
 vendor/etc/usb_audio_policy_configuration.xml
