@@ -15,3 +15,5 @@ allow hal_drm_widevine mediadrm_vendor_data_file:dir create_dir_perms;
 allow hal_drm_widevine mediadrm_vendor_data_file:file create_file_perms;
 
 allow hal_drm_widevine secmem_device:chr_file rw_file_perms;
+
+allow hal_drm_widevine mediacodec:fd use;
