@@ -44,7 +44,6 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 ### BLUETOOTH
 # Bluetooth (aptX) - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-vendor/lib64/libbt-vendor.so
 
 ### CAMERA
 vendor/lib/camera.device@1.0-impl.so
