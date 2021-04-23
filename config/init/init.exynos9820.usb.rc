@@ -180,7 +180,7 @@ on property:sys.usb.config=ptp,adb
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/kernel/config/usb_gadget/g1/idProduct 0x6866
+    write /sys/kernel/config/usb_gadget/g1/idProduct 0x6865
     write /sys/kernel/config/usb_gadget/g1/idVendor 0x04E8
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/kernel/config/usb_gadget/g1/UDC ${sys.usb.controller}
