@@ -132,13 +132,7 @@ vendor/lib64/libkeymaster_helper.so
 
 ### NFC
 system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
-vendor/bin/hw/sec.android.hardware.nfc@1.2-service
-vendor/etc/init/sec.android.hardware.nfc@1.2-service.rc
--vendor/etc/vintf/manifest/sec.android.hardware.nfc@1.2-service.xml
 vendor/firmware/nfc/sec_s3nrn82_firmware.bin
-vendor/lib64/libNfcProperties.so
-vendor/lib64/nfc_nci_sec.so
-vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
 
 ### OMX
 vendor/lib/libepicoperator.so
