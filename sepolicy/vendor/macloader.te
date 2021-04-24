@@ -1,0 +1,4 @@
+# macloader.te
+
+# vendor.wifi.dualconcurrent.interface
+dontaudit macloader property_socket:sock_file write;
