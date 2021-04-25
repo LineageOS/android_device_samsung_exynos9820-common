@@ -10,6 +10,7 @@ type dqmdbg_file, file_type;
 # DATA
 type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
+type nfc_vendor_data_file, file_type, data_file_type;
 
 # DEBUGFS
 type debugfs_mali_mem, fs_type, debugfs_type;

@@ -212,9 +212,6 @@ on post-fs-data
 
     # NFC KEY
     mkdir /data/vendor/nfc 0770 nfc nfc
-    copy /system/etc/nfc_key /data/nfc/Key
-    chmod 660 /data/nfc/Key
-    chown nfc nfc /data/nfc/Key
 
     # super slow motion
     mkdir /data/vendor/mediacodec 0700 mediacodec mediacodec

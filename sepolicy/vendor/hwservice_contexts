@@ -1,3 +1,0 @@
-# hwservice_contexts
-
-vendor.samsung.hardware.nfc::ISehNfc                           u:object_r:hal_nfc_hwservice:s0

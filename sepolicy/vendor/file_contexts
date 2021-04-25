@@ -1,7 +1,7 @@
 ### DATA
-/data/nfc(/.*)                               u:object_r:nfc_data_file:s0
 /data/vendor/display(/.*)?                   u:object_r:display_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
+/data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
 
 ### DEV
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
