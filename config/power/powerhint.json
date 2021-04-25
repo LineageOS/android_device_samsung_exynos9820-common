@@ -206,93 +206,15 @@
     "Actions": [
         {
             "PowerHint": "INTERACTION",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 0,
-            "Value": "0x000ce4c8"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 0,
-            "Value": "0x000c4c70"
-        },
-        {
-            "PowerHint": "INTERACTION",
             "Node": "TASchedtuneBoost",
             "Duration": 0,
             "Value": "30"
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUBigPlusClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 5000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUBigPlusClusterMinFreq",
-            "Duration": 5000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 5000,
-            "Value": "0x001dc130"
-        },
-        {
-            "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
             "Value": "0x0000002c"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigPlusClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x00234f10"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigPlusClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x0029a810"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x001dc130"
-        },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x001dc130"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
