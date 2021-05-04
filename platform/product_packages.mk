@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
 
 ### USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1-service.exynos9820
+    android.hardware.usb@1.1-service.typec
 
 ### USB TRUST HAL
 PRODUCT_PACKAGES += \
