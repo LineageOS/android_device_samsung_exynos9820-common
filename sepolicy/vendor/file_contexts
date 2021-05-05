@@ -23,6 +23,9 @@
 # NFC
 /dev/sec-nfc                                 u:object_r:nfc_device:s0
 
+# RIL
+/dev/nr_boot0                                u:object_r:vendor_radio_device:s0
+
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0
 
