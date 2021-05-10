@@ -30,6 +30,9 @@
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0
 
+# Sensors
+/dev/max_hrm                                 u:object_r:sensors_device:s0
+
 # Soundtrigger
 /dev/vts_fio_dev                             u:object_r:vts_fio_device:s0
 
@@ -61,6 +64,7 @@
 /sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/buffer/length    u:object_r:sysfs_sensors_writable:s0
 /sys/devices/platform/15c40000.adc(/.*)                                           u:object_r:sysfs_iio:s0
 /sys/devices/virtual/input/input[0-9]/enable                                      u:object_r:sysfs_input_writable:s0
+/sys/devices/virtual/input/input[0-9]/poll_delay                                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
 
 ### VENDOR
