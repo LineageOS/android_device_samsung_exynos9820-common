@@ -14,7 +14,10 @@ genfscon proc /sys/vm/swappiness                                                
 genfscon sysfs /devices/platform/10000.mif_pdata/sim/ds_detect                                                          u:object_r:sysfs_sim_writable:s0
 genfscon sysfs /devices/platform/10430000.pinctrl/gpiochip50/gpio/gpio145/value                                         u:object_r:sysfs_gps_writable:s0
 genfscon sysfs /devices/platform/104b0000.hsi2c/i2c-4/4-0048/input/input2/enabled                                       u:object_r:sysfs_touchscreen_writable:s0
+genfscon sysfs /devices/platform/15970000.speedy/i2c-15/15-0000/s2mps19-rtc/rtc/rtc0/hctosys                            u:object_r:sysfs_rtc:s0
 genfscon sysfs /devices/platform/15970000.speedy/i2c-16/16-0000/s2mps19-rtc/rtc/rtc0/hctosys                            u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-13/13-0066/max77705-charger/power_supply/max77705-charger/type      u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-14/14-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-14/14-0066/max77705-charger/power_supply/max77705-charger/type      u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-14/14-0066/max77705-fuelgauge/power_supply/max77705-fuelgauge/type  u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-14/14-0066/max77705-charger/power_supply/otg/type                   u:object_r:sysfs_battery:s0

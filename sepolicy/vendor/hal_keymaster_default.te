@@ -3,3 +3,5 @@
 get_prop(hal_keymaster_default, vendor_tztsdaemon_prop);
 
 teegris_use(hal_keymaster_default);
+
+r_dir_file(hal_keymaster_default, prov_efs_file);
