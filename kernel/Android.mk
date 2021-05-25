@@ -14,21 +14,15 @@
 # limitations under the License.
 #
 
-
-LOCAL_PATH := $(call my-dir)
-
-include $(CLEAR_VARS)
-
 MKDTIMG    := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 DTB_DIR    := $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts/exynos
 DTB_CFG    := $(PLATFORM_PATH)/kernel/$(TARGET_SOC).cfg
 
-INSTALLED_DTBIMAGE_TARGET := $(PRODUCT_OUT)/dtb/dtb.img
+INSTALLED_DTBIMAGE_TARGET := $(PRODUCT_OUT)/dtb.img
 
 $(INSTALLED_DTBIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(MKDTIMG) $(AVBTOOL)
 	$(hide) echo "Building dtb.img"
-	$(hide) mkdir -p $(dir $@)
 	$(hide) $(MKDTIMG) cfg_create $@ $(DTB_CFG) -d $(DTB_DIR)
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_DTBIMAGE_PARTITION_SIZE),raw)
 	$(hide) $(AVBTOOL) add_hash_footer \
@@ -41,4 +35,4 @@ $(INSTALLED_DTBIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(MKDTIMG) $(AVBTOOL)
 .PHONY: dtbimage
 dtbimage: $(INSTALLED_DTBIMAGE_TARGET)
 
-$(call add-radio-file,../../../../$(INSTALLED_DTBIMAGE_TARGET))
+INSTALLED_RADIOIMAGE_TARGET += $(INSTALLED_DTBIMAGE_TARGET)
