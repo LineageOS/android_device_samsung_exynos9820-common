@@ -116,6 +116,13 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_PATH)/hardware/bluetoo
 BOARD_CUSTOM_BT_CONFIG := $(PLATFORM_PATH)/hardware/bluetooth/libbt_vndcfg.txt
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+### CAMERA
+SOONG_CONFIG_NAMESPACES += exynos9820CameraVars
+SOONG_CONFIG_exynos9820CameraVars += \
+    exynos9820_model
+
+SOONG_CONFIG_exynos9820CameraVars_exynos9820_model := $(TARGET_DEVICE)
+
 ### HIDL
 DEVICE_MANIFEST_FILE += $(PLATFORM_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/compatibility_matrix.xml
