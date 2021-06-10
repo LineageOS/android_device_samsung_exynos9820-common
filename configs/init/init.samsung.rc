@@ -81,7 +81,7 @@ on post-fs-data
 
     chown system radio /efs
     chmod 0771 /efs
-    restorecon /efs
+    restorecon_recursive /efs
 
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system

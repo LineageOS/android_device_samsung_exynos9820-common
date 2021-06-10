@@ -39,6 +39,19 @@
 # ZRAM
 /dev/block/zram0                             u:object_r:swap_block_device:s0
 
+## EFS
+/efs/FactoryApp(/.*)?                        u:object_r:app_efs_file:s0
+/efs/TEE(/.*)?                               u:object_r:prov_efs_file:s0
+/efs/biometrics(/.*)?                        u:object_r:sec_efs_file:s0
+/efs/cpdebug(/.*)?                           u:object_r:cpdebug_efs_file:s0
+/efs/cirrus(/.*)?                            u:object_r:sec_efs_file:s0
+/efs/lpm(/.*)?                               u:object_r:sec_efs_file:s0
+/efs/recovery(/.*)?                          u:object_r:sec_efs_file:s0
+/efs/sec_efs(/.*)?                           u:object_r:sec_efs_file:s0
+/efs/ssm(/.*)?                               u:object_r:ssm_efs_file:s0
+/efs/usb_hw_param(/.*)?                      u:object_r:sec_efs_file:s0
+/efs/wv.keys                                 u:object_r:sec_efs_file:s0
+
 ### ROOT
 /keydata(/.*)?                               u:object_r:keydata_data_file:s0
 /keyrefuge(/.*)?                             u:object_r:keyrefuge_data_file:s0

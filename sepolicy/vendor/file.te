@@ -15,6 +15,10 @@ type debugfs_mali_mem, fs_type, debugfs_type;
 type debugfs_ion, fs_type, debugfs_type;
 type debugfs_ion_dma, fs_type, debugfs_type;
 
+# efs types
+type cpdebug_efs_file, fs_type;
+type ssm_efs_file, fs_type;
+
 # proc types
 type proc_swappiness, fs_type, proc_type;
 
