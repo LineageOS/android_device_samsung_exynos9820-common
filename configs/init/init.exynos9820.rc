@@ -1,22 +1,7 @@
-import /vendor/etc/init/hw/init.exynos9820.root.rc
-
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
-    # See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard 0000 root root
-    mkdir /storage/usb1 0000 root root
-    mkdir /storage/usb2 0000 root root
-    mkdir /mnt/media_rw/sdcard 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb1 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb2 0700 media_rw media_rw
-
-    export SECONDARY_STORAGE /storage/sdcard:/storage/usb1:/storage/usb2
-
-    # Support legacy paths
-    symlink /data/app /factory
-
     symlink /dev/block/platform/13d60000.ufs/by-name/steady /dev/block/steady
     symlink /dev/block/platform/13d60000.ufs/by-name/persistent /dev/block/persistent
 
@@ -614,9 +599,6 @@ on boot
 # SSWAP
     write /proc/sys/vm/swappiness 160
 
-#Samsung Members logging
-    setprop persist.vendor.members.cp_sup on
-
 # Bluetooth
     chown bluetooth bluetooth /dev/ttySAC1
     chmod 0660 /dev/ttySAC1
@@ -636,8 +618,6 @@ on boot
     # Allow to access debugfs for system:system
     chmod 0755 /sys/kernel/debug
     chown system system /sys/kernel/debug
-
-    setprop ro.radio.noril no
 
     # Set up kernel tracing, but disable it by default
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
@@ -1032,12 +1012,6 @@ on fs
     chmod 0660 /sys/class/backlight/pwm-backlight.0/brightness
     chown system system /sys/class/backlight/pwm-backlight.0/brightness
 
-# Copy DRM Key
-#    copy /system/app/wv.keys /factory/wv.keys
-
-# Permission for DRM Key
-#    chmod 0644 /factory/wv.keys
-
 # Permision for xlat control
     chmod 0660 /sys/kernel/clat/xlat_plat
     chown clat clat /sys/kernel/clat/xlat_plat
@@ -1055,34 +1029,13 @@ on fs
 #load ecd firmware
     write /proc/ecd/load_firmware 1
 
-service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard /storage/sdcard
-    class late_start
-    disabled
-service fuse_usb1 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb1 /storage/usb1
-    class late_start
-    disabled
-service fuse_usb2 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usb2 /storage/usb2
-    class late_start
-    disabled
-
-service abox /vendor/bin/main_abox 18c50000.abox /data/vendor/log/abox
-    class late_start
-    user audioserver
-    group system
-
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
     class core
     oneshot
     seclabel u:r:watchdogd:s0
-
-# faced
-service faced /system/bin/faced
-    class late_start
-    user system
-    group system
     
-# LPM
+# Charger
 on property:ro.bootmode=charger
     wait /dev/block/platform/13d60000.ufs/by-name/sec_efs
     mount ext4 /dev/block/platform/13d60000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
@@ -1094,45 +1047,3 @@ on property:ro.bootmode=charger
     chmod 0660 /efs/usb_hw_param/usb_hw_param.log
     mkdir /efs/lpm 0775 system system
     class_start sec-charger
-
-# on userdebug and eng builds, enable kgdb on the serial console
-on property:ro.debuggable=1
-    write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
-    write /sys/module/fiq_debugger/parameters/kgdb_enable 1
-
-# Sysscope
-service prepare_param /system/bin/prepare_param.sh /dev/block/platform/13d60000.ufs/by-name/param
-    class core
-    user root
-    group root
-    seclabel u:r:prepare_param:s0
-    oneshot
-
-# Epic daemon
-service epicd /vendor/bin/epic
-    socket epic dgram 666 system system u:object_r:epicd_socket:s0
-    class main
-    user system
-    group system
-    writepid /dev/cpuset/system-background/tasks
-    seclabel u:r:epicd:s0
-
-# Pageboostd
-on property:sys.boot_completed=1
-    start pageboostd
-
-service pageboostd /system/bin/pageboostd
-    class main
-    user system
-    group system mount radio net_bt sdcard_rw shell media media_rw
-    socket pageboostd seqpacket 0660 system system
-    disabled
-
-# SSWAP
-service swapon /system/bin/sswap -s -z -f 2560
-    class core
-    user system
-    group system
-    capabilities SYS_ADMIN
-    seclabel u:r:sswap:s0
-    oneshot

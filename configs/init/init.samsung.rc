@@ -13,13 +13,6 @@ on init
     chown system system /sys/module/sec_debug/parameters/dump_sink
     chmod 0600 /sys/module/sec_debug/parameters/dump_sink
 
-    # VOLD FOR ASEC++
-    # Directory-target for the ASEC images will be bind-mounted.
-    mkdir /mnt/secure/asec 0700 root root
-    mount tmpfs tmpfs /mnt/secure/asec mode=0700,uid=0,gid=0
-    restorecon_recursive /mnt/secure/asec
-    # VOLD FOR ASEC--
-
     # reset_reason
     chown system system /proc/reset_reason
     chmod 0440 /proc/reset_reason
@@ -76,37 +69,19 @@ on early-fs
     chmod 0660 /dev/tzic
 
 on post-fs
-    # VOLD FOR ASEC++
-    mount tmpfs tmpfs /mnt/secure/asec shared rec
-    # VOLD FOR ASEC--
-
     chown system log /proc/sec_log
 
     # make fsdbg on /dev for filesystem debug info.
     mkdir /dev/fsdbg 0775 root system
 
 on post-fs-data
-    mark_post_data
-
-    # System Parameter Upates
-    chown system system /spu
-    chmod 0771 /spu
-    restorecon /spu
-
     # USB conn_gadget device (DeXonPC, Samsung Flow)
     chown system system /dev/android_ssusbcon
     chmod 0660 /dev/android_ssusbcon
 
-    #start CASS
-    start cass
-
     chown system radio /efs
     chmod 0771 /efs
     restorecon /efs
-
-    chown system system /carrier
-    chmod 0771 /carrier
-    restorecon /carrier
 
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
@@ -328,38 +303,6 @@ on boot
     chown system system /sys/class/sec/tsp/ear_detect_enable
     chown system system /sys/class/sec/tsp/ta_mode
     chown system system /sys/class/sec/tsp/virtual_prox
-
-    # Permissions for Touchscreen-1
-    chown system radio /sys/class/sec/tsp1/cmd
-    chown system system /sys/class/sec/tsp1/input/enabled
-    chmod 0660 /sys/class/sec/tsp/input1/enabled
-    chown system system /sys/class/sec/tsp1/multi_count
-    chown system system /sys/class/sec/tsp1/wet_mode
-    chown system system /sys/class/sec/tsp1/noise_mode
-    chown system system /sys/class/sec/tsp1/comm_err_count
-    chown system system /sys/class/sec/tsp1/checksum
-    chown system system /sys/class/sec/tsp1/all_touch_count
-    chown system system /sys/class/sec/tsp1/z_value
-    chown system system /sys/class/sec/tsp1/sensitivity_mode
-    chown system system /sys/class/sec/tsp1/prox_power_off
-    chown system system /sys/class/sec/tsp1/ic_reset_count
-    chown system system /sys/class/sec/tsp1/mode_change_failed_count
-
-    # Permissions for Touchscreen-2
-    chown system radio /sys/class/sec/tsp2/cmd
-    chown system system /sys/class/sec/tsp2/input/enabled
-    chmod 0660 /sys/class/sec/tsp/input2/enabled
-    chown system system /sys/class/sec/tsp2/multi_count
-    chown system system /sys/class/sec/tsp2/wet_mode
-    chown system system /sys/class/sec/tsp2/noise_mode
-    chown system system /sys/class/sec/tsp2/comm_err_count
-    chown system system /sys/class/sec/tsp2/checksum
-    chown system system /sys/class/sec/tsp2/all_touch_count
-    chown system system /sys/class/sec/tsp2/z_value
-    chown system system /sys/class/sec/tsp2/sensitivity_mode
-    chown system system /sys/class/sec/tsp2/prox_power_off
-    chown system system /sys/class/sec/tsp2/ic_reset_count
-    chown system system /sys/class/sec/tsp2/mode_change_failed_count
 
     # Permissions for Wacom
     chown system radio /sys/class/sec/sec_epen/cmd
@@ -1041,16 +984,8 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_min_clock
 
 # LPM
-service lpm /system/bin/charger
+service charger /system/bin/charger
     class sec-charger
     user root
     group system radio input
     critical
-
-# CASS
-service cass /vendor/bin/cass
-    class core
-    user system
-    group radio wakelock system
-    capabilities BLOCK_SUSPEND
-    disabled
