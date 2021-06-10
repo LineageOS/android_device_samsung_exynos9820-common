@@ -69,10 +69,6 @@ vendor/lib64/libstagefrighthw.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 
-## Camera Firmware
-# Copied by vendor_init which needs read access
-system/media/fruc_kernels.exynos9820.bin:vendor/firmware/fruc_kernels.exynos9820.bin
-
 ## Charger Firmware
 vendor/firmware/mfc_fw.bin
 

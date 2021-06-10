@@ -213,13 +213,6 @@ on post-fs-data
     # NFC KEY
     mkdir /data/vendor/nfc 0770 nfc nfc
 
-    # super slow motion
-    mkdir /data/vendor/mediacodec 0700 mediacodec mediacodec
-    mkdir /data/vendor/mediacodec/fruc_files 0700 mediacodec mediacodec
-    mkdir /data/vendor/mediacodec/fruc_assets 0700 mediacodec mediacodec
-    copy /vendor/firmware/fruc_kernels.exynos9820.bin /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9820.bin
-    chown mediacodec mediacodec /data/vendor/mediacodec/fruc_assets/fruc_kernels.exynos9820.bin
-
     # FINGERPRINT
     mkdir /data/vendor/biometrics 0770 system system
     mkdir /data/vendor/fpSnrTest 0770 system system
