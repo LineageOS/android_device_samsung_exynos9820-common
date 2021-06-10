@@ -4,6 +4,9 @@ vendor.bluetooth_fw_ver        u:object_r:vendor_bluetooth_prop:s0
 # Camera
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 
+# Charger
+ro.charger.enable_suspend      u:object_r:exported_default_prop:s0
+
 # Factory
 ro.factory.factory_binary      u:object_r:vendor_factory_prop:s0
 
