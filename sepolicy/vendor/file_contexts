@@ -52,12 +52,6 @@
 /efs/usb_hw_param(/.*)?                      u:object_r:sec_efs_file:s0
 /efs/wv.keys                                 u:object_r:sec_efs_file:s0
 
-### ROOT
-/keydata(/.*)?                               u:object_r:keydata_data_file:s0
-/keyrefuge(/.*)?                             u:object_r:keyrefuge_data_file:s0
-/omr(/.*)?                                   u:object_r:omr_file:s0
-/dqmdbg(/.*)?                                u:object_r:dqmdbg_file:s0
-
 ## Sysfs
 # Block
 /sys/devices/platform/13d00000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler       u:object_r:sysfs_io_sched_tuneable:s0

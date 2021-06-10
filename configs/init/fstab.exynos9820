@@ -8,9 +8,6 @@
 /dev/block/platform/13d60000.ufs/by-name/misc           /misc           emmc    defaults                                                                                defaults
 /dev/block/platform/13d60000.ufs/by-name/userdata       /data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,fileencryption=aes-256-xts,reservedsize=128M,quota
 
-/dev/block/platform/13d60000.ufs/by-name/keydata        /keydata        ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,nofail
-/dev/block/platform/13d60000.ufs/by-name/keyrefuge      /keyrefuge      ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,nofail
-
 /devices/platform/13d00000.dwmmc2/mmc_host*             auto            auto    defaults        voldmanaged=sdcard:auto
 /devices/platform/10c00000.usb*                         auto            auto    defaults        voldmanaged=usb:auto
 

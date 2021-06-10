@@ -1,10 +1,7 @@
 allow init boot_block_device:lnk_file relabelto;
 allow init dtbo_block_device:lnk_file relabelto;
 
-allow init dqmdbg_file:dir mounton;
 allow init efs_file:dir mounton;
-allow init keydata_data_file:dir mounton;
-allow init keyrefuge_data_file:dir mounton;
 allow init mnt_vendor_file:dir mounton;
 
 allow init socket_device:sock_file { create setattr unlink };

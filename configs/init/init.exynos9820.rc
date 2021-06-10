@@ -982,7 +982,6 @@ on fs
     # We need to seperate mounting SEC_EFS partition from fstab file due to GSI image loading case
     wait /dev/block/platform/13d60000.ufs/by-name/sec_efs
     mount ext4 /dev/block/platform/13d60000.ufs/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic,no_sehash_xattr
-    mount ext4 /dev/block/platform/13d60000.ufs/by-name/dqmdbg /dqmdbg nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
 
     restorecon_recursive /mnt/vendor/efs
     restorecon_recursive /mnt/vendor/cpefs
