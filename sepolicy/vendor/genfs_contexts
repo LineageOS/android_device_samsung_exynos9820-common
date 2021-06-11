@@ -37,7 +37,6 @@ genfscon sysfs /devices/system/chip-id/revision                                 
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/led_current                                                          u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/xtalk_code                                                           u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                                                 u:object_r:sysfs_sensors_writable:s0
-genfscon sysfs /devices/virtual/sec/tsp/input/enabled                                                                   u:object_r:sysfs_touchscreen_writable:s0
 
 # kernel
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                                                         u:object_r:sysfs_mem_boost_writable:s0
