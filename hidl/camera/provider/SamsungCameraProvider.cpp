@@ -30,6 +30,27 @@ using ::android::hardware::hidl_string;
 const int kMaxCameraIdLen = 16;
 
 SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
+    // ID=50 is ultrawide (duplicate of ID=2)
+    // see below lines for mDisabledIDs for why
+    // we "duplicate" it
+    mExtraIDs.push_back(50);
+#ifndef EXYNOS9820_MODEL_beyond0lte
+    // ID=52 is telephoto
+    mExtraIDs.push_back(52);
+#endif
+    // ID=1 is a cropped (6.50MP) version of 10MP front camera
+    mDisabledIDs.push_back(1);
+    // ID=2 is ultrawide which we already have by using ID=50,
+    // this is for Snap which expects front camera to always
+    // be ID=1 but apps would see ID=2 as ID=1 so it would
+    // switch to ultrawide instead of actual front camera (ID=3)
+    mDisabledIDs.push_back(2);
+#ifdef EXYNOS9820_MODEL_beyondx
+    // ID=5 is a 3rd virtual front camera on beyondx
+    // which breaks Snap
+    mDisabledIDs.push_back(5);
+#endif
+
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
             struct camera_info info;

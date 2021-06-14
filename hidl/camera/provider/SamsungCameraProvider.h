@@ -31,12 +31,8 @@ public:
 
     Return<void> getCameraIdList(ICameraProvider::getCameraIdList_cb _hidl_cb);
 private:
-    std::vector<int> mExtraIDs = { -1, 50, 52, 54, 56, 58 };
-#ifdef EXYNOS9820_MODEL_beyondx
-    std::vector<int> mDisabledIDs = { 5 };
-#else
-    std::vector<int> mDisabledIDs = { };
-#endif
+    std::vector<int> mExtraIDs;
+    std::vector<int> mDisabledIDs;
 };
 
 #endif // SAMSUNG_CAMERA_PROVIDER_H
