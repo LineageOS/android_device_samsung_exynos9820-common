@@ -1,5 +1,3 @@
-# hal_drm_clearkey.te
-
 type hal_drm_clearkey, domain;
 hal_server_domain(hal_drm_clearkey, hal_drm);
 

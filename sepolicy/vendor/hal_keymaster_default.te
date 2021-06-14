@@ -1,5 +1,3 @@
-# hal_keymaster_default.te
-
 get_prop(hal_keymaster_default, vendor_tztsdaemon_prop);
 
 teegris_use(hal_keymaster_default);

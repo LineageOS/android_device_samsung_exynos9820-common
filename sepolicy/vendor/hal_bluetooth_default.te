@@ -1,3 +1,1 @@
-# hal_bluetooth_default.te
-
 set_prop(hal_bluetooth_default, vendor_bluetooth_prop);

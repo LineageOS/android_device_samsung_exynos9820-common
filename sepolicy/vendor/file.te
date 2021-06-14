@@ -1,5 +1,3 @@
-# file.te
-
 # ROOT
 # /keydata /keyrefuge /omr
 type keydata_data_file, file_type;
@@ -7,20 +5,20 @@ type keyrefuge_data_file, file_type;
 type omr_file, file_type;
 type dqmdbg_file, file_type;
 
-# DATA
+# data types
 type display_vendor_data_file, file_type, data_file_type;
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 
-# DEBUGFS
+# debug types
 type debugfs_mali_mem, fs_type, debugfs_type;
 type debugfs_ion, fs_type, debugfs_type;
 type debugfs_ion_dma, fs_type, debugfs_type;
 
-# PROC
+# proc types
 type proc_swappiness, fs_type, proc_type;
 
-# SYSFS
+# sysfs types
 type sysfs_camera, sysfs_type, r_fs_type, fs_type;
 type sysfs_camera_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_chipid, sysfs_type, r_fs_type, fs_type;

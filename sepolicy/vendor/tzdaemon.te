@@ -1,5 +1,3 @@
-# tzdaemon.te
-
 allow tzdaemon efs_file:dir search;
 allow tzdaemon mnt_vendor_file:dir search;
 

@@ -1,5 +1,3 @@
-# hal_power_default.te
-
 allow hal_power_default pm_qos_device:chr_file rw_file_perms;
 
 allow hal_power_default sysfs_battery:dir search;

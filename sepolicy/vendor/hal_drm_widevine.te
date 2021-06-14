@@ -1,5 +1,3 @@
-# hal_drm_widevine.te
-
 type hal_drm_widevine, domain;
 hal_server_domain(hal_drm_widevine, hal_drm);
 

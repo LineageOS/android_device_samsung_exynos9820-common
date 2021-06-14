@@ -1,4 +1,2 @@
-# hal_fingerprint_default.te
-
 allow hal_fingerprint_default efs_file:dir search;
 allow hal_fingerprint_default sec_efs_file:dir search;

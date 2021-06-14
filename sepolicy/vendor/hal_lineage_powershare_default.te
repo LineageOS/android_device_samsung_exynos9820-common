@@ -1,3 +1,1 @@
-# hal_lineage_powershare_default.te
-
 r_dir_file(hal_lineage_powershare_default, sysfs_battery);

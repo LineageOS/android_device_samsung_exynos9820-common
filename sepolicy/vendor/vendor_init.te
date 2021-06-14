@@ -1,5 +1,3 @@
-# vendor_init.te
-
 allow vendor_init cgroup:file getattr;
 allow vendor_init debugfs_trace_marker:file getattr;
 

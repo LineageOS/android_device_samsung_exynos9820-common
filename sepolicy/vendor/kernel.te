@@ -1,5 +1,3 @@
-# kernel.te
-
 allow kernel self:capability { mknod sys_admin };
 dontaudit kernel self:capability { dac_override dac_read_search };
 

@@ -1,5 +1,3 @@
-# hal_audio_default.te
-
 allow hal_audio_default vts_fio_device:chr_file rw_file_perms;
 
 allow hal_audio_default efs_file:dir search;

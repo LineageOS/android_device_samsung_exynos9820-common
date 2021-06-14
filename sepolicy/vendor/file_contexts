@@ -1,9 +1,9 @@
-### DATA
+## Data Files
 /data/vendor/display(/.*)?                   u:object_r:display_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
 
-### DEV
+## Devices
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
 /dev/block/platform/.+/by-name/radio2        u:object_r:radio_block_device:s0
 /dev/block/platform/.+/by-name/system        u:object_r:system_block_device:s0
@@ -45,8 +45,7 @@
 /omr(/.*)?                                   u:object_r:omr_file:s0
 /dqmdbg(/.*)?                                u:object_r:dqmdbg_file:s0
 
-### SYSFS
-
+## Sysfs
 # Block
 /sys/devices/platform/13d00000.dwmmc2/mmc_host/mmc0/mmc0:aaaa/block/mmcblk0/queue/scheduler       u:object_r:sysfs_io_sched_tuneable:s0
 /sys/devices/platform/13d60000.ufs/host0/target0:0:0/0:0:0:[0-4]/block/sd[a-e]/queue/scheduler    u:object_r:sysfs_io_sched_tuneable:s0
@@ -67,8 +66,7 @@
 /sys/devices/virtual/input/input[0-9]/poll_delay                                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
 
-### VENDOR
-
+## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hw/gpsd                                                                 u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hw/lhd                                                                  u:object_r:lhd_exec:s0

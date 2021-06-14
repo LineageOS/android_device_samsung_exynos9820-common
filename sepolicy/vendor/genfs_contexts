@@ -1,16 +1,13 @@
-# genfs_contexts
-
-# DEBUGFS
+## DebugFS
 genfscon debugfs /dma_buf                                                                                               u:object_r:debugfs_ion_dma:s0
 genfscon debugfs /mali/mem                                                                                              u:object_r:debugfs_mali_mem:s0
 genfscon debugfs /ion                                                                                                   u:object_r:debugfs_ion:s0
 
-# PROC
+## Proc
 genfscon proc /sys/vm/swappiness                                                                                        u:object_r:proc_swappiness:s0
 
-# SYSFS
-
-# devices
+## Sysfs
+# Devices
 genfscon sysfs /devices/platform/10000.mif_pdata/sim/ds_detect                                                          u:object_r:sysfs_sim_writable:s0
 genfscon sysfs /devices/platform/10430000.pinctrl/gpiochip50/gpio/gpio145/value                                         u:object_r:sysfs_gps_writable:s0
 genfscon sysfs /devices/platform/104b0000.hsi2c/i2c-4/4-0048/input/input2/enabled                                       u:object_r:sysfs_touchscreen_writable:s0
@@ -38,5 +35,5 @@ genfscon sysfs /devices/virtual/sensors/hrm_sensor/led_current                  
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/xtalk_code                                                           u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                                                 u:object_r:sysfs_sensors_writable:s0
 
-# kernel
+# Kernel
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                                                         u:object_r:sysfs_mem_boost_writable:s0
