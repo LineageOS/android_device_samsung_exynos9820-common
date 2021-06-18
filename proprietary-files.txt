@@ -232,7 +232,7 @@ vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib/libaudio-ril.so
 vendor/lib/libengmode_client.so
-vendor/lib/libril.so
+vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsecril-client.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
@@ -240,7 +240,7 @@ vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/libengmode_client.so
-vendor/lib64/libril.so
+vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib64/libvkmanager_vendor.so

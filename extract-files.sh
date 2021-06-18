@@ -60,6 +60,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/rild)
+            "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
+            ;;
         vendor/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
             ;;
