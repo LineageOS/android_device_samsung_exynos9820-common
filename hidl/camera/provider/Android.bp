@@ -15,18 +15,20 @@ exynos9820_model {
     },
 }
 
-cc_defaults {
-    name: "samsung_camera_service_2_5_defaults",
+cc_binary {
+    name: "android.hardware.camera.provider@2.5-service_64.samsung",
     defaults: [
         "hidl_defaults",
         "exynos9820_model_defaults",
     ],
+    compile_multilib: "64",
     proprietary: true,
     relative_install_path: "hw",
     srcs: [
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
+    init_rc: ["android.hardware.camera.provider@2.5-service_64.samsung.rc"],
     shared_libs: [
         "android.hardware.camera.common@1.0",
         "android.hardware.camera.device@1.0",
@@ -41,6 +43,10 @@ cc_defaults {
         "android.hardware.graphics.mapper@2.0",
         "android.hidl.allocator@1.0",
         "android.hidl.memory@1.0",
+        "camera.device@3.2-impl.exynos9820",
+        "camera.device@3.3-impl.exynos9820",
+        "camera.device@3.4-impl.exynos9820",
+        "camera.device@3.5-impl.exynos9820",
         "libbinder",
         "libcamera_metadata",
         "libcutils",
@@ -56,18 +62,4 @@ cc_defaults {
         "camera.device@3.4-impl_headers",
         "camera.device@3.5-impl_headers"
     ],
-}
-
-cc_binary {
-    name: "android.hardware.camera.provider@2.5-service.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
-    compile_multilib: "32",
-    init_rc: ["android.hardware.camera.provider@2.5-service.samsung.rc"],
-}
-
-cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.samsung",
-    defaults: ["samsung_camera_service_2_5_defaults"],
-    compile_multilib: "64",
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.samsung.rc"],
 }

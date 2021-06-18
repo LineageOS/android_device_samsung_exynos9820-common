@@ -36,16 +36,13 @@ vendor/firmware/dax_param.bin
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 ## Camera
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/camera.device@3.4-impl.so
-vendor/lib/camera.device@3.5-impl.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
+# These libraries are built from source using a patched hardware/camera3.h
+# (Added a 2 byte placeholder between usage and max_buffers in camera3_stream_t)
+# See the commit that added these lines for details
+-vendor/lib64/camera.device@3.2-impl.so:vendor/lib64/camera.device@3.2-impl.exynos9820.so|d5fca46d8573176bb98b02d9ffb9ac526e831e26
+-vendor/lib64/camera.device@3.3-impl.so:vendor/lib64/camera.device@3.3-impl.exynos9820.so|853bc62b7af7b73983e630e93affffefdb575718
+-vendor/lib64/camera.device@3.4-impl.so:vendor/lib64/camera.device@3.4-impl.exynos9820.so|c46674ed34876573ec8bd697791c4fb62380538f
+-vendor/lib64/camera.device@3.5-impl.so:vendor/lib64/camera.device@3.5-impl.exynos9820.so|6377432379f8a9add76d442a4e6729fdc973103e
 
 ## Camera Dependencies
 vendor/lib/libSEF.quram.so
