@@ -16,6 +16,9 @@ on property:ro.vendor.multisim.simslotcount=1
 on property:ro.product.vendor.device=beyondx
     stop ril-daemon1
 
+on property:ro.product.vendor.device=d2x
+    stop ril-daemon1
+
 on property:vts.native_server.on=*
     setprop vendor.vts.native_server.on ${vts.native_server.on}
 

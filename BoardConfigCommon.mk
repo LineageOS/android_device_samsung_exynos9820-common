@@ -93,8 +93,14 @@ BOARD_ROOT_EXTRA_FOLDERS := efs
 
 ## Platform
 BOARD_VENDOR := samsung
+ifneq ($(filter beyond0lte beyond1lte beyond2lte beyondx,$(TARGET_DEVICE)),)
 TARGET_BOARD_PLATFORM := universal9820
 TARGET_BOOTLOADER_BOARD_NAME := exynos9820
+else
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
+TARGET_BOARD_PLATFORM := universal9825
+TARGET_BOOTLOADER_BOARD_NAME := exynos9825
+endif
 TARGET_SOC := exynos9820
 
 ## Properties
