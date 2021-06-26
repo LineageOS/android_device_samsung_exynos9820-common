@@ -16,7 +16,7 @@ exynos9820_model {
 }
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.samsung",
+    name: "android.hardware.camera.provider@2.5-service_64.exynos9820",
     defaults: [
         "hidl_defaults",
         "exynos9820_model_defaults",
@@ -28,7 +28,7 @@ cc_binary {
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.samsung.rc"],
+    init_rc: ["android.hardware.camera.provider@2.5-service_64.exynos9820.rc"],
     shared_libs: [
         "android.hardware.camera.common@1.0",
         "android.hardware.camera.device@1.0",
