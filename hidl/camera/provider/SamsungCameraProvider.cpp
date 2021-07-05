@@ -45,11 +45,6 @@ SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() 
     // be ID=1 but apps would see ID=2 as ID=1 so it would
     // switch to ultrawide instead of actual front camera (ID=3)
     mDisabledIDs.push_back(2);
-#ifdef EXYNOS9820_MODEL_beyondx
-    // ID=5 is a 3rd virtual front camera on beyondx
-    // which breaks Snap
-    mDisabledIDs.push_back(5);
-#endif
 
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
