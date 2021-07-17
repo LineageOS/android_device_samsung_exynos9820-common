@@ -1,6 +1,6 @@
 # Common proprietary files - from Samsung package version G973FXXSBFUE6, unless pinned
 
-### AUDIO
+## Audio
 vendor/etc/audio_board_info.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/mixer_paths.xml
@@ -23,7 +23,7 @@ vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecaudioinfo.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
 
-### AUDIO_FIRMWARE
+## Audio Firmware
 vendor/firmware/calliope_dram_2.bin
 vendor/firmware/calliope2.dt
 vendor/firmware/calliope_sram_2.bin
@@ -31,21 +31,11 @@ vendor/firmware/calliope_sram.bin
 vendor/firmware/calliope_dram.bin
 vendor/firmware/dax_param.bin
 
-### BIOMETRICS_FINGERPRINT
-vendor/lib/libegis_fp_normal_sensor_test.so
-vendor/lib/libgf_in_system_lib.so
-vendor/lib/libqfp_sensortest.so
-vendor/lib/libsynaFpSensorTestNwd.so
-vendor/lib64/libegis_fp_normal_sensor_test.so
-vendor/lib64/libgf_in_system_lib.so
-vendor/lib64/libqfp_sensortest.so
-vendor/lib64/libsynaFpSensorTestNwd.so
-
-### BLUETOOTH
+## Bluetooth
 # Bluetooth (aptX) - from crosshatch - QP1A.190711.020
 product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-### CAMERA
+## Camera
 vendor/lib/camera.device@1.0-impl.so
 vendor/lib/camera.device@3.2-impl.so
 vendor/lib/camera.device@3.3-impl.so
@@ -57,7 +47,7 @@ vendor/lib64/camera.device@3.3-impl.so
 vendor/lib64/camera.device@3.4-impl.so
 vendor/lib64/camera.device@3.5-impl.so
 
-### CAMERA_DEPENDENCIES
+## Camera Dependencies
 vendor/lib/libSEF.quram.so
 vendor/lib/libacryl.so
 vendor/lib/libacryl.plugin.hdr.exynos9820.so
@@ -79,187 +69,29 @@ vendor/lib64/libstagefrighthw.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 
-### CAMERA_FIRMWARE
+## Camera Firmware
 # Copied by vendor_init which needs read access
 system/media/fruc_kernels.exynos9820.bin:vendor/firmware/fruc_kernels.exynos9820.bin
 
-### CHARGER_FIRMWARE
+## Charger Firmware
 vendor/firmware/mfc_fw.bin
 
-### CODECS
+## Codecs
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 
-### GATEKEEPER
-vendor/lib/hw/gatekeeper.exynos9820.so
-vendor/lib64/hw/gatekeeper.exynos9820.so
+## Fingerprint
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib/libqfp_sensortest.so
+vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsynaFpSensorTestNwd.so
 
-### GRALLOC
-vendor/lib/hw/gralloc.exynos9820.so
-vendor/lib64/hw/gralloc.exynos9820.so
-
-### GPS/GNSS
-vendor/bin/hw/gps.sh
-vendor/bin/hw/gpsd
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
-vendor/etc/gnss/gps.cer
-vendor/etc/gnss/gps.xml
-vendor/etc/init/init.gps.rc
-vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib64/hw/android.hardware.gnss@2.0-impl.so
-vendor/lib64/hw/gps.default.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
-
-# GRAPICS_MALI
-vendor/bin/bcc_mali
-vendor/lib/egl/libGLES_mali.so
-vendor/lib/libmalicore.bc
-vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/libLLVM_android_mali.so
-vendor/lib64/libbcc_mali.so
-vendor/lib64/libmalicore.bc
-
-### ION
-vendor/lib/libion_exynos.so
-vendor/lib64/libion_exynos.so
-
-### KEYMASTER
-vendor/lib64/libkeymaster_helper.so
--vendor/lib64/libskeymaster4device.so
-
-### NFC
-system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
-vendor/firmware/nfc/sec_s3nrn82_firmware.bin
-
-### OMX
-vendor/lib/libepicoperator.so
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
-vendor/lib64/libepicoperator.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
-vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
-vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
-
-### RENDERSCRIPT
-vendor/lib/libRSDriverArm.so
-vendor/lib64/libRSDriverArm.so
-
-### RIL
-vendor/bin/hw/rild
-vendor/bin/cbd
-vendor/etc/init/init.vendor.rilchip.rc
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_attaio.bin
-vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_se13.bin
-vendor/lib/libaudio-ril.so
-vendor/lib/libengmode_client.so
-vendor/lib/libril.so
-vendor/lib/librilutils.so
-vendor/lib/libsecril-client.so
-vendor/lib/libsemnativecarrierfeature.so
-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.0.so
-vendor/lib/vendor.samsung.hardware.radio@2.1.so
-vendor/lib64/libengmode_client.so
-vendor/lib64/libril.so
-vendor/lib64/librilutils.so
-vendor/lib64/libsecril-client.so
-vendor/lib64/libsemnativecarrierfeature.so
-vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.0.so
-vendor/lib64/vendor.samsung.hardware.radio@2.1.so
-
-### SECNATIVE
-vendor/lib/libsecnativefeature.so
-vendor/lib64/libsecnativefeature.so
-
-### TEEGRIS
-vendor/bin/tzdaemon
-vendor/bin/tzts_daemon
-vendor/etc/init/teegris_v3.rc
-vendor/lib/libuuid.so
-vendor/lib/libteecl.so
-vendor/lib64/libiwt.so
-vendor/lib64/libteecl.so
-vendor/lib64/libuuid.so
-
-### TEEGRIS_FIRMWARE
-vendor/tee/00000000-0000-0000-0000-000000010081
-vendor/tee/00000000-0000-0000-0000-000000020081
-vendor/tee/00000000-0000-0000-0000-000046495645
-vendor/tee/00000000-0000-0000-0000-0050524f4341
-vendor/tee/00000000-0000-0000-0000-00535453540c
-vendor/tee/00000000-0000-0000-0000-00575644524d
-vendor/tee/00000000-0000-0000-0000-446e6c6f6164
-vendor/tee/00000000-0000-0000-0000-474154454b45
-vendor/tee/00000000-0000-0000-0000-535355504341
-vendor/tee/00000000-0000-0000-0000-5354494d4552
-vendor/tee/00000000-0000-0000-0000-564c544b5052
-vendor/tee/00000000-0000-0000-0000-64756c444152
-vendor/tee/00000000-0000-0000-0000-656e676d6f64
-vendor/tee/00000000-0000-0000-0000-657365636f6d
-vendor/tee/00000000-0000-0000-0000-6d73745f5441
-vendor/tee/driver/00000000-0000-0000-0000-00535453540b
-vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
-vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
-vendor/tee/ffffffff-0000-0000-0000-000000000030
-vendor/tee/tui/resolution_common/ID00000100
-
-### SAMSUNG_SLSI_HWC
-vendor/lib64/hw/hwcomposer.exynos9820.so
-vendor/lib/libExynosHWCService.so
-vendor/lib/libGrallocWrapper.so
-vendor/lib/libexynosgraphicbuffer.so
-vendor/lib/libexynosgscaler.so
-vendor/lib/libexynosscaler.so
-vendor/lib/libexynosutils.so
-vendor/lib/libexynosv4l2.so
-vendor/lib/libhdr10p_m2l.exynos9820.so
-vendor/lib/hw/hwcomposer.exynos9820.so
-vendor/lib64/libExynosHWCService.so
-vendor/lib64/libGrallocWrapper.so
-vendor/lib64/libacryl.so
-vendor/lib64/libacryl.plugin.hdr.exynos9820.so
-vendor/lib64/libexynosgraphicbuffer.so
-vendor/lib64/libexynosgscaler.so
-vendor/lib64/libexynosscaler.so
-vendor/lib64/libexynosutils.so
-vendor/lib64/libexynosv4l2.so
-vendor/lib64/libhdr10p_m2l.exynos9820.so
-
-### SAMSUNG_SLSI_MEMTRACK
-vendor/lib64/hw/memtrack.exynos9820.so
-vendor/lib/hw/memtrack.exynos9820.so
-
-### SAMSUNG_SLSI_FIRMWARE
+## Firmware              
 vendor/firmware/APDVTX_AUDIO_SLSI.bin
 vendor/firmware/NPU.bin
 vendor/firmware/WithLightFixNoBN.SDNNmodel
@@ -296,7 +128,173 @@ vendor/firmware/score/develop1/score_ts_pmw.bin
 vendor/firmware/score/develop1/score_ts_dmb.bin
 vendor/firmware/score/develop1/score_br_pmw.bin
 
-### SENSORS
+## Gatekeeper
+vendor/lib/hw/gatekeeper.exynos9820.so
+vendor/lib64/hw/gatekeeper.exynos9820.so
+
+### GRALLOC
+vendor/lib/hw/gralloc.exynos9820.so
+vendor/lib64/hw/gralloc.exynos9820.so
+
+## GPS
+vendor/bin/hw/gps.sh
+vendor/bin/hw/gpsd
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
+vendor/etc/gnss/gps.cer
+vendor/etc/gnss/gps.xml
+vendor/etc/init/init.gps.rc
+vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/hw/android.hardware.gnss@2.0-impl.so
+vendor/lib64/hw/gps.default.so
+vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
+
+## Graphics
+vendor/bin/bcc_mali
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/libion_exynos.so
+vendor/lib/libmalicore.bc
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/libion_exynos.so
+vendor/lib64/libLLVM_android_mali.so
+vendor/lib64/libbcc_mali.so
+vendor/lib64/libmalicore.bc
+
+## HWC
+vendor/lib64/hw/hwcomposer.exynos9820.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libGrallocWrapper.so
+vendor/lib/libexynosgraphicbuffer.so
+vendor/lib/libexynosgscaler.so
+vendor/lib/libexynosscaler.so
+vendor/lib/libexynosutils.so
+vendor/lib/libexynosv4l2.so
+vendor/lib/libhdr10p_m2l.exynos9820.so
+vendor/lib/hw/hwcomposer.exynos9820.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libGrallocWrapper.so
+vendor/lib64/libacryl.so
+vendor/lib64/libacryl.plugin.hdr.exynos9820.so
+vendor/lib64/libexynosgraphicbuffer.so
+vendor/lib64/libexynosgscaler.so
+vendor/lib64/libexynosscaler.so
+vendor/lib64/libexynosutils.so
+vendor/lib64/libexynosv4l2.so
+vendor/lib64/libhdr10p_m2l.exynos9820.so
+
+## Keymaster
+vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libskeymaster4device.so
+
+## Memtrack
+vendor/lib64/hw/memtrack.exynos9820.so
+vendor/lib/hw/memtrack.exynos9820.so
+
+## NFC
+system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
+vendor/firmware/nfc/sec_s3nrn82_firmware.bin
+
+## OMX
+vendor/lib/libepicoperator.so
+vendor/lib/libExynosOMX_Core.so
+vendor/lib/libExynosOMX_Resourcemanager.so
+vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
+vendor/lib64/libepicoperator.so
+vendor/lib64/libExynosOMX_Core.so
+vendor/lib64/libExynosOMX_Resourcemanager.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
+
+## RenderScript
+vendor/lib/libRSDriverArm.so
+vendor/lib64/libRSDriverArm.so
+
+## RIL
+vendor/bin/hw/rild
+vendor/bin/cbd
+vendor/etc/init/init.vendor.rilchip.rc
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13.bin
+vendor/lib/libaudio-ril.so
+vendor/lib/libengmode_client.so
+vendor/lib/libril.so
+vendor/lib/librilutils.so
+vendor/lib/libsecril-client.so
+vendor/lib/libsemnativecarrierfeature.so
+vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib/vendor.samsung.hardware.radio@2.0.so
+vendor/lib/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/libengmode_client.so
+vendor/lib64/libril.so
+vendor/lib64/librilutils.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libvkmanager_vendor.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+
+## SECNATIVE
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
+
+## TEEGRIS
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/etc/init/teegris_v3.rc
+vendor/lib/libuuid.so
+vendor/lib/libteecl.so
+vendor/lib64/libiwt.so
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so
+
+## TEEGRIS Firmware
+vendor/tee/00000000-0000-0000-0000-000000010081
+vendor/tee/00000000-0000-0000-0000-000000020081
+vendor/tee/00000000-0000-0000-0000-000046495645
+vendor/tee/00000000-0000-0000-0000-0050524f4341
+vendor/tee/00000000-0000-0000-0000-00535453540c
+vendor/tee/00000000-0000-0000-0000-00575644524d
+vendor/tee/00000000-0000-0000-0000-446e6c6f6164
+vendor/tee/00000000-0000-0000-0000-474154454b45
+vendor/tee/00000000-0000-0000-0000-535355504341
+vendor/tee/00000000-0000-0000-0000-5354494d4552
+vendor/tee/00000000-0000-0000-0000-564c544b5052
+vendor/tee/00000000-0000-0000-0000-64756c444152
+vendor/tee/00000000-0000-0000-0000-656e676d6f64
+vendor/tee/00000000-0000-0000-0000-657365636f6d
+vendor/tee/00000000-0000-0000-0000-6d73745f5441
+vendor/tee/driver/00000000-0000-0000-0000-00535453540b
+vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
+vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
+vendor/tee/ffffffff-0000-0000-0000-000000000030
+vendor/tee/tui/resolution_common/ID00000100
+
+## Sensors
 vendor/bin/hw/lhd
 vendor/etc/sensor/lhd.conf
 vendor/etc/sensors/hals.conf
@@ -305,14 +303,14 @@ vendor/lib/hw/sensors.exynos9820.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/hw/sensors.exynos9820.so
 
-### WIDEVINE
+## Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
 vendor/lib/liboemcrypto.so
 vendor/lib/libwvhidl.so
 
-### WIFI
+## Wi-Fi
 vendor/bin/hw/macloader
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
