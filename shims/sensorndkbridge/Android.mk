@@ -14,7 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-### SENSORNDKBRIDGE
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := ASensorManager.cpp
