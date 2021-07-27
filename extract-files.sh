@@ -66,18 +66,6 @@ function blob_fixup() {
         vendor/etc/libnfc-nci.conf)
             sed -i 's/\/data\/nfc/\/data\/vendor\/nfc/g' "${2}"
             ;;
-        vendor/lib64/camera.device@3.2-impl.exynos9820.so)
-            "${PATCHELF}" --set-soname camera.device@3.2-impl.exynos9820.so "${2}"
-            ;;
-        vendor/lib64/camera.device@3.3-impl.exynos9820.so)
-            "${PATCHELF}" --set-soname camera.device@3.3-impl.exynos9820.so "${2}"
-            ;;
-        vendor/lib64/camera.device@3.4-impl.exynos9820.so)
-            "${PATCHELF}" --set-soname camera.device@3.4-impl.exynos9820.so "${2}"
-            ;;
-        vendor/lib64/camera.device@3.5-impl.exynos9820.so)
-            "${PATCHELF}" --set-soname camera.device@3.5-impl.exynos9820.so "${2}"
-            ;;
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
