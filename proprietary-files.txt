@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version G973FXXSBFUF3, unless pinned
+# Common proprietary files - from Samsung package version G973FXXUCFUH3, unless pinned
 
 ## Audio
 vendor/etc/audio_board_info.xml
@@ -85,9 +85,7 @@ vendor/firmware/score/develop1/score_br_pmw.bin
 
 ## GPS
 vendor/bin/hw/gps.sh
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
 vendor/etc/gnss/gps.cer
-vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 ## Graphics
@@ -171,12 +169,10 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/lib/libaudio-ril.so
-vendor/lib/libengmode_client.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
 vendor/lib/libsecril-client.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.0.so
 vendor/lib/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/libengmode_client.so
