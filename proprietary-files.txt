@@ -89,15 +89,10 @@ vendor/etc/gnss/gps.cer
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 ## Graphics
-vendor/bin/bcc_mali
 vendor/lib/egl/libGLES_mali.so
 vendor/lib/libion_exynos.so
-vendor/lib/libmalicore.bc
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/libion_exynos.so
-vendor/lib64/libLLVM_android_mali.so
-vendor/lib64/libbcc_mali.so
-vendor/lib64/libmalicore.bc
 
 ## HWC
 vendor/lib/libExynosHWCService.so
@@ -155,10 +150,6 @@ vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
 vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
 vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
-
-## RenderScript
-vendor/lib/libRSDriverArm.so
-vendor/lib64/libRSDriverArm.so
 
 ## RIL
 vendor/bin/hw/rild
