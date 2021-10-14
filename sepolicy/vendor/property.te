@@ -1,8 +1,3 @@
-vendor_internal_prop(persist_rmnet_prop)
-vendor_internal_prop(persist_data_df_prop)
-vendor_internal_prop(persist_data_wda_prop)
-
 vendor_internal_prop(vendor_bluetooth_prop)
 vendor_internal_prop(vendor_camera_prop)
-vendor_internal_prop(vendor_factory_prop)
 vendor_internal_prop(vendor_hwc_prop)

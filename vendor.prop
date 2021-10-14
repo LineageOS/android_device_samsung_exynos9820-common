@@ -5,9 +5,6 @@ aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 af.fast_track_multiplier=1
 
-## Charger
-ro.charger.enable_suspend=true
-
 ## Dalvik
 dalvik.vm.lockprof.threshold=500
 
@@ -15,9 +12,6 @@ dalvik.vm.lockprof.threshold=500
 log.tag.EDEN=INFO
 ro.vendor.eden.devices=CPU1_GPU1_NPU1
 ro.vendor.eden.npu.version.path=/sys/devices/platform/npu@17800000/version
-
-## fastbootd
-ro.fastbootd.available=true
 
 ## FRP
 ro.frp.pst=/dev/block/persistent

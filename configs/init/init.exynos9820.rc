@@ -998,13 +998,6 @@ on fs
     mkdir /mnt/vendor/persist/data/sfs 0700 system system
     mkdir /mnt/vendor/persist/data/tz 0700 system system
 
-    # Enable rmnet data and aggregation
-    setprop persist.rmnet.mux enabled
-    setprop persist.rmnet.data.enable true
-    setprop persist.data.wda.enable true
-    setprop persist.data.df.agg.dl_pkt 10
-    setprop persist.data.df.agg.dl_size 4096
-
 # Permissions for ION
     chmod 0660 /sys/class/ion_cma/ion_video_ext/isolated
     chown system system /sys/class/ion_cma/ion_video_ext/isolated
