@@ -4,23 +4,5 @@ vendor.bluetooth_fw_ver        u:object_r:vendor_bluetooth_prop:s0
 # Camera
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 
-# Charger
-ro.charger.enable_suspend      u:object_r:exported_default_prop:s0
-
-# Factory
-ro.factory.factory_binary      u:object_r:vendor_factory_prop:s0
-
-# fastbootd
-ro.fastbootd.available         u:object_r:exported_default_prop:s0
-
 # HWC
 hwc.exynos.vsync_mode          u:object_r:vendor_hwc_prop:s0
-
-# RIL
-persist.ril.esim.slotswitch    u:object_r:vendor_radio_prop:s0
-
-persist.rmnet.                 u:object_r:persist_rmnet_prop:s0
-persist.data.df.               u:object_r:persist_data_df_prop:s0
-persist.data.wda.              u:object_r:persist_data_wda_prop:s0
-
-ro.product_ship                u:object_r:exported_default_prop:s0
