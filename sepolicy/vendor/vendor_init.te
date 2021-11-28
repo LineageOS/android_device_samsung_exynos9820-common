@@ -5,3 +5,6 @@ get_prop(vendor_init, vendor_radio_prop);
 dontaudit vendor_init system_prop:file read;
 
 allow vendor_init proc_swappiness:file rw_file_perms;
+
+allow vendor_init cpdebug_efs_file:lnk_file getattr;
+allow vendor_init ssm_efs_file:file getattr;
