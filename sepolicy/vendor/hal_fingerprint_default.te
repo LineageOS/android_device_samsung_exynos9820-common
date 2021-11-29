@@ -1,3 +1,5 @@
 allow hal_fingerprint_default efs_file:dir search;
 
 r_dir_file(hal_fingerprint_default, sec_efs_file);
+
+allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
