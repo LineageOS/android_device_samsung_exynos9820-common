@@ -132,7 +132,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9820.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9820.rc \
     $(COMMON_PATH)/configs/init/init.recovery.exynos9820.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos9825.rc \
     $(COMMON_PATH)/configs/init/init.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.samsung.rc \
-    $(COMMON_PATH)/configs/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
 
 ifeq ($(TARGET_HAVE_FOD),true)
@@ -254,6 +253,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor:64 \
     android.hardware.radio.config@1.2.vendor:64 \
     android.hardware.radio.deprecated@1.0.vendor:64
+
+PRODUCT_PACKAGES += \
+    secril_config_svc
 
 # Sensors
 PRODUCT_PACKAGES += \
