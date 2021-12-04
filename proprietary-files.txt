@@ -155,6 +155,7 @@ vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 vendor/bin/hw/rild
 vendor/bin/cbd
 vendor/etc/init/init.vendor.rilchip.rc
+vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
