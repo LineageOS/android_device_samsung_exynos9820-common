@@ -226,7 +226,6 @@ vendor/lib/liboemcrypto.so
 vendor/lib/libwvhidl.so
 
 ## Wi-Fi
-vendor/bin/hw/macloader
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
 vendor/etc/wifi/indoorchannel.info
