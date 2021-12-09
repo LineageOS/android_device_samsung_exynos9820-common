@@ -1,5 +1,2 @@
 soong_namespace {
-    imports: [
-        "vendor/samsung/exynos9820-common",
-    ],
 }
