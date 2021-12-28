@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version G973FXXSDFUI5, unless pinned
+# Common proprietary files - from Samsung package version G973FXXUEGULB, unless pinned
 
 ## Audio
 vendor/etc/audio_board_info.xml
@@ -90,15 +90,17 @@ vendor/etc/gnss/gps.cer
 
 ## Graphics
 -vendor/lib/egl/libGLES_mali.so
+-vendor/lib/hw/vulkan.mali.so
 -vendor/lib/libion_exynos.so
 -vendor/lib64/egl/libGLES_mali.so
+-vendor/lib64/hw/vulkan.mali.so
 -vendor/lib64/libion_exynos.so
 
 ## HWC
 -vendor/lib/libExynosHWCService.so
 -vendor/lib/libGrallocWrapper.so
+-vendor/lib/libdrmresource.so
 -vendor/lib/libexynosgraphicbuffer.so
--vendor/lib/libexynosgscaler.so
 -vendor/lib/libexynosscaler.so
 -vendor/lib/libexynosutils.so
 -vendor/lib/libexynosv4l2.so
@@ -107,8 +109,8 @@ vendor/etc/gnss/gps.cer
 -vendor/lib64/libGrallocWrapper.so
 -vendor/lib64/libacryl.so
 -vendor/lib64/libacryl.plugin.hdr.exynos9820.so
+-vendor/lib64/libdrmresource.so
 -vendor/lib64/libexynosgraphicbuffer.so
--vendor/lib64/libexynosgscaler.so
 -vendor/lib64/libexynosscaler.so
 -vendor/lib64/libexynosutils.so
 -vendor/lib64/libexynosv4l2.so
@@ -122,13 +124,14 @@ vendor/etc/gnss/gps.cer
 system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 
 ## OMX
--vendor/lib/libepicoperator.so
 -vendor/lib/libExynosOMX_Core.so
 -vendor/lib/libExynosOMX_Resourcemanager.so
 -vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
 -vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
+-vendor/lib/omx/libOMX.Exynos.AVC.WFD.Encoder.so
 -vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
 -vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
+-vendor/lib/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
 -vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
 -vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
 -vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
@@ -136,13 +139,14 @@ system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 -vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
 -vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
 -vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
--vendor/lib64/libepicoperator.so
 -vendor/lib64/libExynosOMX_Core.so
 -vendor/lib64/libExynosOMX_Resourcemanager.so
 -vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
 -vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
+-vendor/lib64/omx/libOMX.Exynos.AVC.WFD.Encoder.so
 -vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
 -vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+-vendor/lib64/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
 -vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
 -vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
 -vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
@@ -158,28 +162,28 @@ vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
-vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 -vendor/lib/libaudio-ril.so
--vendor/lib/libril.so:vendor/lib/libril-samsung.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9820
 -vendor/lib/libsemnativecarrierfeature.so
--vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib/vendor.samsung.hardware.radio@2.0.so
--vendor/lib/vendor.samsung.hardware.radio@2.1.so
 -vendor/lib64/libengmode_client.so
--vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
+-vendor/lib64/libril_sem.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9820
 -vendor/lib64/libsemnativecarrierfeature.so
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+-vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
 ## SECNATIVE
 -vendor/lib/libsecnativefeature.so
 -vendor/lib64/libsecnativefeature.so
+
+## Sensors
+-vendor/lib64/libflicker_sec.so
 
 ## TEEGRIS
 -vendor/bin/tzdaemon
@@ -194,12 +198,16 @@ vendor/etc/init/teegris_v3.rc
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
 vendor/tee/00000000-0000-0000-0000-000000020081
-vendor/tee/00000000-0000-0000-0000-000046495645
+vendor/tee/00000000-0000-0000-0000-000048444350
+vendor/tee/00000000-0000-0000-0000-0000534b504d
 vendor/tee/00000000-0000-0000-0000-0050524f4341
 vendor/tee/00000000-0000-0000-0000-00535453540c
 vendor/tee/00000000-0000-0000-0000-00575644524d
+vendor/tee/00000000-0000-0000-0000-42494f535542
 vendor/tee/00000000-0000-0000-0000-446e6c6f6164
 vendor/tee/00000000-0000-0000-0000-474154454b45
+vendor/tee/00000000-0000-0000-0000-5345435f4652
+vendor/tee/00000000-0000-0000-0000-53454d655345
 vendor/tee/00000000-0000-0000-0000-535355504341
 vendor/tee/00000000-0000-0000-0000-5354494d4552
 vendor/tee/00000000-0000-0000-0000-564c544b5052
@@ -219,16 +227,15 @@ vendor/etc/sensors/hals.conf
 -vendor/lib64/sensors.grip.so
 
 ## Widevine
--vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 -vendor/lib/liboemcrypto.so
 -vendor/lib/libwvhidl.so
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
-vendor/etc/wifi/indoorchannel.info
 vendor/firmware/bcmdhd_mfg.bin_b1
 vendor/firmware/bcmdhd_mon.bin_b1
 vendor/firmware/bcmdhd_sta.bin_b1

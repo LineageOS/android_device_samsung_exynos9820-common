@@ -25,7 +25,13 @@
 /dev/sec-nfc                                 u:object_r:nfc_device:s0
 
 # RIL
+/dev/modem_boot_spi                          u:object_r:vendor_radio_device:s0
 /dev/nr_boot0                                u:object_r:vendor_radio_device:s0
+/dev/nr_dm0                                  u:object_r:vendor_radio_device:s0
+/dev/nr_ipc[0-1]                             u:object_r:vendor_radio_device:s0
+/dev/nr_ramdump0                             u:object_r:vendor_radio_device:s0
+/dev/nr_rfs0                                 u:object_r:vendor_radio_device:s0
+/dev/nr_router                               u:object_r:vendor_radio_device:s0
 
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0
@@ -82,4 +88,5 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.gnss@[0-9]\.[0-9]-service                    u:object_r:hal_gnss_default_exec:s0
 
 /(vendor|system/vendor)/lib(64)?/hw/gralloc\.exynos[0-9]*\.so                                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/hw/vulkan\.mali\.so                                                u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/libion_exynos\.so                                                  u:object_r:same_process_hal_file:s0

@@ -1,6 +1,7 @@
 allow hal_audio_default vts_fio_device:chr_file rw_file_perms;
 
 allow hal_audio_default efs_file:dir search;
+r_dir_file(hal_audio_default, imei_efs_file);
 r_dir_file(hal_audio_default, sec_efs_file);
 
 allow hal_audio_default rild:unix_stream_socket connectto;
