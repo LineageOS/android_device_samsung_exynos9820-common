@@ -73,13 +73,16 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-service \
     android.hardware.graphics.mapper@2.0-impl-2.1
 
+PRODUCT_PACKAGES += \
+    libdrm.vendor:64
+
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3.vendor:32 \
+    android.hardware.drm@1.4.vendor:32 \
     android.hardware.drm@1.4-service.clearkey
 
 # fastbootd
@@ -177,6 +180,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
+
+# OMX
+PRODUCT_PACKAGES += \
+    libepicoperator
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay

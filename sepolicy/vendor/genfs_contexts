@@ -40,6 +40,7 @@ genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill0/state                 
 genfscon sysfs /devices/system/chip-id/revision                                                                         u:object_r:sysfs_chipid:s0
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/led_current                                                          u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sensors/hrm_sensor/xtalk_code                                                           u:object_r:sysfs_sensors_writable:s0
+genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                                                          u:object_r:sysfs_sensors_writable:s0
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                                                 u:object_r:sysfs_sensors_writable:s0
 
 # Kernel
