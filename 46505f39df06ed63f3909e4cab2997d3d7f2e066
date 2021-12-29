@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55cb8872_5b931d99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16208
+      },
+      "writtenOn": "2021-12-29T14:21:58Z",
+      "side": 1,
+      "message": "Shoule be fixed by https://github.com/LineageOS/android_frameworks_base/commit/38401af99ce112690a8845b81d8fd9f794400a65.",
+      "revId": "46505f39df06ed63f3909e4cab2997d3d7f2e066",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
