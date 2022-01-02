@@ -64,11 +64,6 @@ static inline const char* getBTDefaultName()
 /* 'strings libbluetooth.so' */
 #define BTA_AV_SINK_INCLUDED TRUE
 
-#define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
-#define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
-
-#define BTM_SCO_ENHANCED_SYNC_ENABLED FALSE
-
 #pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif /* _BDROID_BUILDCFG_H */
