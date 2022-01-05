@@ -41,4 +41,7 @@
 
     <!-- True if the firmware supports p2p MAC randomization -->
     <bool name="config_wifi_p2p_mac_randomization_supported">true</bool>
+
+    <!-- Indicate the driver support NL80211_REG_CHANGED event. -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
 </resources>
