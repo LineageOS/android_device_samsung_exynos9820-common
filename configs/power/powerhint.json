@@ -125,15 +125,6 @@
             "HoldFd": true
         },
         {
-            "Name": "TouchscreenPowerOff",
-            "Path": "/sys/class/sec/tsp/prox_power_off",
-            "Values": [
-                "0",
-                "1"
-            ],
-            "ResetOnInit": true
-        },
-        {
             "Name": "TouchscreenEnable",
             "Path": "/sys/class/sec/tsp/input/enabled",
             "Values": [
@@ -348,12 +339,6 @@
             "Node": "GPUMaxFreq",
             "Duration": 0,
             "Value": "0x000ab630"
-        },
-        {
-            "PowerHint": "INTERACTIVE",
-            "Node": "TouchscreenPowerOff",
-            "Duration": 0,
-            "Value": "0"
         },
         {
             "PowerHint": "INTERACTIVE",
