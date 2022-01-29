@@ -1,3 +1,6 @@
+## Adoptable Storage
+ro.crypto.volume.options=aes-256-xts
+
 ## Audio
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
