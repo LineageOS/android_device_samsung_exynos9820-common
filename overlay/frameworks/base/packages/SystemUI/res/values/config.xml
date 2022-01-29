@@ -34,7 +34,4 @@
         resource to update the display. For this reason, the CPU must not
         control the display in this mode. -->
     <bool name="doze_suspend_display_state_supported">true</bool>
-    
-    <!-- Color of the FOD view -->
-    <color name="config_fodColor">#00ffffff</color>
 </resources>
