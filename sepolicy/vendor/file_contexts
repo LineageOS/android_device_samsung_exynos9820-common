@@ -81,8 +81,6 @@
 /(vendor|system/vendor)/bin/hw/lhd                                                                  u:object_r:lhd_exec:s0
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64.exynos9820  u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.clearkey                   u:object_r:hal_drm_clearkey_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@[0-9]\.[0-9]-service\.widevine                   u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]-service\.samsung              u:object_r:hal_keymaster_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@[0-9]\.[0-9]-service\.samsung                    u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.gnss@[0-9]\.[0-9]-service                    u:object_r:hal_gnss_default_exec:s0
