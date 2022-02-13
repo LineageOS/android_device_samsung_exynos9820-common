@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version G973FXXUEGULB, unless pinned
+# Common proprietary files - from Samsung package version G973FXXUEGVA4, unless pinned
 
 ## Audio
 vendor/etc/audio_board_info.xml
