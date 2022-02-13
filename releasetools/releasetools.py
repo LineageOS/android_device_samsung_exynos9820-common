@@ -44,7 +44,7 @@ def OTA_Assertions(info):
   m = re.search(r'require\s+version-bootloader-min\s*=\s*(\S+)', android_info)
   if m:
     bootloader_version = m.group(1)
-    cmd = ('assert(exynos9820.verify_bootloader_min("{}") == "1" || abort("ERROR: This package requires Android 10 or 11 based firmware. Please upgrade firmware and retry!"););').format(bootloader_version)
+    cmd = ('assert(exynos9820.verify_bootloader_min("{}") == "1" || abort("ERROR: This package requires Android 12 based firmware. Please upgrade firmware and retry!"););').format(bootloader_version)
     info.script.AppendExtra(cmd)
   return
 

@@ -1,1 +1,1 @@
-require version-bootloader-min=B
+require version-bootloader-min=G
