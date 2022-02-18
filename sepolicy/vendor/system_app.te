@@ -1,0 +1,2 @@
+# Allow S Pen HAL service to be found
+hal_client_domain(system_app, hal_samsung_spen)
