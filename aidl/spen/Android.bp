@@ -1,0 +1,22 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "vendor.samsung.hardware.spen-service.davinci",
+    relative_install_path: "hw",
+    init_rc: ["vendor.samsung.hardware.spen-service.davinci.rc"],
+    vintf_fragments: ["vendor.samsung.hardware.spen-service.davinci.xml"],
+    srcs: [
+        "SPen.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "vendor.samsung.hardware.spen-V1-ndk_platform",
+    ],
+    vendor: true,
+}

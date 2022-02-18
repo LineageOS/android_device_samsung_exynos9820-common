@@ -1,0 +1,11 @@
+type hal_samsung_spen_default, domain;
+hal_server_domain(hal_samsung_spen_default, hal_samsung_spen)
+
+type hal_samsung_spen_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_samsung_spen_default)
+
+allow hal_samsung_spen_default sysfs_spen:dir search;
+allow hal_samsung_spen_default sysfs_spen:file rw_file_perms;
+r_dir_file(hal_samsung_spen_default, efs_file);
+
+binder_call(hal_samsung_spen_default, servicemanager);

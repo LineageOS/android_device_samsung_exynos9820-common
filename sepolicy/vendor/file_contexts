@@ -65,6 +65,9 @@
 /sys/devices/virtual/camera/rear/ssrm_camera_info             u:object_r:sysfs_camera_writable:s0
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
+# S Pen
+/sys/devices/virtual/sec/sec_epen(/.*)?                       u:object_r:sysfs_spen:s0
+
 # Sensors
 /sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)                  u:object_r:sysfs_iio:s0
 /sys/devices/platform/10970000.spi/spi_master/spi17/spi17.0(/.*)/poll_delay       u:object_r:sysfs_sensors_writable:s0
@@ -79,3 +82,4 @@
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64.exynos9820  u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.spen-service\.davinci                        u:object_r:hal_samsung_spen_default_exec:s0
