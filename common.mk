@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -285,6 +285,15 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung/aidl/power-libperfmgr
+
+# S Pen
+ifeq ($(TARGET_HAVE_SPEN),true)
+PRODUCT_PACKAGES += \
+    SPenActions
+
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.spen-service.davinci
+endif
 
 # Thermal
 PRODUCT_PACKAGES += \
