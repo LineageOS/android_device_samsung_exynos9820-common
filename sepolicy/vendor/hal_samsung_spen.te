@@ -1,0 +1,8 @@
+# HWBinder IPC from client to server
+binder_call(hal_samsung_spen_client, hal_samsung_spen_server)
+
+add_service(hal_samsung_spen_server, hal_samsung_spen_service)
+allow hal_samsung_spen_client hal_samsung_spen_service:service_manager find;
+
+# Allow binder communication with system_app
+binder_call(hal_samsung_spen, system_app)
