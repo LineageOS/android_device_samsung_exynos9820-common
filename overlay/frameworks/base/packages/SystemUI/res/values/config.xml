@@ -34,4 +34,7 @@
         resource to update the display. For this reason, the CPU must not
         control the display in this mode. -->
     <bool name="doze_suspend_display_state_supported">true</bool>
+
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
+    <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>
