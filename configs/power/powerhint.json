@@ -125,6 +125,15 @@
             "HoldFd": true
         },
         {
+            "Name": "TouchscreenEnable",
+            "Path": "/sys/class/sec/tsp/input/enabled",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "LCDEnable",
             "Path": "/sys/class/power_supply/battery/lcd",
             "Values": [
@@ -330,6 +339,12 @@
             "Node": "GPUMaxFreq",
             "Duration": 0,
             "Value": "0x000ab630"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "TouchscreenEnable",
+            "Duration": 0,
+            "Value": "1"
         },
         {
             "PowerHint": "INTERACTIVE",
