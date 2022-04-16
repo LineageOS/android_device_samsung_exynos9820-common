@@ -22,4 +22,6 @@
          have distinct intensity levels -->
     <bool name="config_vibration_supports_multiple_intensities">true</bool>
 
+    <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
+    <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>
