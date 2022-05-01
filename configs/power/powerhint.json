@@ -151,36 +151,6 @@
             ],
             "DefaultIndex": 0,
             "ResetOnInit": false
-        },
-        {
-            "Name": "PowerHALMainState",
-            "Path": "vendor.powerhal.state",
-            "Values": [
-                "CAMERA_STREAMING_MID",
-                "SUSTAINED_PERFORMANCE",
-                "VR_MODE",
-                "VR_SUSTAINED_PERFORMANCE",
-                ""
-            ],
-            "Type": "Property"
-        },
-        {
-            "Name": "PowerHALAudioState",
-            "Path": "vendor.powerhal.audio",
-            "Values": [
-                "AUDIO_STREAMING_LOW_LATENCY",
-                ""
-            ],
-            "Type": "Property"
-        },
-        {
-            "Name": "PowerHALRenderingState",
-            "Path": "vendor.powerhal.rendering",
-            "Values": [
-                "EXPENSIVE_RENDERING",
-                ""
-            ],
-            "Type": "Property"
         }
     ],
     "Actions": [
@@ -201,12 +171,6 @@
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 1000,
             "Value": "0x0000002c"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING_MID",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "CAMERA_STREAMING_MID"
         },
         {
             "PowerHint": "CAMERA_STREAMING_MID",
@@ -270,21 +234,9 @@
         },
         {
             "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-            "Node": "PowerHALAudioState",
-            "Duration": 0,
-            "Value": "AUDIO_STREAMING_LOW_LATENCY"
-        },
-        {
-            "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 0,
             "Value": "0x0000002c"
-        },
-        {
-            "PowerHint": "SUSTAINED_PERFORMANCE",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "SUSTAINED_PERFORMANCE"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -309,24 +261,6 @@
             "Node": "GPUMaxFreq",
             "Duration": 0,
             "Value": "0x00069b68"
-        },
-        {
-            "PowerHint": "VR_MODE",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "VR_MODE"
-        },
-        {
-            "PowerHint": "VR_SUSTAINED_PERFORMANCE",
-            "Node": "PowerHALMainState",
-            "Duration": 0,
-            "Value": "VR_SUSTAINED_PERFORMANCE"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "PowerHALRenderingState",
-            "Duration": 0,
-            "Value": "EXPENSIVE_RENDERING"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
