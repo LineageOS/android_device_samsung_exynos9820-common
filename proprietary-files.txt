@@ -10,7 +10,6 @@ vendor/etc/usb_audio_policy_configuration.xml
 -vendor/lib/lib_SoundAlive_SRC384_ver320.so
 -vendor/lib/lib_soundaliveresampler.so
 -vendor/lib/libalsautils_sec.so
--vendor/lib/libaudio_soundtrigger.so
 -vendor/lib/libfloatingfeature.so
 -vendor/lib/libprofileparamstorage.so
 -vendor/lib/libsecaudiocoreutils.so
