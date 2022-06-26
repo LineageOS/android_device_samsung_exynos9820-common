@@ -32,7 +32,7 @@ LOCAL_C_INCLUDES += \
 	external/expat/lib
 
 LOCAL_HEADER_LIBRARIES := libhardware_headers
-LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa_sec libtinycompress libaudioutils libaudioroute_sec libalsautils_sec libexpat
+LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libtinycompress libaudioutils libaudioroute libalsautils libexpat
 
 # BT A2DP Offload HAL Interface
 ifeq ($(BOARD_USE_BTA2DP_OFFLOAD),true)
@@ -46,9 +46,6 @@ LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function
 
 # To use MCD specific definitions
 LOCAL_CFLAGS += -DSUPPORT_MCD_FEATURE
-
-# To use the headers from vndk-ext libs
-LOCAL_CFLAGS += -D__ANDROID_VNDK_SEC__
 
 ifeq ($(BOARD_USE_SOUNDTRIGGER_HAL),true)
 LOCAL_CFLAGS += -DSUPPORT_STHAL_INTERFACE
