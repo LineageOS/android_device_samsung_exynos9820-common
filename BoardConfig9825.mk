@@ -18,6 +18,10 @@ COMMON_PATH := device/samsung/exynos9820-common
 ## Inherit exynos9820 configuration
 include $(COMMON_PATH)/BoardConfigPieLaunched.mk
 
+## Dynamic Partitions
+BOARD_SUPER_PARTITION_SIZE := 6502219776
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 6498025472
+
 ## Platform
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
 TARGET_BOARD_PLATFORM := universal9825

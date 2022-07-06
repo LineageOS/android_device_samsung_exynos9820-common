@@ -85,6 +85,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor:32 \

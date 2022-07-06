@@ -26,4 +26,5 @@ cc_library_static {
         "bootable/recovery/otautil/include",
         "system/libziparchive/include"
     ],
+    static_libs: ["liblp"],
 }

@@ -2,3 +2,4 @@ allow fastbootd {
     dtb_block_device
     system_block_device
 }:blk_file rw_file_perms;
+allowxperm fastbootd system_block_device:blk_file ioctl { BLKDISCARD BLKSECDISCARD };

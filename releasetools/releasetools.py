@@ -17,6 +17,12 @@
 import common
 import re
 
+def FullOTA_InstallBegin(info):
+  if info.info_dict.get("vendor.build.prop").GetProp("ro.board.platform") != "universal9825_r":
+    AddImage(info, "super_empty.img", "/tmp/super_empty.img", False);
+    info.script.AppendExtra('exynos9820.retrofit_dynamic_partitions();')
+  return
+
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
@@ -26,10 +32,11 @@ def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
 
-def AddImage(info, basename, dest):
+def AddImage(info, basename, dest, printInfo=True):
   data = info.input_zip.read("IMAGES/" + basename)
   common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  if printInfo:
+    info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def AddFirmwareImage(info, model, basename, dest, simple=False, offset=8):
