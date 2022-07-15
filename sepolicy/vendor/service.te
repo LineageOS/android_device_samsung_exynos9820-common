@@ -1,1 +1,1 @@
-type hal_samsung_spen_service, vendor_service, protected_service, service_manager_type;
+type hal_samsung_spen_service, hal_service_type, protected_service, service_manager_type;
