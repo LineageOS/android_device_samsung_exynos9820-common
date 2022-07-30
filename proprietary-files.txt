@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version G973FXXUFHVE1, unless pinned
+# Common proprietary files - from Samsung package version G973FXXUFHVG4, unless pinned
 
 ## Audio
 vendor/etc/audio_board_info.xml
@@ -222,12 +222,12 @@ vendor/etc/sensors/hals.conf
 -vendor/lib/sensors.grip.so
 -vendor/lib64/sensors.grip.so
 
-## Widevine
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+## Widevine - from beyond1lte - G973FXXUFHVE1
+-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
+vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 -vendor/lib/liboemcrypto.so
--vendor/lib/libwvhidl.so
+-vendor/lib/libwvhidl.so|9bd93316e85b3d1ab9e919b53508008b42478978
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
