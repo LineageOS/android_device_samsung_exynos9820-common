@@ -238,3 +238,7 @@ vendor/firmware/bcmdhd_sta.bin_b1
 vendor/firmware/nvram.txt_ES00_semco_b0
 vendor/firmware/nvram.txt_ES01_semco_b0
 vendor/firmware/nvram.txt_ES02_semco_b0
+
+## VNDK
+# libutils - from prebuilts/vndk/v32 - android-13.0.0_r3
+-vendor/lib64/libutils-v32.so|79e694bea942225a64e768468000dce3a0e44b22
