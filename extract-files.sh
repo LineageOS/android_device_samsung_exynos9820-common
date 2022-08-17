@@ -66,6 +66,9 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
             ;;
+        vendor/lib*/sensors.*.so)
+            "${PATCHELF}" --replace-needed libutils.so libutils-v32.so "${2}"
+            ;;
     esac
 }
 
