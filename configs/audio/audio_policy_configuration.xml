@@ -142,9 +142,6 @@
 
         </module>
 
-        <!-- A2dp Audio HAL -->
-        <xi:include href="a2dp_in_audio_policy_configuration_7_0.xml"/>
-
         <!-- Bluetooth Audio HAL -->
         <xi:include href="bluetooth_audio_policy_configuration_7_0.xml"/>
 
