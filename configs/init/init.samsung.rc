@@ -935,40 +935,6 @@ on boot
     chown system radio /sys/class/sensors/hidden_hole/hh_is_exist_efs
     chown system radio /sys/class/sensors/hidden_hole/hh_ext_prox_th
 
-on charger
-    chmod 0664 /sys/class/power_supply/battery/batt_temp_table
-    chown system radio /sys/class/power_supply/battery/batt_temp_table
-    chmod 0664 /sys/class/power_supply/battery/batt_capacity_max
-    chown system radio /sys/class/power_supply/battery/batt_capacity_max
-    chmod 0664 /sys/class/power_supply/battery/battery_cycle
-    chown system radio /sys/class/power_supply/battery/battery_cycle
-    chmod 0664 /sys/class/power_supply/battery/batt_after_manufactured
-    chown system radio /sys/class/power_supply/battery/batt_after_manufactured
-    chown system radio /sys/class/power_supply/battery/cisd_fullcaprep_max
-    chmod 0660 /sys/class/power_supply/battery/cisd_fullcaprep_max
-    chown system radio /sys/class/power_supply/battery/cisd_data
-    chmod 0660 /sys/class/power_supply/battery/cisd_data
-    chown system system /efs/FactoryApp/cisd_fullcaprep_max
-    chmod 0640 /efs/FactoryApp/cisd_fullcaprep_max
-    chown system radio /sys/class/power_supply/battery/cisd_data_efs_path
-    chmod 0660 /sys/class/power_supply/battery/cisd_data_efs_path
-    chown system system /efs/FactoryApp/cisd_data
-    chmod 0640 /efs/FactoryApp/cisd_data
-    chown system system /efs/FactoryApp/cisd_tx_data
-    chmod 0640 /efs/FactoryApp/cisd_tx_data
-    chown system system /efs/FactoryApp/cisd_event_data
-    chmod 0640 /efs/FactoryApp/cisd_event_data
-    chown radio system /efs
-    chmod 0771 /efs
-    mkdir /efs/Battery 0775 radio system
-    chown radio system /efs/Battery
-    chmod 0775 /efs/Battery
-    chown radio system /efs/Battery/batt_capacity_max
-    chmod 0664 /efs/Battery/batt_capacity_max
-    copy /system/vendor/firmware/battery_data.dat /efs/Battery/battery_data.dat
-    chmod 0400 /efs/Battery/battery_data.dat
-    write /sys/class/power_supply/battery/batt_update_data "/efs/Battery/battery_data.dat"
-
 # BATTERY
 on property:sys.boot_completed=1
     write /sys/class/power_supply/battery/boot_completed "1"
@@ -982,10 +948,3 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_governor
     chmod 0644 /sys/kernel/gpu/gpu_max_clock
     chmod 0644 /sys/kernel/gpu/gpu_min_clock
-
-# LPM
-service charger /system/bin/charger
-    class sec-charger
-    user root
-    group system radio input
-    critical
