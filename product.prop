@@ -1,5 +1,2 @@
-## Charger
-ro.charger.enable_suspend=true
-
 ## fastbootd
 ro.fastbootd.available=true
