@@ -41,7 +41,7 @@ $(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 LIBUTILS32_SERVICES := \
     android.hardware.graphics.composer@2.2-service \
-    android.hardware.sensors@2.1-service.samsung-multihal
+    android.hardware.sensors-service.samsung-multihal
 LIBUTILS32_FILES := $(addprefix $(TARGET_OUT_VENDOR)/bin/hw/,$(LIBUTILS32_SERVICES))
 LIBUTILS32_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libuti32.so
 $(LIBUTILS32_SYMLINK): $(LOCAL_INSTALLED_MODULE) $(LIBUTILS32_FILES)
