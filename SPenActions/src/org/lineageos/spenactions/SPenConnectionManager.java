@@ -78,7 +78,7 @@ public class SPenConnectionManager extends BroadcastReceiver {
             mGatt.disconnect();
             mGatt.close();
         }
-        if (mAdapter != null && mSpen != null) mAdapter.disconnectAllEnabledProfiles(mSpen);
+        if (mSpen != null) mSpen.disconnect();
 
         mSPenHAL.setCharging(false);
     }
