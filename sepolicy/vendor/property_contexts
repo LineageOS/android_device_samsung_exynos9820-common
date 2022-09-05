@@ -5,7 +5,7 @@ vendor.bluetooth_fw_ver        u:object_r:vendor_bluetooth_prop:s0
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 
 # HWC
-vendor.hwc.exynos.vsync_mode   u:object_r:vendor_hwc_prop:s0
+vendor.hwc.                    u:object_r:vendor_hwc_prop:s0
 
 # WiFi
 vendor.wlan.                   u:object_r:vendor_wlan_prop:s0
