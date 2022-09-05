@@ -58,6 +58,8 @@
 /efs/usb_hw_param(/.*)?                      u:object_r:sec_efs_file:s0
 /efs/wv.keys                                 u:object_r:sec_efs_file:s0
 
+/mnt/vendor/efs/spen(/.*)?                   u:object_r:spen_efs_file:s0
+
 ## Sysfs
 # Block
 /sys/devices/platform/(.*)/block/sda/queue/discard_max_bytes  u:object_r:sysfs_block_writable:s0

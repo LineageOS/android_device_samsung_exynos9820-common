@@ -8,4 +8,8 @@ allow hal_samsung_spen_default sysfs_spen:dir search;
 allow hal_samsung_spen_default sysfs_spen:file rw_file_perms;
 r_dir_file(hal_samsung_spen_default, efs_file);
 
+allow hal_samsung_spen_default mnt_vendor_file:dir search;
+allow hal_samsung_spen_default spen_efs_file:dir rw_dir_perms;
+allow hal_samsung_spen_default spen_efs_file:file create_file_perms;
+
 binder_call(hal_samsung_spen_default, servicemanager);
