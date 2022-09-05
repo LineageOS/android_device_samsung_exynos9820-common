@@ -1,0 +1,1 @@
+allow fsck_untrusted sysfs_block:file r_file_perms;
