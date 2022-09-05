@@ -1,1 +1,3 @@
 allow lhd sysfs_sensors_writable:file rw_file_perms;
+
+binder_call(lhd, servicemanager)

@@ -1,3 +1,4 @@
 allow rild log_vendor_data_file:dir create_dir_perms;
 
 dontaudit rild default_prop:file read;
+dontaudit rild system_prop:file read;
