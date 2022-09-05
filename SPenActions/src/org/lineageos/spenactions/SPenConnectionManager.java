@@ -73,6 +73,14 @@ public class SPenConnectionManager extends BroadcastReceiver {
             mGatt = mSpen.connectGatt(mContext, false, new SPenGattCallback(this, mContext), BluetoothDevice.TRANSPORT_LE);
     }
 
+    public void onConnected() {
+        try {
+            mSPenHAL.setMACAddress(mCurBleSpenAddr);
+        } catch (RemoteException ex) {
+            ex.printStackTrace();
+        }
+    }
+
     public void disconnect() throws RemoteException {
         if (mGatt != null) {
             mGatt.disconnect();
