@@ -63,6 +63,13 @@ public class SPenConnectionManager extends BroadcastReceiver {
         if (!mAdapter.isEnabled())
             mAdapter.enable();
 
+        // Try to reset the pen if HAL fails to retrieve MAC
+        if (blespenAddr.startsWith("00:00:00:00:00:00")) {
+            Log.i(LOG_TAG, "Trying to reset pen!");
+            BluetoothUtils.resetSPenMAC(mContext);
+            return;
+        }
+
         mSpen = mAdapter.getRemoteDevice(blespenAddr);
 
         if (!mSPenHAL.isCharging())
