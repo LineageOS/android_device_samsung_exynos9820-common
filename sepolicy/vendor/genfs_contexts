@@ -24,6 +24,9 @@ genfscon sysfs /devices/platform/15d60000.hsi2c/i2c-17/17-0066/max77705-fuelgaug
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-15/15-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/15d70000.hsi2c/i2c-18/18-003b/power_supply/mfc-charger/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/sec-direct-charger/power_supply/sec-direct-charger/type                                u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/18500000.mali/dma_buf_gpu_mem                                                          u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/18500000.mali/total_gpu_mem                                                            u:object_r:sysfs_gpu:s0
+genfscon sysfs /devices/platform/18500000.mali/kprcs                                                                    u:object_r:sysfs_gpu:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video6/name                                                   u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video7/name                                                   u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/188d0000.mfc/video4linux/video8/name                                                   u:object_r:sysfs_v4l:s0
@@ -39,5 +42,4 @@ genfscon sysfs /devices/virtual/sensors/ssp_sensor/ssp_control                  
 genfscon sysfs /devices/virtual/sec/sensorhub/mcu_power                                                                 u:object_r:sysfs_sensors_writable:s0
 
 # Kernel
-genfscon sysfs /kernel/gpu/gpu_memory                                                                                   u:object_r:sysfs_gpu_memory:s0
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                                                         u:object_r:sysfs_mem_boost_writable:s0
