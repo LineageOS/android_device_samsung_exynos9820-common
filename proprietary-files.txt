@@ -153,7 +153,6 @@ system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 -vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 ## RIL
--vendor/bin/hw/rild
 -vendor/bin/cbd
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
@@ -162,18 +161,19 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
 -vendor/lib/libaudio-ril.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9820
--vendor/lib/libsemnativecarrierfeature.so
 -vendor/lib64/libengmode_client.so
--vendor/lib64/libril_sem.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9820
--vendor/lib64/libsemnativecarrierfeature.so
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio@2.1.so
--vendor/lib64/vendor.samsung.hardware.radio@2.2.so
+
+## RIL - from beyond1lte - G973FXXSDFUI5
+-vendor/bin/hw/rild|78c28a1e254318abae9c45699b69a61cf96d73b1
+-vendor/lib/libsemnativecarrierfeature.so|ac27187c27eba2b96eaa4812b8e9b60193ca18d6
+-vendor/lib64/libril-samsung.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
+-vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
 
 ## SECNATIVE
 -vendor/lib/libsecnativefeature.so
