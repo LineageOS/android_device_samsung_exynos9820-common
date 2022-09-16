@@ -26,15 +26,6 @@
          non-interactive. -->
     <bool name="doze_display_state_supported">true</bool>
 
-    <!-- Doze: does this device support STATE_DOZE_SUSPEND?
-        Display state: The display is dozing in a suspended low power state;
-        it is still on but the CPU is not updating it. This may be used in
-        one of two ways: to show static system-provided content while the
-        device is non-interactive, or to allow a "Sidekick" compute
-        resource to update the display. For this reason, the CPU must not
-        control the display in this mode. -->
-    <bool name="doze_suspend_display_state_supported">true</bool>
-
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>
