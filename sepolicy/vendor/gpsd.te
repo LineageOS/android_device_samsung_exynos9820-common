@@ -1,3 +1,4 @@
 allow gpsd gpsd_exec:file execute_no_trans;
 
 binder_call(gpsd, servicemanager)
+allow gpsd hal_system_suspend_service:service_manager find;

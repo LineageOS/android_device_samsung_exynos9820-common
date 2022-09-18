@@ -87,6 +87,9 @@
 /sys/devices/virtual/input/input[0-9]/poll_delay                                  u:object_r:sysfs_input_writable:s0
 /sys/devices/virtual/sec/hall_ic(/.*)                                             u:object_r:sysfs_sec_key:s0
 
+# Wakeup
+/sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                     u:object_r:sysfs_wakeup:s0
+
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
 
