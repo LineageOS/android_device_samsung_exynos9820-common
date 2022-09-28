@@ -28,4 +28,7 @@
 
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 2.16A @ 5V  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
+
+    <!-- Color of the UDFPS pressed view -->
+    <color name="config_udfpsColor">#00ffffff</color>
 </resources>
