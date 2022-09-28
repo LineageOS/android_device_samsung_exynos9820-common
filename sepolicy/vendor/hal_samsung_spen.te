@@ -1,3 +1,5 @@
+hal_attribute(samsung_spen)
+
 # HWBinder IPC from client to server
 binder_call(hal_samsung_spen_client, hal_samsung_spen_server)
 
