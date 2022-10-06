@@ -1,4 +1,6 @@
 /dev/block/platform/13d60000.ufs/by-name/system         /system         ext4    ro                                                                                      wait,first_stage_mount
+/dev/block/platform/13d60000.ufs/by-name/system         /system         erofs   ro                                                                                      wait,first_stage_mount
+/dev/block/platform/13d60000.ufs/by-name/vendor         /vendor         ext4    ro                                                                                      wait,first_stage_mount
 /dev/block/platform/13d60000.ufs/by-name/vendor         /vendor         erofs   ro                                                                                      wait,first_stage_mount
 
 /dev/block/platform/13d60000.ufs/by-name/omr            /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable,check
