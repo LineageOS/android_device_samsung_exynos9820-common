@@ -42,12 +42,12 @@ vendor/etc/usb_audio_policy_configuration.xml
 -vendor/lib64/libsensorlistener.so|b440957789f50d8ea22c6428cb46c453d822b779
 -vendor/lib64/libuniapi.so|0ac709e10a701768055e0f6559c14ae3daf83712
 
-## Charger Firmware
-vendor/firmware/mfc_fw.bin
-
 ## Codecs
 vendor/etc/media_codecs.xml
 vendor/etc/media_profiles_V1_0.xml
+
+## Exynos Multi-Format Codec (MFC) Firmware
+vendor/firmware/mfc_fw.bin
 
 ## Fingerprint
 -vendor/lib/libegis_fp_normal_sensor_test.so
