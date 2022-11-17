@@ -22,21 +22,10 @@ vendor/etc/usb_audio_policy_configuration.xml
 -product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
 ## Camera Dependencies
--vendor/lib/libacryl.so
--vendor/lib/libacryl.plugin.hdr.exynos9820.so
--vendor/lib/libcsc.so
--vendor/lib/libgiantmscl.so
--vendor/lib/libhwjpeg.so
--vendor/lib/libstagefrighthw.so
 -vendor/lib/libuniplugin.so
--vendor/lib64/libcsc.so
--vendor/lib64/libgiantmscl.so
--vendor/lib64/libhwjpeg.so
--vendor/lib64/libstagefrighthw.so
 -vendor/lib64/libuniplugin.so
 
 ## Camera Dependencies - from beyond1lte - G973FXXSEGVA9
--vendor/lib64/libGrallocWrapper.so|51d9c2e2856e7eac4a8062f8c502f490df315406
 -vendor/lib64/libSEF.quram.so|2e9d5d3b403bddc78b9854acfd8ae19f43511f82
 -vendor/lib64/libhwjsqz.so|9185e4d27d12b96d875a837d259ebd3ac9800f40
 -vendor/lib64/libsensorlistener.so|b440957789f50d8ea22c6428cb46c453d822b779
@@ -90,28 +79,8 @@ vendor/etc/gnss/gps.cer
 ## Graphics
 -vendor/lib/egl/libGLES_mali.so
 -vendor/lib/hw/vulkan.mali.so
--vendor/lib/libion_exynos.so
 -vendor/lib64/egl/libGLES_mali.so
 -vendor/lib64/hw/vulkan.mali.so
--vendor/lib64/libion_exynos.so
-
-## HWC
--vendor/lib/libExynosHWCService.so
--vendor/lib/libdrmresource.so
--vendor/lib/libexynosgraphicbuffer.so
--vendor/lib/libexynosscaler.so
--vendor/lib/libexynosutils.so
--vendor/lib/libexynosv4l2.so
--vendor/lib/libhdr10p_m2l.exynos9820.so
--vendor/lib64/libExynosHWCService.so
--vendor/lib64/libacryl.so
--vendor/lib64/libacryl.plugin.hdr.exynos9820.so
--vendor/lib64/libdrmresource.so
--vendor/lib64/libexynosgraphicbuffer.so
--vendor/lib64/libexynosscaler.so
--vendor/lib64/libexynosutils.so
--vendor/lib64/libexynosv4l2.so
--vendor/lib64/libhdr10p_m2l.exynos9820.so
 
 ## Keymaster
 -vendor/lib64/libkeymaster_helper.so
@@ -119,38 +88,6 @@ vendor/etc/gnss/gps.cer
 
 ## NFC
 system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
-
-## OMX
--vendor/lib/libExynosOMX_Core.so
--vendor/lib/libExynosOMX_Resourcemanager.so
--vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
--vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
--vendor/lib/omx/libOMX.Exynos.AVC.WFD.Encoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
--vendor/lib/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
--vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
--vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
--vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
--vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
--vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
--vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
--vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
--vendor/lib64/libExynosOMX_Core.so
--vendor/lib64/libExynosOMX_Resourcemanager.so
--vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.AVC.WFD.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.HEVC.WFD.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
--vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
--vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 ## RIL
 -vendor/bin/cbd
