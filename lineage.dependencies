@@ -8,6 +8,26 @@
         "target_path": "hardware/samsung"
     },
     {
+        "repository": "android_hardware_samsung_slsi-linaro_config",
+        "target_path": "hardware/samsung_slsi-linaro/config"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_exynos",
+        "target_path": "hardware/samsung_slsi-linaro/exynos"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_exynos5",
+        "target_path": "hardware/samsung_slsi-linaro/exynos5"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_graphics",
+        "target_path": "hardware/samsung_slsi-linaro/graphics"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_openmax",
+        "target_path": "hardware/samsung_slsi-linaro/openmax"
+    },
+    {
         "repository": "android_kernel_samsung_exynos9820",
         "target_path": "kernel/samsung/exynos9820"
     }

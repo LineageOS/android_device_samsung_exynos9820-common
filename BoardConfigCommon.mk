@@ -117,6 +117,7 @@ TARGET_BOARD_PLATFORM := universal9825
 TARGET_BOOTLOADER_BOARD_NAME := exynos9825
 endif
 TARGET_SOC := exynos9820
+include hardware/samsung_slsi-linaro/config/BoardConfig9820.mk
 
 ## Properties
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
