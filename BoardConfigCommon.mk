@@ -55,6 +55,9 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
+## Camera
+$(call soong_config_set,exynos9820CameraVars,exynos9820_model,$(TARGET_DEVICE))
+
 ## DTB
 BOARD_PACK_RADIOIMAGES += dtb.img
 
