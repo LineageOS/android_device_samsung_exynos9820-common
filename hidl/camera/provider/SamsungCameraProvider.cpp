@@ -31,6 +31,11 @@ SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() 
     mExtraIDs.push_back(52);
 #endif
 
+#if defined(EXYNOS9820_MODEL_beyond2lte) || defined(EXYNOS9820_MODEL_beyondx)
+    // ID=51 is the second front cam
+    mExtraIDs.push_back(51);
+#endif
+
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
             struct camera_info info;
