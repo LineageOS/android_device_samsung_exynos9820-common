@@ -165,6 +165,7 @@
 # TEEGRIS
 /dev/tzdev                0666   system     system
 /dev/tziwsock             0666   system     system
+/dev/tziwshmem            0660   system     system
 /dev/ionfd2phys           0660   system     system
 /dev/tzirs                0660   system     system
 /dev/tuihw              0660   system     system
