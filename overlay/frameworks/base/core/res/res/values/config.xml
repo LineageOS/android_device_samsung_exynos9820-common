@@ -86,28 +86,6 @@
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
-    <!-- Package name(s) containing location provider support.
-         These packages can contain services implementing location providers,
-         such as the Geocode Provider, Network Location Provider, and
-         Fused Location Provider. They will each be searched for
-         service components implementing these providers.
-         It is strongly recommended that the packages explicitly named
-         below are on the system image, so that they will not map to
-         a 3rd party application.
-         The location framework also has support for installation
-         of new location providers at run-time. The new package does not
-         have to be explicitly listed here, however it must have a signature
-         that matches the signature of at least one package on this list.
-         -->
-    <string-array name="config_locationProviderPackageNames" translatable="false">
-        <!-- The UnifiedNlp provider by MicroG -->
-        <item>org.microg.nlp</item>
-        <!-- The Google provider -->
-        <item>com.google.android.gms</item>
-        <!-- The standard AOSP fused location provider -->
-        <item>com.android.location.fused</item>
-     </string-array>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
@@ -278,15 +256,6 @@
 
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
-
-    <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <!--
-    <string name="config_defaultWellbeingPackage" translatable="false">com.samsung.android.forest</string>
-    -->
 
     <!-- FP trustled limits the number to 4. -->
     <integer name="config_fingerprintMaxTemplatesPerUser">4</integer>
