@@ -1,4 +1,4 @@
-# Common proprietary files - from Samsung package version G973FXXUFHVG4, unless pinned
+# Common proprietary files - from Samsung package version G973FXXSGHWA3, unless pinned
 
 ## Audio
 vendor/etc/audio_board_info.xml
@@ -183,16 +183,14 @@ vendor/etc/plmn_delta_usagsm.bin
 -vendor/lib64/libflicker_sec.so
 
 ## TEEGRIS
+-vendor/bin/tzdaemon
 -vendor/bin/tzts_daemon
 vendor/etc/init/teegris_v3.rc
+-vendor/lib/libteecl.so
 -vendor/lib/libuuid.so
 -vendor/lib64/libiwt.so
+-vendor/lib64/libteecl.so
 -vendor/lib64/libuuid.so
-
-## TEEGRIS - from beyond1lte - G973FXXUGHVK1
--vendor/bin/tzdaemon|42f4c9c1fd678ff40b4216873ea3e2ac15f3ac93
--vendor/lib/libteecl.so|b4b16cbad9c0efaf8cc16b5c64094bbf3e91a9d8
--vendor/lib64/libteecl.so|5976fe63aa413da484d22d8d223725f1ead78399
 
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
