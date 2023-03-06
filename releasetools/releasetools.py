@@ -1,6 +1,6 @@
 #!/bin/env python3
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,7 +46,8 @@ def AddFirmwareImage(info, model, basename, dest, simple=False):
       info.script.AppendExtra('assert(exynos9820.mark_header_bt("%s", 0, 0, 3142939818));' % dest)
 
 def OTA_InstallEnd(info):
-  AddImage(info, "dtb.img", "/dev/block/by-name/dtb")
+  if "IMAGES/dtb.img" in info.input_zip.namelist():
+    AddImage(info, "dtb.img", "/dev/block/by-name/dtb")
   AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/by-name/vbmeta")
 

@@ -1,0 +1,25 @@
+system                                                  /system                 ext4    ro,barrier=1            wait,logical,first_stage_mount
+system                                                  /system                 erofs   ro                      wait,logical,first_stage_mount
+system_ext                                              /system_ext             ext4    ro,barrier=1            wait,logical,first_stage_mount
+system_ext                                              /system_ext             erofs   ro                      wait,logical,first_stage_mount
+vendor                                                  /vendor                 ext4    ro,barrier=1            wait,logical,first_stage_mount
+vendor                                                  /vendor                 erofs   ro                      wait,logical,first_stage_mount
+product                                                 /product                ext4    ro,errors=panic         wait,logical,first_stage_mount
+product                                                 /product                erofs   ro                      wait,logical,first_stage_mount
+odm                                                     /odm                    ext4    ro,errors=panic         wait,logical,first_stage_mount
+odm                                                     /odm                    erofs   ro                      wait,logical,first_stage_mount
+
+/dev/block/platform/13d60000.ufs/by-name/metadata       /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable,check
+
+/dev/block/platform/13d60000.ufs/by-name/boot           /boot           emmc    defaults                                                                                recoveryonly
+/dev/block/platform/13d60000.ufs/by-name/recovery       /recovery       emmc    defaults                                                                                recoveryonly
+/dev/block/platform/13d60000.ufs/by-name/vbmeta         /vbmeta         emmc    defaults                                                                                first_stage_mount
+/dev/block/platform/13d60000.ufs/by-name/cache          /cache          ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
+/dev/block/platform/13d60000.ufs/by-name/efs            /mnt/vendor/efs ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
+/dev/block/platform/13d60000.ufs/by-name/misc           /misc           emmc    defaults                                                                                defaults
+/dev/block/platform/13d60000.ufs/by-name/userdata       /data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,reservedsize=128M,quota
+
+/devices/platform/13d00000.dwmmc2/mmc_host*             auto            auto    defaults        voldmanaged=sdcard:auto,encryptable=userdata
+/devices/platform/10c00000.usb*                         auto            auto    defaults        voldmanaged=usb:auto
+
+/dev/block/zram0                                        none            swap    defaults        zramsize=2684354560,max_comp_streams=8
