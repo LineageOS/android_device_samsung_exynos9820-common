@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +16,12 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter beyond0lte beyond1lte beyond2lte beyondx d1 d2s d2x, $(TARGET_DEVICE)),)
+ifneq ($(filter beyond0lte beyond1lte beyond2lte beyondx d1 d2s d2x f62, $(TARGET_DEVICE)),)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+ifneq ($(BOARD_INCLUDE_DTB_IN_BOOTIMG), true)
 include $(COMMON_PATH)/AndroidBoard.mk
+endif
 
 include $(CLEAR_VARS)
 
