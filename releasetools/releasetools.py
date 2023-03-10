@@ -32,7 +32,7 @@ def AddImage(info, basename, dest):
   info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
-def AddFirmwareImage(info, model, basename, dest, simple=False):
+def AddFirmwareImage(info, model, basename, dest, simple=False, offset=8):
   if ("RADIO/%s_%s" % (basename, model)) in info.input_zip.namelist():
     data = info.input_zip.read("RADIO/%s_%s" % (basename, model))
     common.ZipWriteStr(info.output_zip, "firmware/%s/%s" % (model, basename), data);
@@ -40,10 +40,15 @@ def AddFirmwareImage(info, model, basename, dest, simple=False):
     if simple:
       info.script.AppendExtra('package_extract_file("firmware/%s/%s", "%s");' % (model, basename, dest))
     else:
+      uses_single_bota = dest == "/dev/block/by-name/bota"
       size = info.input_zip.getinfo("RADIO/%s_%s" % (basename, model)).file_size
-      info.script.AppendExtra('assert(exynos9820.mark_header_bt("%s", 0, 0, 0));' % dest);
-      info.script.AppendExtra('assert(exynos9820.write_data_bt("firmware/%s/%s", "%s", 8, %d));' % (model, basename, dest, size))
-      info.script.AppendExtra('assert(exynos9820.mark_header_bt("%s", 0, 0, 3142939818));' % dest)
+      if not uses_single_bota:
+        info.script.AppendExtra('assert(exynos9820.mark_header_bt("%s", 0, 0, 0));' % dest);
+      info.script.AppendExtra('assert(exynos9820.write_data_bt("firmware/%s/%s", "%s", %d, %d));' % (model, basename, dest, offset, size))
+      if not uses_single_bota:
+        info.script.AppendExtra('assert(exynos9820.mark_header_bt("%s", 0, 0, 3142939818));' % dest)
+      return size
+    return 0
 
 def OTA_InstallEnd(info):
   if "IMAGES/dtb.img" in info.input_zip.namelist():
@@ -61,11 +66,22 @@ def OTA_InstallEnd(info):
         info.script.AppendExtra('ifelse (getprop("ro.boot.em.model") == "%s" &&' % model)
         info.script.AppendExtra('exynos9820.verify_no_downgrade("%s") == "0" &&' % version)
         info.script.AppendExtra('getprop("ro.boot.bootloader") != "%s",' % version)
-        AddFirmwareImage(info, model, "sboot.bin", "/dev/block/by-name/bota0")
-        AddFirmwareImage(info, model, "cm.bin", "/dev/block/by-name/bota1")
-        AddFirmwareImage(info, model, "up_param.bin", "/dev/block/by-name/bota2")
-        AddFirmwareImage(info, model, "keystorage.bin", "/dev/block/by-name/keystorage", True)
-        AddFirmwareImage(info, model, "uh.bin", "/dev/block/by-name/uh", True)
+        if info.info_dict.get("vendor.build.prop").GetProp("ro.board.platform") != "universal9825_r":
+          AddFirmwareImage(info, model, "sboot.bin", "/dev/block/by-name/bota0")
+          AddFirmwareImage(info, model, "cm.bin", "/dev/block/by-name/bota1")
+          AddFirmwareImage(info, model, "up_param.bin", "/dev/block/by-name/bota2")
+          AddFirmwareImage(info, model, "keystorage.bin", "/dev/block/by-name/keystorage", True)
+          AddFirmwareImage(info, model, "uh.bin", "/dev/block/by-name/uh", True)
+        else:
+          offset = 8
+          numImages = 0
+          info.script.AppendExtra('assert(exynos9820.mark_header_bt("/dev/block/by-name/bota", 0, 0, 0));')
+          for image in 'cm.bin', 'keystorage.bin', 'sboot.bin', 'uh.bin', 'up_param.bin':
+            size = AddFirmwareImage(info, model, image, "/dev/block/by-name/bota", False, offset)
+            if size > 0:
+              numImages += 1
+              offset += size + 36 # header size
+          info.script.AppendExtra('assert(exynos9820.mark_header_bt("/dev/block/by-name/bota", 0, %d, 3142939818));' % numImages)
         AddFirmwareImage(info, model, "modem.bin", "/dev/block/by-name/radio", True)
         AddFirmwareImage(info, model, "modem_5g.bin", "/dev/block/by-name/radio2", True)
         AddFirmwareImage(info, model, "modem_debug.bin", "/dev/block/by-name/cp_debug", True)
