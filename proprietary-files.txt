@@ -17,10 +17,6 @@ vendor/etc/usb_audio_policy_configuration.xml
 -vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libsecaudioinfo.so
 
-## Bluetooth
-# Bluetooth (aptX) - from raven - TP1A.220624.021
--product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 ## Camera Dependencies
 -vendor/lib/libuniplugin.so
 -vendor/lib64/libuniplugin.so
