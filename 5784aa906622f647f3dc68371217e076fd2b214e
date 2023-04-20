@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b0f34d16_cd15712a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25925
+      },
+      "writtenOn": "2023-04-20T18:50:32Z",
+      "side": 1,
+      "message": "It does not really affect lineage that much, due to the black frames at the beginning it seems to be delayed rather than laggy",
+      "revId": "5784aa906622f647f3dc68371217e076fd2b214e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
