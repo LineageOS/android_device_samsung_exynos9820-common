@@ -999,6 +999,14 @@ on fs
 #load ecd firmware
     write /proc/ecd/load_firmware 1
 
+# Copy DRM Key
+    copy /efs/wv.keys /mnt/vendor/efs/wv.keys
+
+# Permission for DRM Key
+    chown system system /mnt/vendor/efs/wv.keys
+    chmod 0644 /mnt/vendor/efs/wv.keys
+
+
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
     class core
