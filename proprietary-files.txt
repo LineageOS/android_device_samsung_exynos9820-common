@@ -153,12 +153,12 @@ vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
 
-## Widevine - from beyond1lte - G973FXXUFHVE1
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
+## Widevine - from f62 - E625FDDU3CWC2
+-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|33364fc077597ad5f95d8fbdf44d6d37e481a927
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
--vendor/lib/liboemcrypto.so
--vendor/lib/libwvhidl.so|9bd93316e85b3d1ab9e919b53508008b42478978
+-vendor/lib/liboemcrypto.so|f5e2028bda6289d45933db70d24729f1f8f176ee
+-vendor/lib/libwvhidl.so|2e192582de87156f02b330b64016ecdb5ff9d87b
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
