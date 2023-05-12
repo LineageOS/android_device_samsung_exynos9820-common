@@ -113,7 +113,10 @@ vendor/etc/plmn_delta_usagsm.bin
 -vendor/lib64/libsecnativefeature.so
 
 ## Sensors
+vendor/etc/sensors/hals.conf
+-vendor/lib/sensors.grip.so
 -vendor/lib64/libflicker_sec.so
+-vendor/lib64/sensors.grip.so
 
 ## TEEGRIS
 -vendor/bin/tzdaemon
@@ -149,11 +152,6 @@ vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
 vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
-
-## Sensors
-vendor/etc/sensors/hals.conf
--vendor/lib/sensors.grip.so
--vendor/lib64/sensors.grip.so
 
 ## Widevine - from beyond1lte - G973FXXUFHVE1
 -vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
