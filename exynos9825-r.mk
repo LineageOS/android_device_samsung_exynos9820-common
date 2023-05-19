@@ -19,6 +19,10 @@ COMMON_PATH := device/samsung/exynos9820-common
 # Inherit common configuration
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
+# Camera
+PRODUCT_PACKAGES += \
+    libexynosgraphicbuffer
+
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
