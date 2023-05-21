@@ -12,20 +12,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- All the capabilities of the LEDs on this device, stored as a bit field. -->
-    <integer name="config_deviceLightCapabilities">0</integer>
-
-    <!-- Defines the actions shown in advanced reboot submenu -->
-    <string-array name="config_restartActionsList">
-        <item>restart</item>
-        <item>restart_recovery</item>
-        <item>restart_fastboot</item>
-        <item>restart_download</item>
-     </string-array>
-
-    <!-- Whether device has a screen with a higher aspect ratio -->
-    <bool name="config_haveHigherAspectRatioScreen">true</bool>
-
-    <!-- Default values for LiveDisplay -->
-    <integer name="config_defaultLiveDisplayMode">0</integer>
+    <!-- Whether the device supports wireless charging or not -->
+    <bool name="config_deviceSupportsWirelessCharging">true</bool>
 </resources>
