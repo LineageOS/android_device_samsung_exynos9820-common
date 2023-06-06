@@ -1,5 +1,6 @@
 teegris_use(hal_drm_widevine);
 
+allow hal_drm_widevine mnt_vendor_file:dir search;
 r_dir_file(hal_drm_widevine, efs_file);
 allow hal_drm_widevine sec_efs_file:file r_file_perms;
 
