@@ -35,5 +35,5 @@ aidl_interface {
         },
 
     ],
-
+    owner: "samsung",
 }
