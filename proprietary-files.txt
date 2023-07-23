@@ -158,7 +158,7 @@ vendor/tee/tui/resolution_common/ID00000100
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
 -vendor/lib/liboemcrypto.so|808d043101c4f23061e2964fb7ebec4c44aaffcb
--vendor/lib/libwvhidl.so|9bd93316e85b3d1ab9e919b53508008b42478978
+-vendor/lib/libwvhidl.so|4a19cb424aa0e5077155d4fe209ed1328525554a
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
