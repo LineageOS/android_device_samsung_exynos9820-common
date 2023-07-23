@@ -154,6 +154,7 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
+    libcrypto-v33 \
     libkeymaster4_1support.vendor:64
 
 # Lineage Health
