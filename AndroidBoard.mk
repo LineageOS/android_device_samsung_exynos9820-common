@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ INSTALLED_DTBIMAGE_TARGET := $(PRODUCT_OUT)/dtb.img
 $(INSTALLED_DTBIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(MKDTIMG) $(AVBTOOL)
 	$(hide) echo "Building dtb.img"
 	$(hide) $(MKDTIMG) cfg_create $@ $(DTB_CFG) -d $(DTB_DIR)
-	$(hide) $(call assert-max-image-size,$@,$(BOARD_DTBIMAGE_PARTITION_SIZE),raw)
+	$(hide) $(call assert-max-image-size,$@,$(BOARD_DTBIMG_PARTITION_SIZE),raw)
 	$(hide) $(AVBTOOL) add_hash_footer \
 	  --image $@ \
 	  --partition_size $(BOARD_DTBIMG_PARTITION_SIZE) \
