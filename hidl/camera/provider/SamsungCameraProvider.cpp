@@ -31,11 +31,6 @@ SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() 
     mExtraIDs.push_back(52);
 #endif
 
-#if defined(EXYNOS9820_MODEL_beyond2lte) || defined(EXYNOS9820_MODEL_beyondx)
-    // ID=51 is the second front cam
-    mExtraIDs.push_back(51);
-#endif
-
 #ifdef EXYNOS9820_MODEL_f62
    // ID=52 is depth camera
    mExtraIDs.push_back(52);
