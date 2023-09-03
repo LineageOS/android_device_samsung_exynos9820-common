@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "390cdf30_8ab28d40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2023-09-03T20:43:22Z",
+      "side": 1,
+      "message": "hard no, LineageOS won\u0027t and doesn\u0027t do anything like this.",
+      "revId": "6d745e97ea1e7cb52dc16bce33b573a0cfc82be8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
