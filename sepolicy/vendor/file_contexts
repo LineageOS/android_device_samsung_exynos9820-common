@@ -72,7 +72,8 @@
 /sys/devices/virtual/camera(/.*)                              u:object_r:sysfs_camera:s0
 
 # Extcon
-/sys/devices/platform/(.*)/extcon/extcon0/cable.0/name        u:object_r:sysfs_extcon:s0
+/sys/devices/platform/(.*)/extcon/extcon[0-9]/cable.[0-9]/name        u:object_r:sysfs_extcon:s0
+/sys/devices/platform/(.*)/extcon/extcon[0-9]/state                   u:object_r:sysfs_extcon:s0
 
 # S Pen
 /sys/devices/virtual/sec/sec_epen(/.*)?                       u:object_r:sysfs_spen:s0
