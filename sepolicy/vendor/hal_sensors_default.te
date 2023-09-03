@@ -3,4 +3,6 @@ allow hal_sensors_default sysfs_input_writable:file rw_file_perms;
 
 allow hal_sensors_default sensors_device:chr_file rw_file_perms;
 
+allow hal_sensors_default log_vendor_data_file:dir search;
+
 binder_call(hal_sensors_default, system_server)

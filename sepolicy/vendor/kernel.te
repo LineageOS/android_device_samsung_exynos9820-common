@@ -2,7 +2,7 @@ allow kernel self:capability { mknod sys_admin };
 dontaudit kernel self:capability { dac_override dac_read_search };
 
 allow kernel block_device:dir search;
-allow kernel device:dir { add_name write remove_name rmdir };
+allow kernel device:dir { add_name create write remove_name rmdir };
 allow kernel device:chr_file { create setattr getattr unlink };
 dontaudit kernel device:blk_file create;
 
