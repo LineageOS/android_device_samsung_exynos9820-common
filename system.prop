@@ -1,0 +1,3 @@
+## Pretend different manufacturer so Samsung apps work
+ro.product.brand=google
+ro.product.manufacturer=google
