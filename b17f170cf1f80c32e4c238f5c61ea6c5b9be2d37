@@ -16,6 +16,23 @@
       "message": "While debugging kernel panics I noticed a few audit denials, not sure if they are intended as everything seems to work without those allows but maybe they\u0027re useful (they didn\u0027t help on my bug hunting though)",
       "revId": "b17f170cf1f80c32e4c238f5c61ea6c5b9be2d37",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "045edd38_75aa93e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25925
+      },
+      "writtenOn": "2023-09-04T16:16:02Z",
+      "side": 1,
+      "message": "Could you add exynos9820-common prefix in commit message?",
+      "revId": "b17f170cf1f80c32e4c238f5c61ea6c5b9be2d37",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
