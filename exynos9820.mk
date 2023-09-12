@@ -19,6 +19,10 @@ COMMON_PATH := device/samsung/exynos9820-common
 # Inherit common configuration
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
+# Display
+PRODUCT_PACKAGES += \
+    libGrallocWrapper
+
 # init
 FSTAB_FILES ?= \
     $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9820 \
