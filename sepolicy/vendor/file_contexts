@@ -5,8 +5,6 @@
 ## Devices
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
 /dev/block/platform/.+/by-name/radio2        u:object_r:radio_block_device:s0
-/dev/block/platform/.+/by-name/system        u:object_r:system_block_device:s0
-/dev/block/platform/.+/by-name/vendor        u:object_r:system_block_device:s0
 /dev/block/platform/13d60000.ufs/by-name/omr u:object_r:metadata_block_device:s0
 
 # Camera
