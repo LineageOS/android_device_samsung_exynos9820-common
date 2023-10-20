@@ -4,18 +4,10 @@
 vendor/etc/audio_board_info.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/usb_audio_policy_configuration.xml
--vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.exynos9820
--vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.exynos9820
--vendor/lib/libSamsungPostProcessConvertor.so
--vendor/lib/lib_SoundAlive_SRC384_ver320.so
--vendor/lib/lib_soundaliveresampler.so
--vendor/lib/libalsautils_sec.so
--vendor/lib/libfloatingfeature.so
+
+## Audio - Dolby Atmos
 -vendor/lib/libprofileparamstorage.so
 -vendor/lib/libsecaudiocoreutils.so
--vendor/lib/libsecaudioinfo.so
--vendor/lib64/libfloatingfeature.so
--vendor/lib64/libsecaudioinfo.so
 
 ## Camera Dependencies
 -vendor/lib/libuniplugin.so
@@ -92,9 +84,9 @@ vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
--vendor/lib/libaudio-ril.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9820
 -vendor/lib64/libengmode_client.so
+-vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9820
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so

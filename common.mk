@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hidl.allocator@1.0.vendor:32 \
     audio.bluetooth.default \
+    audio.primary.exynos9820 \
     audio.r_submix.default \
     audio.usb.default \
     libaudioroute \
@@ -290,7 +291,6 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_audioparams \
     libshim_oemcrypto \
     libshim_sensorndkbridge
 
