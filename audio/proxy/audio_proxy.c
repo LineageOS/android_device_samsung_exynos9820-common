@@ -6349,6 +6349,8 @@ void * proxy_init(void)
     aproxy->offload_effect_lib_update = NULL;
     aproxy->spk_ampL_powerOn = false;
 
+    proxy_set_board_info(aproxy);
+
     ALOGI("proxy-%s: opened & initialized Audio Proxy", __func__);
     return (void *)aproxy;
 }
