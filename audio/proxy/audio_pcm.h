@@ -867,4 +867,7 @@ struct pcm_config pcm_config_hotword_capture = {
 // Duration for Remote-Mic Playback/Capture loopback node configuration
 #define PREDEFINED_REMOTE_MIC_DURATION      20  // 20ms
 
+// Duration for USB Playback
+#define PREDEFINED_USB_PLAYBACK_DURATION    10  // 10ms
+
 #endif  // __EXYNOS_AUDIOPROXY_PCM_H__
