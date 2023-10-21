@@ -409,7 +409,7 @@ static bool is_playback_device_bta2dp(device_type device)
 static bool is_device_speaker(device_type device)
 {
     if (device < DEVICE_MAIN_MIC) {
-        if ((device == DEVICE_SPEAKER)
+        if (device == DEVICE_SPEAKER
 #ifdef SEC_AUDIO_SUPPORT_GAMECHAT_SPK_AEC
                 || (device == DEVICE_SPEAKER_GAMING)
 #endif
@@ -418,7 +418,7 @@ static bool is_device_speaker(device_type device)
         }
         return false;
     } else {
-        if ((device == DEVICE_SPEAKER_MIC)
+        if (device == DEVICE_SPEAKER_MIC
 #ifdef SEC_AUDIO_SUPPORT_GAMECHAT_SPK_AEC
                 || (device == DEVICE_SPEAKER_GAMING_MIC)
 #endif
@@ -4974,8 +4974,8 @@ void proxy_deinit_route(void *proxy)
 bool proxy_update_route(void *proxy, int ausage, int device)
 {
     struct audio_proxy *aproxy = proxy;
-    audio_usage routed_ausage = (audio_usage)ausage;
-    device_type routed_device = (device_type)device;
+    audio_usage __unused routed_ausage = (audio_usage)ausage;
+    device_type __unused routed_device = (device_type)device;
 
     // Temp
     if (aproxy != NULL) {
