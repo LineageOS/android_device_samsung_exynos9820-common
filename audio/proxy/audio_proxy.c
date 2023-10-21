@@ -930,7 +930,7 @@ static void disable_spkamp_playback(void *proxy)
     struct audio_proxy *aproxy = proxy;
     char pcm_path[MAX_PCM_PATH_LEN];
 
-    if (aproxy->support_spkamp) {
+    if (aproxy->support_spkamp && ENABLE_SPKAMP_PLAYBACK) {
         snprintf(pcm_path, sizeof(pcm_path), "/dev/snd/pcmC%uD%u%c",
                  SPKAMP_PLAYBACK_CARD, SPKAMP_PLAYBACK_DEVICE, 'p');
 
@@ -953,7 +953,7 @@ static void enable_spkamp_playback(void *proxy)
     struct pcm_config pcmconfig = pcm_config_spkamp_playback;
     char pcm_path[MAX_PCM_PATH_LEN];
 
-    if (aproxy->support_spkamp) {
+    if (aproxy->support_spkamp && ENABLE_SPKAMP_PLAYBACK) {
         snprintf(pcm_path, sizeof(pcm_path), "/dev/snd/pcmC%uD%u%c",
                  SPKAMP_PLAYBACK_CARD, SPKAMP_PLAYBACK_DEVICE, 'p');
 

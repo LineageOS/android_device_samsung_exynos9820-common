@@ -231,4 +231,8 @@ struct audio_proxy
 #define SOUND_TRIGGER_HAL_LIBRARY_PATH "sound_trigger.primary.%s.so"
 #endif
 
+#ifndef ENABLE_SPKAMP_PLAYBACK
+#define ENABLE_SPKAMP_PLAYBACK false
+#endif
+
 #endif /* AUDIO_PROXY_H */
