@@ -4998,6 +4998,12 @@ bool proxy_set_route(void *proxy, int ausage, int device, int modifier, bool set
 
     modifier_type routed_modifier = (modifier_type)modifier;
 
+    // HACK: Swap mic
+    if (routed_device == DEVICE_MAIN_MIC)
+        routed_device = DEVICE_SUB_MIC;
+    else if (routed_device == DEVICE_SUB_MIC)
+        routed_device = DEVICE_MAIN_MIC;
+
     if (set) {
         /* check whether path routing is for AP/CP call bandwidth or speaker/DEX Device Change */
         if (routed_device < DEVICE_MAIN_MIC) {
