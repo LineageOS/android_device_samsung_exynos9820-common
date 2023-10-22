@@ -442,9 +442,7 @@ static bool is_quad_mic_device(device_type device)
     struct audio_proxy *aproxy = getInstance();
     bool flag = false;
 
-    if (device == DEVICE_QUAD_MIC)
-        flag = true;
-    else if (is_usage_CPCall(aproxy->active_capture_ausage) ||
+    if (is_usage_CPCall(aproxy->active_capture_ausage) ||
             is_usage_APCall(aproxy->active_capture_ausage))
         flag = (device == DEVICE_MAIN_MIC ||
                 device == DEVICE_HANDSET_MIC ||
@@ -452,7 +450,7 @@ static bool is_quad_mic_device(device_type device)
                 device == DEVICE_SPEAKER_MIC ||
                 device == DEVICE_SPEAKER_DEX_MIC /*||
                 device == DEVICE_SPEAKER_GAMING_MIC*/);
-	return flag;
+    return flag;
 }
 #endif
 
@@ -4132,8 +4130,7 @@ void *proxy_create_capture_stream(void *proxy, int type, int usage, void *config
             apstream->sound_card = PRIMARY_CAPTURE_CARD;
             apstream->sound_device = get_pcm_device_number(aproxy, apstream);
 #ifdef SUPPORT_QUAD_MIC
-            if (((is_active_usage_CPCall(aproxy) && aproxy->active_capture_ausage != AUSAGE_CALL_FORWARDING_PRIMARY
-                && aproxy->active_capture_ausage != AUSAGE_SPECTRO)
+            if ((is_active_usage_CPCall(aproxy)
                 || is_active_usage_APCall(aproxy)
                 || apstream->stream_usage == AUSAGE_CAMCORDER)
                 && is_quad_mic_device(aproxy->active_capture_device)) {
@@ -4629,8 +4626,7 @@ int proxy_reconfig_capture_usage(void *proxy_stream, int type, int usage)
             apstream->sound_device = get_pcm_device_number(aproxy, apstream);
 
 #ifdef SUPPORT_QUAD_MIC
-            if (((is_active_usage_CPCall(aproxy) && aproxy->active_capture_ausage != AUSAGE_CALL_FORWARDING_PRIMARY
-                && aproxy->active_capture_ausage != AUSAGE_SPECTRO)
+            if ((is_active_usage_CPCall(aproxy)
                 || is_active_usage_APCall(aproxy)
                 || apstream->stream_usage == AUSAGE_CAMCORDER)
                 && is_quad_mic_device(aproxy->active_capture_device)) {
