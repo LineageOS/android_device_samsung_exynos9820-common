@@ -19,6 +19,7 @@ COMMON_PATH := device/samsung/exynos9820-common
 include $(COMMON_PATH)/BoardConfigCommon.mk
 
 ## Audio
+BOARD_USE_DUAL_SPEAKER := true
 BOARD_USE_QUAD_MIC := true
 
 ## Boot Image

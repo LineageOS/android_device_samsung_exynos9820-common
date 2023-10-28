@@ -5000,9 +5000,11 @@ bool proxy_set_route(void *proxy, int ausage, int device, int modifier, bool set
     else if (routed_device == DEVICE_SUB_MIC)
         routed_device = DEVICE_MAIN_MIC;
 
+#ifdef SUPPORT_DUAL_SPEAKER
     // HACK: Force dual speaker
     if (routed_device == DEVICE_SPEAKER)
         routed_device = DEVICE_SPEAKER_DUAL;
+#endif
 
     if (set) {
         /* check whether path routing is for AP/CP call bandwidth or speaker/DEX Device Change */
