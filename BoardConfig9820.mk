@@ -18,6 +18,9 @@ COMMON_PATH := device/samsung/exynos9820-common
 ## Inherit common configuration
 include $(COMMON_PATH)/BoardConfigCommon.mk
 
+## Audio
+BOARD_USE_QUAD_MIC := true
+
 ## Boot Image
 BOARD_BOOTIMG_HEADER_VERSION := 1
 
