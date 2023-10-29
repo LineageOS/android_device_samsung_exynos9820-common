@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.exynos9820 \
+    android.hardware.camera.provider@2.5-service_64.samsung \
     libsensorndkbridge
 
 PRODUCT_PACKAGES += \

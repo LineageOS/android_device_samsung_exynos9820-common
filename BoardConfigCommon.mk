@@ -13,9 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-## Include path
-TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
-
 ## Inherit proprietary vendor configuration
 include vendor/samsung/exynos9820-common/BoardConfigVendor.mk
 
@@ -52,7 +49,18 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 
 ## Camera
-$(call soong_config_set,exynos9820CameraVars,exynos9820_model,$(TARGET_DEVICE))
+ifneq ($(TARGET_DEVICE),beyond0lte)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+ifeq ($(TARGET_DEVICE),f62)
+# ID=52 is depth camera
+# ID=54 is macro
+SOONG_CONFIG_samsungCameraVars_extra_ids := 52,54
+else
+# ID=52 is telephoto
+SOONG_CONFIG_samsungCameraVars_extra_ids := 52
+endif
+endif
 
 ## DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
