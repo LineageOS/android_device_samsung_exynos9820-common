@@ -3,7 +3,7 @@
 /dev/block/platform/13d60000.ufs/by-name/vendor         /vendor         ext4    ro                                                                                      wait,first_stage_mount
 /dev/block/platform/13d60000.ufs/by-name/vendor         /vendor         erofs   ro                                                                                      wait,first_stage_mount
 
-/dev/block/platform/13d60000.ufs/by-name/omr            /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable,check
+/dev/block/platform/13d60000.ufs/by-name/omr            /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable,check,fsverity
 
 /dev/block/platform/13d60000.ufs/by-name/boot           /boot           emmc    defaults                                                                                recoveryonly
 /dev/block/platform/13d60000.ufs/by-name/recovery       /recovery       emmc    defaults                                                                                recoveryonly
@@ -11,7 +11,7 @@
 /dev/block/platform/13d60000.ufs/by-name/cache          /cache          ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
 /dev/block/platform/13d60000.ufs/by-name/efs            /mnt/vendor/efs ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
 /dev/block/platform/13d60000.ufs/by-name/misc           /misc           emmc    defaults                                                                                defaults
-/dev/block/platform/13d60000.ufs/by-name/userdata       /data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,fileencryption=aes-256-xts,reservedsize=128M,quota
+/dev/block/platform/13d60000.ufs/by-name/userdata       /data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,fileencryption=aes-256-xts,reservedsize=128M,quota,fsverity
 
 /devices/platform/13d00000.dwmmc2/mmc_host*             auto            auto    defaults        voldmanaged=sdcard:auto,encryptable=userdata
 /devices/platform/10c00000.usb*                         auto            auto    defaults        voldmanaged=usb:auto
