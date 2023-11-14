@@ -15,36 +15,9 @@
 
 COMMON_PATH := device/samsung/exynos9820-common
 
-## Inherit common configuration
-include $(COMMON_PATH)/BoardConfigCommon.mk
-
-## Audio
-BOARD_USE_DUAL_SPEAKER := true
-BOARD_USE_QUAD_MIC := true
-
-## Boot Image
-BOARD_BOOTIMG_HEADER_VERSION := 1
-
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-
-## DTB
-BOARD_PACK_RADIOIMAGES += dtb.img
-
-## Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 57671680
-BOARD_DTBIMG_PARTITION_SIZE := 8388608
-BOARD_PRODUCTIMAGE_PARTITION_SIZE := 650117120
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67633152
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 5976883200
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1153433600
+## Inherit exynos9820 configuration
+include $(COMMON_PATH)/BoardConfigPieLaunched.mk
 
 ## Platform
 TARGET_BOARD_PLATFORM := universal9820
 TARGET_BOOTLOADER_BOARD_NAME := exynos9820
-
-## Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos9820
-
-## Verified Boot
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --include_descriptors_from_image $(PRODUCT_OUT)/dtb.img
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3

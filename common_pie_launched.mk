@@ -12,13 +12,26 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-COMMON_PATH := device/samsung/exynos9820-common
+# Inherit common configuration
+$(call inherit-product, $(COMMON_PATH)/common.mk)
 
-## Inherit exynos9820 configuration
-include $(COMMON_PATH)/BoardConfigPieLaunched.mk
+# Display
+PRODUCT_PACKAGES += \
+    libGrallocWrapper
 
-## Platform
-DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
-TARGET_BOARD_PLATFORM := universal9825
-TARGET_BOOTLOADER_BOARD_NAME := exynos9825
+# NFC
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-exynos9820
+
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libutils-v32

@@ -16,31 +16,10 @@
 
 COMMON_PATH := device/samsung/exynos9820-common
 
-# Inherit common configuration
-$(call inherit-product, $(COMMON_PATH)/common.mk)
-
-# Display
-PRODUCT_PACKAGES += \
-    libGrallocWrapper
+# Inherit exynos9820 configuration
+$(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 
 # init
-FSTAB_FILES ?= \
+PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9820 \
     $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9820
-
-PRODUCT_COPY_FILES += $(FSTAB_FILES)
-
-# NFC
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay-exynos9820
-
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.samsung
-
-# VNDK
-PRODUCT_PACKAGES += \
-    libutils-v32
