@@ -71,6 +71,9 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
 TARGET_BOARD_PLATFORM := universal9825_r
 TARGET_BOOTLOADER_BOARD_NAME := exynos9825
 
+## Properties
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.exynos9825.prop
+
 ## Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos9825-r
 

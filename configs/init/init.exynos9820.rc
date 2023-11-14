@@ -259,12 +259,6 @@ on init
 
     setprop ro.boot.hardware.revision ${ro.revision}
 
-on property:ro.hardware=exynos9820
-    setprop ro.soc.model "Exynos 9820"
-
-on property:ro.hardware=exynos9825
-    setprop ro.soc.model "Exynos 9825"
-
 on fs
 # Permissions for backlight
     chown system system /sys/class/backlight/panel/brightness

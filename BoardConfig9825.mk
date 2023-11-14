@@ -22,3 +22,6 @@ include $(COMMON_PATH)/BoardConfigPieLaunched.mk
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/exynos9825_manifest.xml
 TARGET_BOARD_PLATFORM := universal9825
 TARGET_BOOTLOADER_BOARD_NAME := exynos9825
+
+## Properties
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.exynos9825.prop

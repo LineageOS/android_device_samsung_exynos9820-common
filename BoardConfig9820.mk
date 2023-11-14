@@ -21,3 +21,6 @@ include $(COMMON_PATH)/BoardConfigPieLaunched.mk
 ## Platform
 TARGET_BOARD_PLATFORM := universal9820
 TARGET_BOOTLOADER_BOARD_NAME := exynos9820
+
+## Properties
+TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.exynos9820.prop
