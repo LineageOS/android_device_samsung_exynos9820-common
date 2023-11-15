@@ -20,6 +20,6 @@ COMMON_PATH := device/samsung/exynos9820-common
 $(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 
 # init
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos9820 \
-    $(COMMON_PATH)/configs/init/fstab.exynos9820:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos9820
+PRODUCT_PACKAGES += \
+    fstab.exynos9820 \
+    fstab.exynos9820.ramdisk

@@ -39,7 +39,7 @@ BOARD_DTBIMG_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67633152
 
 ## Recovery
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/configs/init/fstab.exynos9820
+TARGET_RECOVERY_FSTAB_GENRULE := gen_fstab.exynos9820
 
 ## Verified Boot
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --include_descriptors_from_image $(PRODUCT_OUT)/dtb.img
