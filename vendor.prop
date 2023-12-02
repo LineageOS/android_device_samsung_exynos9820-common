@@ -1,5 +1,7 @@
 ## Adoptable Storage
-ro.crypto.volume.options=aes-256-xts
+ro.crypto.dm_default_key.options_format.version=2
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
 ## APK Verity
 ro.apk_verity.mode=2
@@ -51,6 +53,11 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.use_color_management=true
+
+## Metadata Encryption
+ro.crypto.dm_default_key.options_format.version=2
+# Call deleteAllKeys if vold detects a factory reset
+ro.crypto.metadata_init_delete_all_keys.enabled=true
 
 ## RIL
 vendor.rild.libpath=/vendor/lib64/libsec-ril.so

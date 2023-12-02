@@ -17,7 +17,7 @@ odm                                                     /odm                    
 /dev/block/platform/13d60000.ufs/by-name/cache          /cache          ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
 /dev/block/platform/13d60000.ufs/by-name/efs            /mnt/vendor/efs ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check
 /dev/block/platform/13d60000.ufs/by-name/misc           /misc           emmc    defaults                                                                                defaults
-/dev/block/platform/13d60000.ufs/by-name/userdata       /data           ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,check,fileencryption=aes-256-xts:aes-256-cts:v1,reservedsize=128M,quota,fsverity
+/dev/block/platform/13d60000.ufs/by-name/userdata       /data           f2fs    noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier,inlinecrypt latemount,wait,check,quota,formattable,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,metadata_encryption=aes-256-xts,keydirectory=/metadata/vold/metadata_encryption,fscompress,readahead_size_kb=128
 
 /devices/platform/13d00000.dwmmc2/mmc_host*             auto            auto    defaults        voldmanaged=sdcard:auto,encryptable=userdata
 /devices/platform/10c00000.usb*                         auto            auto    defaults        voldmanaged=usb:auto
