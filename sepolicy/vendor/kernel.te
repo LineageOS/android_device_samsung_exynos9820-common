@@ -1,4 +1,5 @@
 allow kernel self:capability { mknod sys_admin };
+allow kernel self:perf_event cpu;
 dontaudit kernel self:capability { dac_override dac_read_search };
 
 allow kernel block_device:dir search;
