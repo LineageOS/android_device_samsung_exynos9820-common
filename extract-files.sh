@@ -60,7 +60,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/rild|vendor/lib*/libsec-ril*.so)
+        vendor/bin/hw/rild)
             "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
             ;;
         vendor/etc/libnfc-nci.conf)
@@ -69,6 +69,11 @@ function blob_fixup() {
         vendor/lib*/liboemcrypto.so)
             "${PATCHELF}" --add-needed libshim_oemcrypto.so "${2}"
             sed -i 's/fopen/kopen/g' "${2}"
+            ;;
+        vendor/lib*/libsec-ril*.so)
+            "${PATCHELF}" --replace-needed libril.so libril-samsung.so "${2}"
+            xxd -p -c0 "${2}" | sed "s/600e40f9820c8052e10315aae30314aa/600e40f9820c8052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
+            mv "${2}".patched "${2}"
             ;;
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed libshim_sensorndkbridge.so "${2}"
