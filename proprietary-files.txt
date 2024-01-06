@@ -98,6 +98,8 @@ vendor/etc/plmn_delta_usagsm.bin
 -vendor/bin/hw/rild|78c28a1e254318abae9c45699b69a61cf96d73b1
 -vendor/lib/libsemnativecarrierfeature.so|ac27187c27eba2b96eaa4812b8e9b60193ca18d6
 -vendor/lib64/libril-samsung.so|cf62752d95d5bd16fe2613ee0b4ab1cb5328b37c
+-vendor/lib64/libsec-ril.so|f1917988d62182eec1b44c74161f3ce2f293bd8f
+-vendor/lib64/libsec-ril-dsds.so|8ae8d41648f43d765a312531205606db6ea43ca2
 -vendor/lib64/libsemnativecarrierfeature.so|b9663215a8cae356b4ddf86790359beda9c30f47
 
 ## SECNATIVE
