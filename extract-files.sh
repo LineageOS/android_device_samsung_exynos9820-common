@@ -26,7 +26,7 @@ CLEAN_VENDOR=true
 
 ONLY_COMMON=
 ONLY_TARGET=
-ONLY_FIRMWARE=
+FIRMWARE=
 KANG=
 SECTION=
 
@@ -38,8 +38,8 @@ while [ "${#}" -gt 0 ]; do
         --only-target )
                 ONLY_TARGET=true
                 ;;
-        --only-firmware )
-                ONLY_FIRMWARE=true
+        --firmware )
+                FIRMWARE=true
                 ;;
         -n | --no-cleanup )
                 CLEAN_VENDOR=false
@@ -99,7 +99,7 @@ if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
-    if [ -z "${ONLY_FIRMWARE}" ]; then
+    if [ -z "${FIRMWARE}" ]; then
         extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
     fi
 fi
@@ -109,11 +109,11 @@ if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt
     source "${MY_DIR}/../${DEVICE}/extract-files.sh"
     setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-    if [ -z "${ONLY_FIRMWARE}" ]; then
+    if [ -z "${FIRMWARE}" ]; then
         extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
     fi
 
-    if [ -z "${SECTION}" ] && [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
+    if [ -z "${SECTION}" ] && [ ! -z "${FIRMWARE}" ] && [ -f "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" ]; then
         extract_firmware "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-firmware.txt" "${SRC}"
     fi
 fi
