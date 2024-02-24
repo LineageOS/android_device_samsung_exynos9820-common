@@ -63,3 +63,6 @@ ro.soc.manufacturer=Samsung
 
 ## Wi-Fi Direct
 wifi.direct.interface=p2p-dev-wlan0
+
+# Logs
+persist.log.tag.OpenGLRenderer=S
