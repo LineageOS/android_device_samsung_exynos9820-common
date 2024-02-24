@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a990778_16cd3ea9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32717
+      },
+      "writtenOn": "2024-02-24T14:04:48Z",
+      "side": 1,
+      "message": "This change also applicable for `lineage-21` branch",
+      "revId": "e7cef8671bffe3a335ec97e4b96202eccf38d37e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
