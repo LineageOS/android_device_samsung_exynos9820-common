@@ -16,6 +16,6 @@
 
 #include <stdint.h>
 
-uint64_t dsms_send_message(char* param_1, char* param_2, long param_3) {
+uint64_t dsms_send_message(char* param_1 __unused, char* param_2 __unused, long param_3 __unused) {
     return 0xfffffff2;
 }
