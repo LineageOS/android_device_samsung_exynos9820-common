@@ -6,18 +6,18 @@ vendor/etc/default_volume_tables.xml
 vendor/etc/usb_audio_policy_configuration.xml
 
 ## Audio - Dolby Atmos
--vendor/lib/libprofileparamstorage.so
--vendor/lib/libsecaudiocoreutils.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
 
 ## Camera Dependencies
--vendor/lib/libuniplugin.so
--vendor/lib64/libuniplugin.so
+vendor/lib/libuniplugin.so
+vendor/lib64/libuniplugin.so
 
 ## Camera Dependencies - from beyond1lte - G973FXXSEGVA9
--vendor/lib64/libSEF.quram.so|2e9d5d3b403bddc78b9854acfd8ae19f43511f82
--vendor/lib64/libhwjsqz.so|9185e4d27d12b96d875a837d259ebd3ac9800f40
--vendor/lib64/libsensorlistener.so|b440957789f50d8ea22c6428cb46c453d822b779
--vendor/lib64/libuniapi.so|0ac709e10a701768055e0f6559c14ae3daf83712
+vendor/lib64/libSEF.quram.so|2e9d5d3b403bddc78b9854acfd8ae19f43511f82
+vendor/lib64/libhwjsqz.so|9185e4d27d12b96d875a837d259ebd3ac9800f40
+vendor/lib64/libsensorlistener.so|b440957789f50d8ea22c6428cb46c453d822b779|b440957789f50d8ea22c6428cb46c453d822b779
+vendor/lib64/libuniapi.so|0ac709e10a701768055e0f6559c14ae3daf83712
 
 ## Codecs
 vendor/etc/media_profiles_V1_0.xml
@@ -26,14 +26,10 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/firmware/mfc_fw.bin
 
 ## Fingerprint
--vendor/lib/libegis_fp_normal_sensor_test.so
--vendor/lib/libgf_in_system_lib.so
--vendor/lib/libqfp_sensortest.so
--vendor/lib/libsynaFpSensorTestNwd.so
--vendor/lib64/libegis_fp_normal_sensor_test.so
--vendor/lib64/libgf_in_system_lib.so
--vendor/lib64/libqfp_sensortest.so
--vendor/lib64/libsynaFpSensorTestNwd.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsynaFpSensorTestNwd.so
 
 ## Firmware
 vendor/firmware/NPU.bin
@@ -61,74 +57,74 @@ vendor/firmware/score/develop1/score_br_pmw.bin
 ## GPS
 vendor/bin/hw/gps.sh
 vendor/etc/gnss/gps.cer
--vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
 ## Graphics - from a51x - A516BXXU7FWH2
--vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1|eafa7f78f32c97345c8e1b037e408efcaf1c90df
--vendor/lib/hw/vulkan.mali.so|f886c029850426dd0bd4144b625a1157ba6ca6d2
--vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1|76ac9e981ba704f952162b68ec38f60f05f94740
--vendor/lib64/hw/vulkan.mali.so|3ca0ef3048406c4510d2f042c3b0ca89dc924675
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1|eafa7f78f32c97345c8e1b037e408efcaf1c90df
+vendor/lib/hw/vulkan.mali.so|f886c029850426dd0bd4144b625a1157ba6ca6d2
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1|76ac9e981ba704f952162b68ec38f60f05f94740
+vendor/lib64/hw/vulkan.mali.so|3ca0ef3048406c4510d2f042c3b0ca89dc924675
 
 ## Keymaster
--vendor/lib64/libkeymaster_helper.so
--vendor/lib64/libskeymaster4device.so
+vendor/lib64/libkeymaster_helper.so;DISABLE_DEPS
+vendor/lib64/libskeymaster4device.so;DISABLE_DEPS
 
 ## NFC
 system/etc/libnfc-nci.conf:vendor/etc/libnfc-nci.conf
 
 ## RIL
--vendor/bin/cass
--vendor/bin/cbd
+vendor/bin/cass;DISABLE_DEPS
+vendor/bin/cbd
 vendor/etc/init/cass.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_usagsm.bin
--vendor/lib64/libengmode_client.so
--vendor/lib64/libfloatingfeature.so
+vendor/lib64/libengmode_client.so
+vendor/lib64/libfloatingfeature.so
 
 ## RIL - from a54x - A546BXXU5BWK4
--vendor/bin/hw/rild|249bd469620af395bcca58153d40cee6c28bdcb5
+vendor/bin/hw/rild|249bd469620af395bcca58153d40cee6c28bdcb5
 vendor/etc/init/vendor.samsung.rilchip.slsi.rc|95aa52333814b340e5064eae3a9bd5cb8a96a3ff
--vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
--vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
--vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
--vendor/lib/libsecril-client.so;MODULE=libsecril-client.exynos9820|fd7cb317ad17fd6c5b94c69bc4eaef80631215f1
--vendor/lib/libsemnativecarrierfeature.so|56ed7bd5f596502cf9614b5d9ebf255ac4e1e73c
--vendor/lib64/libSemDataProps.so|023991c586ba36f42f06b7f9286cf417bcb8a9f8
--vendor/lib64/libSemTelephonyProps.so|cbde8c62e9126875501d26681873b81e75dcd8a0
--vendor/lib64/libril_sem.so|9bcd6054a5ebded9ba92f27ef00ab537ab1c09b9
--vendor/lib64/libsec-ril.so|f66b4199957f40d0e023141e86606696a740872f
--vendor/lib64/libsecril-client.so;MODULE=libsecril-client.exynos9820|bae84e05d1c19dc5b41bfe2326dbf2744b1e412c
--vendor/lib64/libsemnativecarrierfeature.so|b69b820d8881d4e7bba426212e4aba31095bb437
--vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|738bc9ac0ca800b36e8b08652240ee01ddba6e47
--vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|6faa7fbeab4b7d335d434729ec22493fde30028c
--vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|fc3522bd787fa48ab80f53c0836cbb0c5ddf1b10
--vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07ee8c69d9f7d817b3730
--vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
--vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_33.xml|e9cdde9d05c5cce32f76bbb164437f43b3288157
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_33.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
+vendor/lib/libsecril-client.so;MODULE_SUFFIX=_vendor|fd7cb317ad17fd6c5b94c69bc4eaef80631215f1
+vendor/lib/libsemnativecarrierfeature.so|56ed7bd5f596502cf9614b5d9ebf255ac4e1e73c
+vendor/lib64/libSemDataProps.so|023991c586ba36f42f06b7f9286cf417bcb8a9f8
+vendor/lib64/libSemTelephonyProps.so|cbde8c62e9126875501d26681873b81e75dcd8a0
+vendor/lib64/libril_sem.so|9bcd6054a5ebded9ba92f27ef00ab537ab1c09b9
+vendor/lib64/libsec-ril.so|f66b4199957f40d0e023141e86606696a740872f|f66b4199957f40d0e023141e86606696a740872f
+vendor/lib64/libsecril-client.so;MODULE=_vendor|bae84e05d1c19dc5b41bfe2326dbf2744b1e412c
+vendor/lib64/libsemnativecarrierfeature.so|b69b820d8881d4e7bba426212e4aba31095bb437
+vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|738bc9ac0ca800b36e8b08652240ee01ddba6e47
+vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|6faa7fbeab4b7d335d434729ec22493fde30028c
+vendor/lib64/vendor.samsung.hardware.radio.channel-V1-ndk.so|fc3522bd787fa48ab80f53c0836cbb0c5ddf1b10
+vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|8645b1d3d2e944a38ec07ee8c69d9f7d817b3730
+vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|9b3b09c9bc2911b801d0de0caea13476a90f8776
+vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|611a9f8ca1a46b33471643e200e70ce28f963b75
 
 ## SECNATIVE
--vendor/lib/libsecnativefeature.so
--vendor/lib64/libsecnativefeature.so
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
 
 ## Sensors
 vendor/etc/sensors/hals.conf
--vendor/lib/sensors.grip.so
--vendor/lib64/libflicker_sec.so
--vendor/lib64/sensors.grip.so
+vendor/lib/sensors.grip.so
+vendor/lib64/libflicker_sec.so
+vendor/lib64/sensors.grip.so
 
 ## TEEGRIS
--vendor/bin/tzts_daemon
+vendor/bin/tzts_daemon
 vendor/etc/init/teegris_v3.rc
--vendor/lib/libuuid.so
--vendor/lib64/libiwt.so
--vendor/lib64/libuuid.so
+vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libiwt.so
+vendor/lib64/libuuid.so
 
 ## TEEGRIS - from beyond1lte - G973FXXSGHWA3
--vendor/bin/tzdaemon|42f4c9c1fd678ff40b4216873ea3e2ac15f3ac93
--vendor/lib/libteecl.so|b4b16cbad9c0efaf8cc16b5c64094bbf3e91a9d8
--vendor/lib64/libteecl.so|5976fe63aa413da484d22d8d223725f1ead78399
+vendor/bin/tzdaemon|42f4c9c1fd678ff40b4216873ea3e2ac15f3ac93
+vendor/lib/libteecl.so|b4b16cbad9c0efaf8cc16b5c64094bbf3e91a9d8
+vendor/lib64/libteecl.so|5976fe63aa413da484d22d8d223725f1ead78399
 
 ## TEEGRIS Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
@@ -155,11 +151,11 @@ vendor/tee/ffffffff-0000-0000-0000-000000000030
 vendor/tee/tui/resolution_common/ID00000100
 
 ## Widevine - from beyond1lte - G973FXXUFHVE1
--vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
+vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
--vendor/lib/liboemcrypto.so|808d043101c4f23061e2964fb7ebec4c44aaffcb
--vendor/lib/libwvhidl.so|4a19cb424aa0e5077155d4fe209ed1328525554a
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib/liboemcrypto.so|808d043101c4f23061e2964fb7ebec4c44aaffcb|808d043101c4f23061e2964fb7ebec4c44aaffcb
+vendor/lib/libwvhidl.so|4a19cb424aa0e5077155d4fe209ed1328525554a|d406ac80e3a6f6eaccfaa11dcf3fa483f29074f6
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc
