@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
-    audio.primary.exynos9820 \
     audio.r_submix.default \
     audio.usb.default
 
@@ -310,6 +309,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/libaudio/audiohal \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
 
 # S Pen

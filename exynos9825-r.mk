@@ -19,11 +19,15 @@ COMMON_PATH := device/samsung/exynos9820-common
 # Inherit common configuration
 $(call inherit-product, $(COMMON_PATH)/common.mk)
 
+# audio
+PRODUCT_PACKAGES += \
+    audio.primary.universal9825
+    
 # gralloc
 PRODUCT_PACKAGES += \
     gralloc.universal9825
 
-## init
+# init
 PRODUCT_PACKAGES += \
     fstab.exynos9825 \
     fstab.exynos9825.ramdisk

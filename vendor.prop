@@ -10,7 +10,6 @@ aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 af.fast_track_multiplier=1
-ro.hardware.audio.primary=exynos9820
 
 ## Bluetooth
 bluetooth.device.class_of_device=90,2,12
