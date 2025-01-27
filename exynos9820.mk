@@ -19,7 +19,11 @@ COMMON_PATH := device/samsung/exynos9820-common
 # Inherit exynos9820 configuration
 $(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 
-# init
+# gralloc
+PRODUCT_PACKAGES += \
+    gralloc.universal9820
+
+## init
 PRODUCT_PACKAGES += \
     fstab.exynos9820 \
     fstab.exynos9820.ramdisk
