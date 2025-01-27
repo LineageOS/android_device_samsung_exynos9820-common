@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
-    gralloc.exynos9820 \
     libion
 
 # Doze
@@ -310,7 +309,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung
+    hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
 
 # S Pen
 ifeq ($(TARGET_HAVE_SPEN),true)
