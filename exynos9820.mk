@@ -19,6 +19,10 @@ COMMON_PATH := device/samsung/exynos9820-common
 # Inherit exynos9820 configuration
 $(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 
+# audio
+PRODUCT_PACKAGES += \
+    audio.primary.universal9820
+
 # gralloc
 PRODUCT_PACKAGES += \
     gralloc.universal9820
