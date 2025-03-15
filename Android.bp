@@ -6,3 +6,10 @@
 
 soong_namespace {
 }
+
+install_symlink {
+    name: "tee_firmware_symlink",
+    vendor: true,
+    installed_location: "tee",
+    symlink_target: "/vendor/firmware/tee",
+}
