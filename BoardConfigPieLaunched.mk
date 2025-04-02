@@ -27,6 +27,9 @@ BOARD_BOOTIMG_HEADER_VERSION := 1
 
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
+## Camera
+$(call soong_config_set,samsungCameraVars,needs_acquire_fence_workaround,true)
+
 ## Dynamic Partitions
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
 
