@@ -91,10 +91,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.samsung
@@ -143,6 +139,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung
 
 # Lineage Health
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
+$(call soong_config_set,lineage_health,fast_charge_value_none,1)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
+
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
