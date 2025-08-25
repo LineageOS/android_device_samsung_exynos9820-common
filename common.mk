@@ -148,7 +148,7 @@ PRODUCT_PACKAGES += \
 
 # Livedisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-exynos
+    vendor.lineage.livedisplay-service.samsung-exynos
 
 # Media
 PRODUCT_COPY_FILES += \
