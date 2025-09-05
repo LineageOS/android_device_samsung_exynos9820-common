@@ -111,6 +111,14 @@
             <name>IGloveMode</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IHighTouchPollingRate</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ITouchscreenGesture</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>vendor.lineage.livedisplay</name>
