@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "feab2e11_58ce893b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-24T10:01:52Z",
+      "side": 1,
+      "message": "Tim, if this still works for you, don\u0027t you prefer to switch hw/samsung?",
+      "revId": "e5999b955a511fc799a27aee8fbce77b7f7d71c4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
