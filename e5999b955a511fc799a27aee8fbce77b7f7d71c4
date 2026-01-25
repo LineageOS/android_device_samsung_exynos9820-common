@@ -52,6 +52,24 @@
       "parentUuid": "eb8b34c8_2ea9acea",
       "revId": "e5999b955a511fc799a27aee8fbce77b7f7d71c4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "755ba893_9f6d3794",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-25T19:23:48Z",
+      "side": 1,
+      "message": "Well then, if the chain in hardware/samsung works for you let me know. I still need to make it works for Galaxy Tab S7 series, but it definitely deserves to be in a common place.",
+      "parentUuid": "94bb0113_b6335717",
+      "revId": "e5999b955a511fc799a27aee8fbce77b7f7d71c4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
