@@ -1,8 +1,0 @@
-service vendor.spen-default /vendor/bin/hw/vendor.samsung.hardware.spen-service.davinci
-    class hal
-    user system
-    group system
-    shutdown critical
-
-on fs
-    mkdir /mnt/vendor/efs/spen 0770 system system
