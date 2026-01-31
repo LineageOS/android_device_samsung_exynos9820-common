@@ -91,4 +91,4 @@
 ## Vendor
 /(vendor|system/vendor)/bin/hw/gps.sh                                                               u:object_r:gpsd_exec:s0
 
-/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.spen-service\.davinci                        u:object_r:hal_samsung_spen_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung\.hardware\.spen-service                        u:object_r:hal_samsung_spen_default_exec:s0
