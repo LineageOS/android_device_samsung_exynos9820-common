@@ -151,6 +151,7 @@ vendor/tee/tui/resolution_common/ID00000100
 
 ## VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
 vendor/lib64/libcrypto-tm.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|f53b9d897921ade77c511eb98955db374fcc5c69
+vendor/lib64/libssl-tm.so;FIX_SONAME|25d0fcea69b588a9a2eedd8549f62920c92e371f|8bacc6cc2bed44db75658dd59da1ae312a5c9a4a
 
 ## Widevine - from beyond1lte - G973FXXUFHVE1
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine|247dd44a8dd853ca3c1bd6c797d2be827c2a7719
