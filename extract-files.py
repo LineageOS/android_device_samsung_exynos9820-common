@@ -39,8 +39,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('/data/nfc', '/data/vendor/nfc'),
-    'vendor/lib64/libcrypto-tm.so': blob_fixup()
-        .replace_needed('libssl.so', 'libssl-tm.so'),
+    'vendor/lib64/libssl-tm.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-tm.so'),
     'vendor/lib/liboemcrypto.so': blob_fixup()
         .add_needed('libshim_oemcrypto.so')
         .binary_regex_replace(b'fopen', b'kopen'),
