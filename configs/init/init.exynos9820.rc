@@ -627,6 +627,17 @@ on boot
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/restricted/cpus 0-2
 
+    mkdir /dev/cpuset/surfaceflinger
+    write /dev/cpuset/surfaceflinger/cpus 6-7
+    write /dev/cpuset/surfaceflinger/mems 0
+    chown system system /dev/cpuset/surfaceflinger
+    chown system system /dev/cpuset/surfaceflinger/tasks
+    chown system system /dev/cpuset/surfaceflinger/cgroup.procs
+    # set surfaceflinger to 0775 so SurfaceFlinger can touch it
+    chmod 0775 /dev/cpuset/surfaceflinger
+    chmod 0664 /dev/cpuset/surfaceflinger/tasks
+    chmod 0664 /dev/cpuset/surfaceflinger/cgroup.procs
+
     setprop vendor.powerhal.init 1
 
 # Ownership and permissions for SEC PM
