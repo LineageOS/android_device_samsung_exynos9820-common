@@ -155,6 +155,32 @@
           }
         }
       ]
+    },
+    {
+      "Name": "SFMainPolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "android.hardware.composer.hwc3-service.slsi"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "SFRenderEnginePolicy",
+      "Actions": [
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpuset",
+            "Path": "android.hardware.composer.hwc3-service.slsi"
+          }
+        }
+      ]
     }
   ]
 }

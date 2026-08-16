@@ -627,6 +627,17 @@ on boot
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/restricted/cpus 0-2
 
+    mkdir /dev/cpuset/android.hardware.composer.hwc3-service.slsi
+    write /dev/cpuset/android.hardware.composer.hwc3-service.slsi/cpus 6-7
+    write /dev/cpuset/android.hardware.composer.hwc3-service.slsi/mems 0
+    chown system system /dev/cpuset/android.hardware.composer.hwc3-service.slsi
+    chown system system /dev/cpuset/android.hardware.composer.hwc3-service.slsi/tasks
+    chown system system /dev/cpuset/android.hardware.composer.hwc3-service.slsi/cgroup.procs
+    # set android.hardware.composer.hwc3-service.slsi to 0775 so SurfaceFlinger can touch it
+    chmod 0775 /dev/cpuset/android.hardware.composer.hwc3-service.slsi
+    chmod 0664 /dev/cpuset/android.hardware.composer.hwc3-service.slsi/tasks
+    chmod 0664 /dev/cpuset/android.hardware.composer.hwc3-service.slsi/cgroup.procs
+
     setprop vendor.powerhal.init 1
 
 # Ownership and permissions for SEC PM
