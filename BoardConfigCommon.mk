@@ -108,7 +108,6 @@ TARGET_USES_VULKAN := true
 
 ## Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
-TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos9820
 
 ## Keymaster
