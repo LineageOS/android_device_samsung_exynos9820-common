@@ -112,6 +112,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
 
+# IMS
+$(call inherit-product, hardware/lineage/generic-ims/ims.mk)
+
 # init
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.exynos9820.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos9820.rc \
