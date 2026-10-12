@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d2805443_e2e8f5af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38264
+      },
+      "writtenOn": "2026-10-12T23:59:26Z",
+      "side": 1,
+      "message": "Thanks for the pointers! (I\u0027m new here.)\n\nBoth commits now carry `Assisted-by: LLM` (patch set 2 of this change, and the new beyond1lte change).\n\nrfreg files are per-device RF calibration data, so I listed it in beyond1lte\u0027s `proprietary-files.txt` (https://review.lineageos.org/c/LineageOS/android_device_samsung_beyond1lte/+/507715), with the blob itself in the TheMuppets beyond1lte vendor repo (https://github.com/TheMuppets/proprietary_vendor_samsung_beyond1lte/pull/4). I can only verify beyond1lte\u0027s extraction (md5 c408abc142e1db759766060ad3159b00, from the same G973FXXSGHWC2 that list is pinned to). If the other exynos9820 devices turn out to ship identical rfreg content, moving it to exynos9820-common is trivial.",
+      "parentUuid": "68aa50af_41a8ecfc",
+      "revId": "8545913bd5a2a5cf91d2c195512d327d3f284d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ff6aed2_4738f45f",
         "filename": "configs/nfc/libnfc-sec-vendor.conf",
         "patchSetId": 1
@@ -31,6 +49,30 @@
       "writtenOn": "2026-10-08T12:51:20Z",
       "side": 1,
       "message": "https://review.lineageos.org/c/LineageOS/android_device_samsung_exynos9820-common/+/469739",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 36
+      },
+      "revId": "8545913bd5a2a5cf91d2c195512d327d3f284d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c41f7aaf_dff30190",
+        "filename": "configs/nfc/libnfc-sec-vendor.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 38264
+      },
+      "writtenOn": "2026-10-12T23:59:26Z",
+      "side": 1,
+      "message": "The `RF_SW_DIR_PATH`/`RF_SW_FILE_NAME` (and `RF_HW_*`) keys added there are only read for the dual-option image types (`IMAGE_TYPE_SW_REG`/`IMAGE_TYPE_HW_REG`, used by chips like S3NRN4V) — see `hal_vs.cc`. The S3NRN82 runs the single-image path (`IMAGE_TYPE_RF_REG`), and `get_storage()`/`get_image_file_name()` in `hal_selectImage.cc` read only `RF_DIR_PATH`/`RF_FILE_NAME` for it, with no fallback between the key sets. Without the legacy pair the file is never looked up — matches the on-device behaviour (A/B-tested, see the linked issue). The blob location `/vendor/etc/nfc/` is unaffected and matches the keys from 469739.",
+      "parentUuid": "8ff6aed2_4738f45f",
       "range": {
         "startLine": 44,
         "startChar": 0,
