@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<carrier_config>
+    <!-- The platform does not report dedicated-bearer QoS. -->
+    <boolean name="ims.support_sdp_precondition_bool" value="false" />
+    <boolean name="imsvoice.release_call_on_qos_lost_during_setup_bool" value="false" />
+    <boolean name="imsvoice.voice_on_default_bearer_supported_bool" value="true" />
+    <boolean name="imsvoice.voice_qos_precondition_supported_bool" value="false" />
+    <boolean name="imsvoice.wait_qos_when_local_precondition_not_supported_bool" value="false" />
+</carrier_config>
