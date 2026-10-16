@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "149f265f_f98e94cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38267
+      },
+      "writtenOn": "2026-10-16T17:19:35Z",
+      "side": 1,
+      "message": "The rfreg blob from DBT_G975FXXUHHXJ1 (intended for beyond2lte) has md5 1b6f84a3a18aa0b6d7b50138f6562770, so it differs. Not sure if thats a version difference or incompatibility between devices.",
+      "parentUuid": "d2805443_e2e8f5af",
+      "revId": "8545913bd5a2a5cf91d2c195512d327d3f284d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ff6aed2_4738f45f",
         "filename": "configs/nfc/libnfc-sec-vendor.conf",
         "patchSetId": 1
