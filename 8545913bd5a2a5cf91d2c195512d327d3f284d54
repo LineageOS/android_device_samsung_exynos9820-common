@@ -56,6 +56,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "6d00f86c_0b8b5e7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 38264
+      },
+      "writtenOn": "2026-10-19T18:06:45Z",
+      "side": 1,
+      "message": "Thanks for checking! Either way, that supports keeping it per-device. For reference: the HAL decodes the version metadata embedded at the end of these files as a build timestamp (hal_selectImage.cc, get_image_version()). Our beyond1lte file (from G973FXXSGHWC2) self-reports 2018-12-27 20:59:43, i.e. an S10-development-era build that stayed identical across later FW updates. If your G975FXXUHHXJ1 extraction shows the same era but different bytes, that would pin the difference on the device rather than on the FW version.\n\nEither way the safe rule stays: each device ships the rfreg extracted from the stock vendor of the FW version its own proprietary-files.txt is pinned to (beyond1lte: G973FXXSGHWC2, verified working). For beyond2lte that means the same recipe from its own image.",
+      "parentUuid": "149f265f_f98e94cc",
+      "revId": "8545913bd5a2a5cf91d2c195512d327d3f284d54",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "8ff6aed2_4738f45f",
         "filename": "configs/nfc/libnfc-sec-vendor.conf",
         "patchSetId": 1
