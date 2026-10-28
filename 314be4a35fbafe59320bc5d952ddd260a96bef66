@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5dd3ef57_097db7ba",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 25925
+      },
+      "writtenOn": "2026-10-28T16:32:52Z",
+      "side": 1,
+      "message": "$(call inherit-product-if-exists, ...)",
+      "range": {
+        "startLine": 116,
+        "startChar": 22,
+        "endLine": 116,
+        "endChar": 23
+      },
+      "revId": "314be4a35fbafe59320bc5d952ddd260a96bef66",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
