@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a84e64c_75ab0f43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36705
+      },
+      "writtenOn": "2026-10-28T15:09:01Z",
+      "side": 1,
+      "message": "Grab the original commit instead (https://review.lineageos.org/c/LineageOS/android_device_fairphone_FP6/+/491915?usp\u003dsearch). ExtremeXT picked the current commit from my tree back when it was in a WIP state. In the end I moved surfaceflinger instead just like stock does (at least on s5e8825).",
+      "revId": "254bfdefec6d58d322f92245e57f086f063b486a",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
