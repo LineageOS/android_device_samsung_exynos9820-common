@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import struct
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -24,6 +26,52 @@ namespace_imports = [
     'hardware/samsung_slsi-linaro/graphics',
 ]
 
+# The Exynos M4 cores lack FEAT_LRCPC, so LDAPR{,H,B} raise SIGILL there.
+# LDAR is a stricter acquire load with identical operands and size, so it
+# is a safe drop-in replacement. Maps LDAPR (mask 0xfffffc00) -> LDAR.
+LDAPR_TO_LDAR = {
+    0xF8BFC000: 0xC8DFFC00,
+    0xB8BFC000: 0x88DFFC00,
+    0x78BFC000: 0x48DFFC00,
+    0x38BFC000: 0x08DFFC00,
+}
+
+
+def ldapr_to_ldar_impl(ctx, file, file_path: str, *args, **kwargs):
+    with open(file_path, 'rb+') as f:
+        data = bytearray(f.read())
+
+        if data[:4] != b'\x7fELF' or data[4] != 2 or data[5] != 1:
+            raise ValueError(f'{file_path}: not a 64-bit little-endian ELF')
+
+        e_shoff, = struct.unpack_from('<Q', data, 0x28)
+        e_shentsize, e_shnum = struct.unpack_from('<HH', data, 0x3A)
+
+        count = 0
+        for i in range(e_shnum):
+            sh_type, sh_flags, _, sh_offset, sh_size = struct.unpack_from(
+                '<IQQQQ', data, e_shoff + i * e_shentsize + 4
+            )
+            # SHT_PROGBITS (1) with SHF_EXECINSTR (0x4) only
+            if sh_type != 1 or not sh_flags & 0x4:
+                continue
+            for off in range(sh_offset, sh_offset + sh_size - 3, 4):
+                insn, = struct.unpack_from('<I', data, off)
+                new = LDAPR_TO_LDAR.get(insn & 0xFFFFFC00)
+                if new is not None:
+                    struct.pack_into('<I', data, off, new | (insn & 0x3FF))
+                    count += 1
+
+        f.seek(0)
+        f.write(data)
+
+    print(f'ldapr_to_ldar: patched {count} instruction(s) in {file_path}')
+
+
+def ldapr_to_ldar() -> blob_fixup:
+    return blob_fixup().call(ldapr_to_ldar_impl, need_tmp_dir=False)
+
+
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
@@ -33,6 +81,7 @@ lib_fixups: lib_fixups_user_type = {
 } # fmt: skip
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/bin/hw/rild': ldapr_to_ldar(),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
         .regex_replace('/data/nfc', '/data/vendor/nfc'),
     'vendor/lib64/libssl-tm.so': blob_fixup()
