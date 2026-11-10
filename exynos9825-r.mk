@@ -23,10 +23,6 @@ $(call inherit-product, $(COMMON_PATH)/common.mk)
 PRODUCT_PACKAGES += \
     audio.primary.universal9825_r
 
-# Display
-PRODUCT_PACKAGES += \
-    gralloc.universal9825_r
-
 # init
 PRODUCT_PACKAGES += \
     fstab.exynos9825 \

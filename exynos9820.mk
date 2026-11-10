@@ -23,10 +23,6 @@ $(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 PRODUCT_PACKAGES += \
     audio.primary.universal9820
 
-# Display
-PRODUCT_PACKAGES += \
-    gralloc.universal9820
-
 # init
 PRODUCT_PACKAGES += \
     fstab.exynos9820 \
