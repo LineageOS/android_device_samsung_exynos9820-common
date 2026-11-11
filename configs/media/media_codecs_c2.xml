@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<MediaCodecs>
+    <Settings>
+        <Domain name="telephony" enabled="true" />
+        <Setting name="supports-multiple-secure-codecs" value="true" />
+        <Setting name="supports-secure-with-non-secure-codec" value="true" />
+        <Setting name="max-video-encoder-input-buffers" value="9" />
+    </Settings>
+    <Decoders>
+        <MediaCodec name="c2.exynos.mpeg4.decoder" type="video/mp4v-es" >
+            <Limit name="size" min="32x32" max="2048x2048" />  <!-- 1920x1080, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-16384" />
+            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.h263.decoder" type="video/3gpp" >
+            <Limit name="size" min="32x32" max="2048x1152" />  <!-- 1920x1080, 120fps -->
+            <Limit name="alignment" value="4x4" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-9216" />
+            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.h264.decoder" type="video/avc" >
+            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.h264.decoder.secure" type="video/avc" >
+            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="2" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.vp8.decoder" type="video/x-vnd.on2.vp8" >
+            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.hevc.decoder" type="video/hevc" >
+            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.hevc.decoder.secure" type="video/hevc" >
+            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="2" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="low-latency" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.vp9.decoder" type="video/x-vnd.on2.vp9" >
+            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 3840x2176, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="64x64" />
+            <Limit name="block-count" range="1-16384" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.vp9.decoder.secure" type="video/x-vnd.on2.vp9" >
+            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 3840x2176, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="64x64" />
+            <Limit name="block-count" range="1-16384" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="2" />
+            <Feature name="can-swap-width-height" value="1" />
+            <Feature name="adaptive-playback" />
+            <Feature name="secure-playback" required="true" />
+        </MediaCodec>
+    </Decoders>
+
+    <Encoders>
+        <MediaCodec name="c2.exynos.h264.encoder" type="video/avc" >
+            <Limit name="size" min="32x32" max="8192x8192" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-262144" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.h263.encoder" type="video/3gpp" >
+            <Limit name="size" min="32x32" max="2048x1152" />  <!-- 1920x1080, 120fps -->
+            <Limit name="alignment" value="4x4" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-9216" />
+            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.mpeg4.encoder" type="video/mp4v-es" >
+            <Limit name="size" min="32x32" max="2048x2048" />  <!-- 1920x1080, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-16384" />
+            <Limit name="blocks-per-second" min="1" max="972000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.vp8.encoder" type="video/x-vnd.on2.vp8" >
+            <Limit name="size" min="32x32" max="3840x2160" />  <!-- 3840x2160, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-32400" />
+            <Limit name="blocks-per-second" min="1" max="3888000" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.hevc.encoder" type="video/hevc" >
+            <Limit name="size" min="64x64" max="8192x8192" />  <!-- 3840x2176, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="32x32" />
+            <Limit name="block-count" range="1-65536" />
+            <Limit name="blocks-per-second" min="1" max="979200" />
+            <Limit name="bitrate" range="1-120000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+            <Feature name="can-swap-width-height" value="1" />
+        </MediaCodec>
+        <MediaCodec name="c2.exynos.vp9.encoder" type="video/x-vnd.on2.vp9" >
+            <Limit name="size" min="64x64" max="4096x8192" />  <!-- 3840x2176, 120fps -->
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="64x64" />
+            <Limit name="block-count" range="1-8192" />
+            <Limit name="blocks-per-second" min="1" max="244800" />
+            <Limit name="bitrate" range="1-80000000" />
+            <!-- performance point : size[SD, HD, FHD, UHD], fps[24, 25, 30, 50, 60, 120, 200, 240] -->
+            <Limit name="performance-point-1920x1080" range="240" />
+            <Limit name="performance-point-3840x2160" range="120" />
+            <Limit name="concurrent-instances" max="16" />
+        </MediaCodec>
+    </Encoders>
+</MediaCodecs>
