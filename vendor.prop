@@ -82,8 +82,8 @@ vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
 ## Samsung specific
 ro.product_ship=true
-# Set csc support in OMX
-# If not set or set to 0, OMX will only use BT.601 colorspace.
+# Set csc support in gralloc
+# If not set or set to 0, only the BT.601 colorspace is used.
 ro.vendor.cscsupported=1
 
 ## Wi-Fi Direct
