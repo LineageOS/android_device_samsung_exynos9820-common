@@ -42,7 +42,18 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'fopen', b'kopen'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
 	.sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
-            '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
+            '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2')
+        # SmsRespBuilder::BuildBroadcastSmsResponse() prefixes the cell
+        # broadcast PDU with two 16 bit lengths (header and body), which is
+        # Samsung's own format. AOSP expects a plain 3GPP TS 23.041 PDU in
+        # newBroadcastSms(), so it parses the lengths as serial number and
+        # message identifier and drops the alert. Return a pointer to the
+        # header (RilData + 0x240 instead of 0x23c) and omit the four length
+        # bytes from the reported size.
+        .sig_replace('68 02 45 B9 15 F0 08 91',
+            '68 02 45 B9 15 00 09 91')
+        .sig_replace('28 01 08 0B 08 11 00 11',
+            '28 01 08 0B 08 01 00 11'),
     'vendor/lib64/libsensorlistener.so': blob_fixup()
         .add_needed('libshim_sensorndkbridge.so'),
     (
