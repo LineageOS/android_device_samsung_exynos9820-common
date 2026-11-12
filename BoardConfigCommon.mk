@@ -67,6 +67,12 @@ SOONG_CONFIG_samsungCameraVars_extra_ids := 52
 endif
 endif
 
+ifeq ($(TARGET_USES_SLSI_CAMERA_HAL),true)
+# The BSP camera HAL does not know the extra (tele/depth/macro) camera IDs
+SOONG_CONFIG_samsungCameraVars_extra_ids :=
+include $(COMMON_PATH)/BoardConfigCamera.mk
+endif
+
 ## DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
