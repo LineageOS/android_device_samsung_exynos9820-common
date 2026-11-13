@@ -65,7 +65,6 @@ ifeq ($(TARGET_USES_SLSI_CAMERA_HAL),true)
 # System LSI BSP camera HAL built from source
 PRODUCT_SOONG_NAMESPACES += hardware/samsung_slsi-linaro/camera/N23
 PRODUCT_PACKAGES += \
-    camera.universal9825 \
     libexynoscamera3 \
     libexynoscamera_plugin
 endif

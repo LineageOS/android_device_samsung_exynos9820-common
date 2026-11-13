@@ -23,6 +23,12 @@ $(call inherit-product, $(COMMON_PATH)/common_pie_launched.mk)
 PRODUCT_PACKAGES += \
     audio.primary.universal9825
 
+# Camera
+ifeq ($(TARGET_USES_SLSI_CAMERA_HAL),true)
+PRODUCT_PACKAGES += \
+    camera.universal9825
+endif
+
 # init
 PRODUCT_PACKAGES += \
     fstab.exynos9825 \

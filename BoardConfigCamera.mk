@@ -8,7 +8,11 @@
 # String variables
 $(call soong_config_set,exynos_camera,target_soc_base,exynos9820)
 $(call soong_config_set,exynos_camera,back_camera_sensor,SENSOR_NAME_SAK2L4)
+ifeq ($(TARGET_DEVICE),beyond1lte)
+$(call soong_config_set,exynos_camera,back_1_camera_sensor,SENSOR_NAME_S5K3M3)
+else
 $(call soong_config_set,exynos_camera,back_1_camera_sensor,SENSOR_NAME_S5K3M5)
+endif
 $(call soong_config_set,exynos_camera,back_2_camera_sensor,SENSOR_NAME_S5K3P9)
 $(call soong_config_set,exynos_camera,front_camera_sensor,SENSOR_NAME_S5K3J1)
 $(call soong_config_set,exynos_camera,back_camera_rotation,90)
